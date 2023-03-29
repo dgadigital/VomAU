@@ -1,0 +1,66 @@
+//main: ../main.scss
+
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass variables.
+// -----------------------------------------------------------------------------
+
+/// Regular font family
+$font-lato-black: 'Lato Black';
+$font-lato-bold: 'Lato Bold';
+$font-lato-regular: 'Lato Regular';
+$font-lato-light: 'Lato Light';
+
+/// @type List
+$text-font-stack: $font-lato-regular, 'Helvetica Neue Light', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif !default;
+
+/// Code (monospace) font family
+/// @type List
+$code-font-stack: 'Courier New', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Monaco', monospace !default;
+
+/// Copy text color
+/// @type Color
+$text-color: #353535 !default;
+
+/// Main brand color
+/// @type Color
+$brand-color: #FF0016 !default;
+
+/// Brand Pallete
+/// Brown
+/// @type Color
+$dark-brown: #6B5649 !default;
+$mid-brown: #8F7D75 !default;
+$semi-light-brown: #D3CCC8 !default;
+$light-brown: #E9E1DD !default;
+
+/// Green
+/// @type Color
+$dark-green: #4BA088 !default;
+$mid-green: #B7D4AD !default;
+$semi-light-green: #B3E0D3 !default;
+$light-green: #D8E5D7 !default;
+
+/// Grey
+/// @type Color
+$light-grey: #EDEDED !default;
+$semi-mid-grey: #F6F6F6 !default;
+$mid-grey: #F7F7F7 !default;
+$semi-dark-grey: #D5D5D3 !default;
+$dark-grey: #444 !default;
+
+/// Blue
+/// @type Color
+$dark-blue: #7E9CCB !default;
+$mid-blue: #91B8D0 !default;
+
+/// Orange
+/// @type Color
+$dark-orange:#FF9C51 !default;
+$mid-orange: #FFBA85 !default;
+$light-orange: #EEDEA9 !default;
+
+/// Relative or absolute URL where all assets are served from
+/// @type String
+/// @example scss - When using a CDN
+///   $base-url: 'http://cdn.example.com/assets/';
+$base-url: '../assets/' !default;
