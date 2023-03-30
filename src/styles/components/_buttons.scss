@@ -1,5 +1,45 @@
-//main: ../main.scss
+.btn-solid {
+    padding-top: 13px;
+    padding-bottom: 13px;
+    padding-left: 50px;
+    padding-right: 50px;
+    font-family: $font-lato-regular;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 10px;
+    
+    @media (max-width: 991px) {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 35px;
+        padding-right: 35px;
+    }
 
-// -----------------------------------------------------------------------------
-// This file contains all styles related to the button component.
-// -----------------------------------------------------------------------------
+    @media (max-width: 767px) {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 25px;
+        padding-right: 25px;
+        font-size: 14px;
+    }
+
+    &.green {
+        background-color: $dark-green;
+
+        &:hover,
+        &:active,
+        &:focus {
+            background-color: #3e8974;
+        }
+    }
+    
+    &.orange {
+        background-color: $dark-orange;
+
+        &:hover,
+        &:active,
+        &:focus {
+            background-color:#e98f4a;
+        }
+    }
+}
