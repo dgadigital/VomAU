@@ -1,0 +1,69 @@
+.slider-section{
+
+    &.bg-mountain{
+        background: url('../../assets/images/mountain-bg.png');
+        background: linear-gradient(to top, $mid-grey 50%, transparent 50%), url('../../assets/images/mountain-bg.png') no-repeat center top / cover;
+    }
+
+    .title{
+        h2{
+            font-weight: 700;
+            font-size: 30px;
+            line-height: 57px;
+        }
+    }
+
+    .slider{
+        margin-top: 15px;
+        .slider-container{
+
+            .number{
+                display: inline-block;
+                padding: 5px 12px;
+                margin-right: 15px;
+                border-radius: 20px;
+
+                &.bg-dark-green{
+                    background: $dark-green;
+                    color: #FFF;
+                }
+
+                h3{
+                    margin-bottom: 0;
+                    font-weight: 400;
+                    font-size: 30px;
+                    line-height: 33px;
+                }
+            }
+            .content{
+                display: inline-block;
+                vertical-align: middle;
+
+                p{
+                    font-weight: 700;
+                    font-size: 21px;
+                    line-height: 30px;
+                }
+            }
+        }
+
+        .slick-dots{
+
+            button{
+                width: 10px;
+                height: 10px;
+                border: 1px solid #000;
+            }
+        }
+
+        .slick-dots{
+            li{
+                &.slick-active{
+                    button{
+                        background-color: $text-color;
+                    }
+                }
+            }
+        }
+    }
+}

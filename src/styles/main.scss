@@ -10,7 +10,8 @@
 @import
   'vendors/swiper',
   'vendors/bootstrap',
-  'vendors/font-awesome';
+  'vendors/font-awesome',
+  'vendors/slick';
 
 // 3. Base stuff
 @import
@@ -37,3 +38,11 @@
 // 7. Themes
 @import
   'themes/default';
+
+// 8. sections
+@import
+  'sections/two-column-text-image',
+  'sections/two-column-image-title-description',
+  'sections/tabs',
+  'sections/slider-section',
+  'sections/vom-office';
