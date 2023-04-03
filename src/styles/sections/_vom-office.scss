@@ -1,0 +1,62 @@
+.vom-office{
+    background: url('../../assets/images/map-bg.png');
+    background-repeat: no-repeat;
+    background-position: center;
+
+    .title{
+        h2{
+            font-weight: 700;
+            font-size: 30px;
+            line-height: 57px;
+        }
+    }
+
+    .country-container{
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0 100px;
+
+        @media (max-width: 1199px){
+            padding: 0 20px;
+        }
+
+        @media (max-width: 991px){
+            padding: 0 20px;
+        }
+
+        .country-list{
+            flex: 1;
+            margin: 10px;
+
+            @media (max-width: 767px){
+                flex-basis: 100%;
+                margin: 0;
+                text-align: center;
+            }
+
+            a{
+                display: block;
+                color: #000;
+                font-weight: 700;
+                font-size: 30px;
+                line-height: 57px;
+
+                @media (max-width: 991px){
+                    font-size: 24px;
+                }
+
+                &::after{
+                    content: url('../../assets/images/arrow-red.svg');
+                    margin-left: 15px;
+                    transition: transform 0.3s ease-out;
+                }
+
+                &:hover{
+                    &::after{
+                        margin-left: 20px;
+                    }
+                }
+            }
+        }
+    }
+}

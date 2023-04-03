@@ -1,0 +1,105 @@
+.tabs{
+    &.box-shadow{
+        box-shadow: 0px 0px 27px rgba(0, 0, 0, 0.2);
+    }
+    &.bg-mid-grey{
+        background-color: $mid-grey;
+    }
+
+    .tab-container {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+
+        @media (max-width: 767px){
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        .tab-menu {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+            margin: 0;
+            padding: 0;
+            padding-bottom: 20px;
+            list-style: none;
+            border-bottom: 1px solid #000000;
+
+            @media (max-width: 1199px){
+                gap: 10px;
+            }
+            @media (max-width: 767px){
+                flex-basis: 30%;
+                flex-direction: column;
+                border-bottom: none;
+                border-right: 1px solid #000000;
+                padding-right: 20px;
+            }
+
+            li {
+                font-weight: 700;
+                font-size: 30px;
+                line-height: 57px;
+
+                @media (max-width: 991px){
+                    font-size: 18px;
+                }
+
+                &:first-child(){
+                    margin-right: -20px;
+
+                    @media (max-width: 1199px){
+                        margin-right: 0px;
+                    }
+                }
+
+                a{
+                    display: block;
+                    padding: 0 20px;
+                    text-decoration: none;
+                }
+
+                &.active a{
+                    background: $dark-green;
+                    color: #FFF;
+                    border-radius: 10px;
+                }
+            }
+            
+            &.text-green{
+                li{
+                    a{
+                        color: $dark-green;
+                    }
+                    &.active{
+                        a{
+                            color: #FFF;
+                        }
+                    }
+                }
+            }
+        }
+
+        .tab-content {
+            margin-top: 20px;
+            padding: 20px;
+            border-top: none;
+
+            @media (max-width: 767px){
+                flex-basis: 70%;
+                margin-top: 10px;
+                padding-top: 10px;
+            }
+            div {
+                display: none;
+
+                &.active-tab {
+                    display: block;
+                }
+            }
+        }
+    }
+}
