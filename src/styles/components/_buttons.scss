@@ -23,6 +23,12 @@
         font-size: 14px;
     }
 
+    &:hover,
+    &:active,
+    &:focus {
+        color: #fff;
+    }
+
     &.green {
         background-color: $dark-green;
 
