@@ -1,0 +1,116 @@
+.post{
+    .content-container{
+        display: flex;
+        flex-wrap: wrap;
+        padding-bottom: 70px;
+        border-bottom: 1px solid #000;
+
+        h3{
+            text-transform: none;
+        }
+        .post-container{
+            flex-basis: 60%;
+            padding: 15px;
+            padding-left: 0;
+
+            .title{
+                margin-bottom: 15px;
+            }
+            .date-published{
+                margin-bottom: 30px;
+            }
+            .image-container{
+                margin-bottom: 30px;
+            }
+            .category-container{
+                margin-bottom: 20px;
+
+                ul{
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: flex-start;
+                    gap: 15px;
+                    list-style: none;
+                    padding-left: 0;
+
+                    li{
+                        padding: 7px 15px;
+                        font-size: 16px;
+                        line-height: 33px;
+                        text-align: center;
+                        background: #E8E9E8;
+                        border-radius: 5px;
+                    }
+                }
+            }
+            .source-container{
+                p{
+                    font-style: italic;
+                    font-size: 16px;
+                    line-height: 33px;
+                }
+            }
+        }
+        .side-container{
+            flex-basis: 40%;
+            padding: 15px 30px;
+            padding-right: 0;
+            margin-top: 235px;
+
+            .informed-form{
+                padding: 40px;
+                margin-bottom: 30px;
+
+                form{
+                    margin-top: 10px;
+
+                    .form-control{
+                        margin-bottom: 12px;
+                    }
+                    .btn{
+                        margin-top: 10px;
+                    }
+                }
+            }
+
+            .pray-container{
+                padding: 40px;
+
+                h3{
+                    &::before{
+                        content: url('../../assets/images/pray.png');
+                        display: inline-block;
+                        width: 63px;
+                        height: 63px;
+                        vertical-align: middle;
+                    }
+                }
+            }
+        }
+        .buttons-article{
+            margin-top: 80px;
+            width: 100%;
+
+            a{
+                font-style: $font-lato-bold;
+                font-size: 16px;
+                line-height: 33px;
+                color: $dark-green;
+
+                &.btn-prev::before{
+                    content: url('../../assets/images/arrow-green.svg');
+                    display: inline-block;
+                    margin-right: 10px;
+                    vertical-align: middle;
+                }
+
+                &.btn-next::after{
+                    content: url('../../assets/images/arrow-green.svg');
+                    display: inline-block;
+                    transform: rotate(180deg);
+                    margin-left: 10px;
+                }
+            }
+        }
+    }
+}
