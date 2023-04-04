@@ -35,12 +35,12 @@
         .image-container img{
             width: 100%;
         }
-    }
-    &.reverse{
-        flex-direction: row-reverse;
-
-        @media (max-width: 991px){
-            flex-direction: column-reverse;
+        &.reverse{
+            flex-direction: row-reverse;
+    
+            @media (max-width: 991px){
+                flex-direction: column-reverse;
+            }
         }
     }
 }

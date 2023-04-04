@@ -1,10 +1,4 @@
-.tabs{
-    &.box-shadow{
-        box-shadow: 0px 0px 27px rgba(0, 0, 0, 0.2);
-    }
-    &.bg-mid-grey{
-        background-color: $mid-grey;
-    }
+.our-history{
 
     .tab-container {
         display: flex;
@@ -40,7 +34,7 @@
             }
 
             li {
-                font-weight: 700;
+                font-family: $font-lato-bold;
                 font-size: 30px;
                 line-height: 57px;
 
