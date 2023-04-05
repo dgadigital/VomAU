@@ -2,6 +2,7 @@
     .content-container{
         display: flex;
         flex-wrap: wrap;
+        margin-bottom: 30px;
         padding-bottom: 70px;
         border-bottom: 1px solid #000;
 
@@ -12,6 +13,11 @@
             flex-basis: 60%;
             padding: 15px;
             padding-left: 0;
+
+            @media (max-width: 991px){
+                flex-basis: 100%;
+                padding: 0;
+            }
 
             .title{
                 margin-bottom: 15px;
@@ -40,6 +46,22 @@
                         text-align: center;
                         background: #E8E9E8;
                         border-radius: 5px;
+
+                        a{
+                            color: $text-color;
+
+                            &::after{
+                                position: absolute;
+                                top: 0;
+                                right: 0;
+                                bottom: 0;
+                                left: 0;
+                                z-index: 1;
+                                pointer-events: auto;
+                                content: "";
+                                background-color: rgba(0,0,0,0);
+                            }
+                        }
                     }
                 }
             }
@@ -56,6 +78,12 @@
             padding: 15px 30px;
             padding-right: 0;
             margin-top: 235px;
+
+            @media (max-width: 991px){
+                flex-basis: 100%;
+                margin-top: 30px;
+                padding: 0;
+            }
 
             .informed-form{
                 padding: 40px;
@@ -109,6 +137,26 @@
                     display: inline-block;
                     transform: rotate(180deg);
                     margin-left: 10px;
+                }
+            }
+        }
+    }
+    .prayer-form-container{
+        .row{
+            h2{
+                font-size: 30px;
+            }
+            .form-check{
+                padding-left: 15px;
+
+                .form-check-input{
+                    margin-left: 0;
+                    width: 25px;
+                    height: 25px;
+                }
+                .form-check-label{
+                    margin-left: 30px;
+                    margin-top: 7px;
                 }
             }
         }

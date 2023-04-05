@@ -1,0 +1,17 @@
+.article{
+    .month-container{
+        position: absolute;
+        top: 0;
+        left: 30px;
+        padding: 12px;
+        background-color: $dark-green;
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+
+        p{
+            font-size: 16px;
+            line-height: 33px;
+            color: #FFF;
+        }
+    }
+}
