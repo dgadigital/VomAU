@@ -1,0 +1,50 @@
+.title-description-with-two-column{
+    font-family: 'Lato';
+
+    h2{
+        font-weight: 700;
+        font-size: 30px;
+        line-height: 57px;
+    }
+
+    .content-container{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: flex-start;
+        padding-top: 30px;
+        padding-bottom: 30px;
+
+        div{
+            flex-grow: 1;
+            padding: 0 10px;
+        }
+        .image-container{
+            flex-basis: 30%;
+
+            @media (max-width: 991px){
+                flex-basis: 100%;
+            }
+
+            img{
+                display: block;
+                margin-right: auto;
+                margin-left: auto;
+            }
+        }
+        .text-container{
+            flex-basis: 70%;
+            align-self: center;
+
+            @media (max-width: 991px){
+                flex-basis: 100%;
+            }
+
+            h4{
+                font-weight: 700;
+                font-size: 30px;
+                line-height: 57px;
+            }
+        }
+    }
+}
