@@ -1,6 +1,4 @@
 .subscribe{
-    font-family: 'Lato';
-
     .row-container{
         display: flex;
         flex-wrap: wrap;
@@ -10,25 +8,18 @@
             padding: 0 15px;
         }
 
-        .subscribe-form{
+        .form-container{
             flex-basis: 66.67%;
-            margin-bottom: 20px;
-            padding: 20px 20px 0 20px;
-            box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-
-            h2 {
-                padding-left: 20px;
-                font-style: normal;
-                font-weight: 700;
-                font-size: 42px;
-                line-height: 45px;
+            padding: 50px 40px;
+            
+            .form-title{
+                font-size: 40px;
             }
-            h5 {
-                padding-left: 20px;
+            .form-description{
+                padding-bottom: 20px;
+                font-size: 24px;
             }
-            form {
-                padding: 20px 0em;
-            }
+            
             .form-group {
                 display: flex;
                 flex: 1;  
@@ -40,7 +31,7 @@
                 .btn {
                     border: none;
                     border-radius: 10px;
-                    margin: 10px 0px;
+                    margin-top: 10px;
                     padding: 5px 40px;
                     color:#ffffff;
                     font-weight: 700;
@@ -50,11 +41,10 @@
 
             @media (max-width: 991px){
                 flex-basis: 100%;
-                padding: 0;
-
+                margin-bottom: 80px;
                 .row{
                     flex-direction:column; 
-                  }
+                }
             }
         }
         

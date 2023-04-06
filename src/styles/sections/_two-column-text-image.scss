@@ -53,8 +53,25 @@
             flex-direction: row-reverse;
     
             @media (max-width: 991px){
-                flex-direction: column-reverse;
+                flex-direction: row-reverse;
+            }
+        }
+        &.reverse .text-container{
+            padding-left: 60px ;
+            @media (max-width: 991px){
+            padding-left: 15px;
+            margin-bottom: 50px;
             }
         }
     }
+
+    .alternate-sections{
+        h2{
+            width: 75%;
+        }
+        p{
+            width: 79%;
+        }
+    }
+
 }
