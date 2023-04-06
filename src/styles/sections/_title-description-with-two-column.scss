@@ -4,7 +4,7 @@
         line-height: 57px;
         text-transform: uppercase;
     }
-
+   
     .content-container{
         display: flex;
         flex-wrap: wrap;
@@ -61,3 +61,24 @@
         }
     }
 }
+
+.vom-app-section{
+    .vom-app-title{
+        width: 67%;
+        margin: auto;
+        font-weight: 800;
+        line-height: 44px;
+        @media (max-width: 991px){
+            width: 100%;
+        }
+    }
+    h4{
+        font-family: 'Lato Bold';
+    }
+    .text-container{
+        font-family: 'Lato Regular';
+    }
+  
+}
+
+

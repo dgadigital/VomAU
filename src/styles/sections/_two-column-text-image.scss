@@ -25,6 +25,25 @@
             ol{
                 padding-left: 15px;
             }
+            &.with-image-icon{
+                text-align: center;
+                
+                h2{
+                    line-height: 30px;
+                }
+                p{
+                    margin: 30px;
+                }
+                img{
+                    display: block;
+                    
+                    margin: 0px auto 20px auto;
+                }
+
+                @media (max-width: 991px){
+                    margin-top: 15px;
+                }
+            }
         }
 
         .image-container img{
