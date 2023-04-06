@@ -48,4 +48,25 @@
             background-color:#e98f4a;
         }
     }
+
+    
+    &.red{
+        background-color: #DA322A;
+
+        &:hover,
+        &:active,
+        &:focus {
+            background-color:#B71C1C;
+        }
+    }
+
+    &.dark-orange{
+        background-color: #FF5000;
+
+        &:hover,
+        &:active,
+        &:focus {
+            background-color:#d94703;
+        }
+    }
 }

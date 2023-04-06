@@ -1,0 +1,16 @@
+.title-description-with-media{
+    .content{
+        h2{
+            font-size: 30px;
+        }
+        .btn-solid{
+            &:first-of-type{
+                margin-right: 20px;
+            }
+        }
+
+        img{
+            margin-top: 45px;
+        }
+    }
+}

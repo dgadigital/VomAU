@@ -29,8 +29,7 @@
 @import
   'components/buttons',
   'components/contact-form7',
-  'components/forms',
-  'components/article';
+  'components/forms';
 
 // 6. Page-specific styles
 @import
@@ -50,4 +49,5 @@
   'sections/_filter-by-state',
   'sections/_two-column-form-iframe-description',
   'sections/_card-column',
-  'sections/post';
+  'sections/post',
+  'sections/title-description-with-media';
