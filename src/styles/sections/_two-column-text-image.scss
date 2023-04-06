@@ -19,17 +19,11 @@
         
         .text-container{
             h2 {
-                font-style: normal;
-                font-weight: 700;
                 font-size: 30px;
-                /* line-height: 57px; */
                 padding-bottom: 20px;
             }
-            p{
-                font-style: normal;
-                font-weight: 400;
-                font-size: 14px;
-                line-height: 24px;
+            ol{
+                padding-left: 15px;
             }
             &.with-image-icon{
                 text-align: center;
