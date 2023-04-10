@@ -8,12 +8,41 @@ AppName.Modules.ThemeModule = (function () {
   const _privateMethod = () => {
     // private stuff
 
-    const swiper = new Swiper('.swiper-container', {
-      pagination: {
-        el: '.swiper-pagination',
-      },
+    // const swiper = new Swiper('.swiper-container', {
+    //   pagination: {
+    //     el: '.swiper-pagination',
+    //   },
+    // });
+  };
+  var _stickynav = function () {
+    $(window).on("load scroll", function () {
+      if ($(this).scrollTop() > 10) {
+        $('header').addClass('sticky');
+      } else {
+        $('header').removeClass('sticky');
+      }
     });
   };
+
+  const _multi_level_menu = () => {
+    $('.dropdown-menu a.dropdown-toggle').on('click', function(e) {
+      if (!$(this).next().hasClass('show')) {
+        $(this).parents('.dropdown-menu').first().find('.show').removeClass("show");
+        $(this).removeClass('show');
+      }
+      var $subMenu = $(this).next(".dropdown-menu");
+      $subMenu.toggleClass('show');
+      $(this).toggleClass('show');
+    
+      $(this).parents('li.nav-item.dropdown.show').on('hidden.bs.dropdown', function(e) {
+        $('.dropdown-submenu .show').removeClass("show");
+        $(this).removeClass('show');
+      });
+    
+    
+      return false;
+    });
+  }
 
   var _tabs = function () {
     // add click event to tabs
@@ -54,6 +83,8 @@ AppName.Modules.ThemeModule = (function () {
     _privateMethod();
     _tabs();
     _slider_section();
+    _multi_level_menu();
+    _stickynav();
   };
 
   return {
