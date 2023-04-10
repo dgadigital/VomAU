@@ -1,5 +1,256 @@
-//main: ../main.scss
+footer {
 
-// -----------------------------------------------------------------------------
-// This file contains all styles related to the footer of the site/application.
-// -----------------------------------------------------------------------------
+    .footer-main {
+        padding-top: 40px;
+        padding-bottom: 30px;
+        background: linear-gradient(180deg, #F6F6F6 53.8%, #FCFCFC 73.07%, #F3F3F3 100%);
+
+        .container {
+            @media (max-width: 991px){
+                max-width: 100%;
+            }
+        }
+
+        .footer-title {
+            padding-bottom: 5px;
+            margin: 0;
+            font-family: $font-lato-bold;
+            text-transform: uppercase;
+            font-size: 14px;
+            color: $dark-green;
+        }
+
+        .footer-sub-title {
+            margin: 0;
+            font-family: $font-lato-regular;
+            text-transform: uppercase;
+            font-size: 12px;
+            color: $dark-green;
+        }
+
+        .upper {
+            padding-bottom: 20px;
+            align-items: center;
+            text-align: center;
+
+            p {
+                padding-left: 30px;
+                margin: 0;
+
+                @media (max-width: 767px) {
+                    justify-content: center;
+                    max-width: 480px;
+                    padding-left: 0;
+                    padding-top: 10px;
+                    margin: 0 auto;
+                }
+            }
+
+            img {
+                @media (max-width: 767px) {
+                    max-width: 60%;
+                }
+            }
+        }
+
+        .bottom {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            @media (max-width: 767px){
+                flex-direction: column-reverse;
+            }
+
+            .footer-links {
+                display: flex;
+
+                @media (max-width: 767px){
+                    flex-wrap: wrap;
+                    justify-content: space-between;
+                    width: 100%;
+                }
+
+                .links-wrapper {
+                    padding-right: 60px;
+
+                    @media (max-width: 991px){
+                        padding-right: 20px;
+                    }
+
+                    @media (max-width: 767px){
+                        padding-top: 40px;
+                    }
+
+                    &.first-menu {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+
+                        @media (max-width: 767px){
+                            justify-content: flex-start;
+                        }
+                    }
+
+                    ul {
+                        margin-bottom: 5px;
+                        padding: 0;
+                        list-style: none;
+
+                        li a {
+                            color: $text-color;
+                            font-size: 12px;
+
+                            &:hover {
+                                color: $brand-color;
+                            }
+                        }
+                    }
+
+                    .more-links {
+                        @media (max-width: 767px){
+                            padding-top: 30px;
+                        }
+
+                        ul {
+                            li {
+                                padding-bottom: 20px;
+
+                                @media (max-width: 767px){
+                                    padding-bottom: 10px;
+                                }
+
+                                &:last-child {
+                                    padding-bottom: 0;
+                                }
+
+                                a {
+                                    color: $brand-color;
+                                    font-family: $font-lato-regular;
+                                    font-size: 18px;
+                                    text-transform: uppercase;
+
+                                    @media (max-width: 767px){
+                                        font-size: 14px;
+                                    }
+
+                                    &:hover {
+                                        color: $dark-green;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .footer-form {
+                width: 360px;
+                max-width: 100%;
+
+                .footer-title {
+                    padding-bottom: 15px;
+
+                    @media (max-width: 767px){
+                        text-align: center;
+                    }
+                }
+
+                .form-wrapper {
+                    text-align: right;
+
+                    .form-group {
+                        margin-bottom: 10px;
+                    }
+
+                    .btn-solid {
+                        margin-top: 10px;
+                        padding-top: 5px;
+                        padding-bottom: 5px;
+
+                        @media (max-width: 767px){
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+   
+    .footer-bottom {
+        padding: 27px 0;
+        background-color: $text-color;
+
+        .footer-bottom-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+
+            @media (max-width: 991px) {
+                justify-content: center;
+            }
+
+            .social {
+                @media (max-width: 991px) {
+                    width: 100%;
+                }
+    
+            }
+
+            .copyright {
+                @media (max-width: 991px) {
+                    width: 100%;
+                }
+    
+            }
+        }
+
+        .social-media-footer {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+
+            @media (max-width: 991px) {
+                padding-bottom: 20px;
+            }
+
+            .title {
+                padding-right: 20px;
+                text-transform: uppercase;
+                color: #fff;
+                font-size: 14px;
+
+                @media (max-width: 767px) {
+                    padding-bottom: 15px;
+                    padding-right: 0;
+                    width: 100%;
+                    text-align:center;
+                }
+            }
+
+            .icon {
+                padding: 0 8px;
+            }
+        }
+
+        p {
+            margin: 0;
+            color: #fff;
+            font-size: 14px;
+            text-align: center;
+
+            a {
+                padding-left: 10px;
+                color: #fff;
+                text-decoration: underline;
+
+                @media (max-width: 991px) {
+                    display: block;
+                }
+            }
+        }
+    }
+}
