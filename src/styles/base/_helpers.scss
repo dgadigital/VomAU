@@ -32,3 +32,30 @@
   position: absolute;
   width: 1px;
 }
+
+.box-shadow{
+  box-shadow: 0px 0px 27px rgba(0, 0, 0, 0.2);
+}
+
+.bg-mid-grey{
+  background-color: $mid-grey;
+}
+.box-shadow{
+  box-shadow: 0px 0px 27px rgba(0, 0, 0, 0.2);
+}
+
+.bg-mid-grey{
+  background-color: $mid-grey;
+}
+
+.bg-mountain {
+  background: url(../../assets/images/mountain-bg.png);
+  background: -webkit-gradient(linear,left bottom,left top,color-stop(50%,#f7f7f7),color-stop(50%,transparent)),url(../../assets/images/mountain-bg.png) no-repeat center top/cover;
+  background: linear-gradient(to top,#f7f7f7 70%,transparent 50%),url(../../assets/images/mountain-bg.png) no-repeat center top/contain;
+  @media(max-width: 1600px){
+    background: linear-gradient(to top,#f7f7f7 90%,transparent 50%),url(../../assets/images/mountain-bg.png) no-repeat center top/contain;
+  }
+  @media(max-width: 980px){
+    background: linear-gradient(to top,#f7f7f7 96%,transparent 50%),url(../../assets/images/mountain-bg.png) no-repeat center top/contain;
+  }
+}

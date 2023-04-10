@@ -1,0 +1,23 @@
+.card-column{
+    .row-container{
+        display: flex;
+        gap: 6%;
+        flex-wrap: wrap;
+
+        @media(max-width: 980px){
+            flex-direction: column;
+        }
+        >div{
+            flex-basis: 47%;
+            flex-grow: 1;
+            &:first-child{
+                @media(max-width: 980px){
+                    margin-bottom: 30px;
+                }
+            }
+        }
+        img{
+            margin-bottom: 20px;
+        }
+    }
+}
