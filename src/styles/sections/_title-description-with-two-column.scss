@@ -5,7 +5,7 @@
         text-transform: uppercase;
     }
    
-    .content-container{
+    .column-content{
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
@@ -20,15 +20,7 @@
         .image-container{
             flex-basis: 30%;
 
-            @media (max-width: 991px){
-                flex-basis: 100%;
-            }
-
-            img{
-                display: block;
-                margin-right: auto;
-                margin-left: auto;
-            }
+            
         }
         .text-container{
             flex-basis: 70%;
