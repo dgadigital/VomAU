@@ -30,10 +30,16 @@
             background-color: #fff;
             .form-title{
                 font-size: 50px;
+                @media(max-width: 767px){
+                    font-size: 25px;
+                }
             }
             .form-description{
                 padding-bottom: 20px;
                 font-size: 22px;
+                @media(max-width: 767px){
+                    font-size: 16px;
+                }
             }
             input{
                 margin-bottom: 10px;
