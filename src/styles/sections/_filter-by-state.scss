@@ -122,4 +122,17 @@
             }
         }
     }
+
+    &.church-visit{
+        .tab-content{
+            .testimonial-container{
+                .text-container{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    padding: 40px 40px 40px 40px;
+                }
+            }
+        }
+    }
 }

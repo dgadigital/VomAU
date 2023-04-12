@@ -69,4 +69,14 @@
             background-color:#d94703;
         }
     }
+
+    &.grey{
+        background-color: #D5D5D3;
+
+        &:hover,
+        &:active,
+        &:focus {
+            background-color: #acacaa;
+        }
+    }
 }
