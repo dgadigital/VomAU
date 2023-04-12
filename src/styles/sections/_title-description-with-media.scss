@@ -12,5 +12,90 @@
         img{
             margin-top: 45px;
         }
+
+        .tab-container {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+    
+            .tab-menu {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 26px;
+                margin: 0;
+                padding: 0;
+                padding-bottom: 20px;
+                list-style: none;
+    
+                @media (max-width: 1199px){
+                    gap: 10px;
+                }
+                @media (max-width: 980px){
+                    flex-wrap: wrap;
+                    li:nth-child(-n+2){
+                        line-height: 23px;
+                    }
+                }
+                @media (max-width: 767px){
+                    li:last-child {
+                        line-height: 35px;
+                    }
+                }
+    
+                li{
+                    font-family: $font-lato-regular;
+                    font-size: 16px;
+                    line-height: 45px;
+                    font-weight: 500;
+                    background-color: #D5D5D3;
+                    border-radius: 10px;
+                    @media (max-width: 980px){
+                        width: 20%;
+                    }
+                    @media (max-width: 400px){
+                        width: 45%;
+                    }
+                    a{
+                        display: block;
+                        padding: 0 20px;
+                        text-decoration: none;
+                        color: #fff;
+                        border-radius: 10px;
+                    }
+                    &:hover{
+                        color: #FFF;
+                        background: $dark-green;
+                    }
+                    &.active a{
+                        color: #FFF;
+                        background: $dark-green;
+                    }
+                }
+            }
+    
+            .tab-content {
+                padding: 20px;
+                border-top: none;
+                
+                .content-container{
+                    display: flex;
+                    justify-content: center;
+                    padding: 0;
+                    
+
+                    img{
+                        margin: 0;
+                    }
+                }
+                &>div {
+                    display: none;
+    
+                    &.active-tab {
+                        display: block;
+                    }
+                }
+            }
+        }
     }
 }
