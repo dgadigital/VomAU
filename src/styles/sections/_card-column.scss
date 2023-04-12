@@ -8,6 +8,8 @@
             flex-direction: column;
         }
         >div{
+            position: relative;
+            padding-top: 399px;
             flex-basis: 47%;
             flex-grow: 1;
             &:first-child{
@@ -18,6 +20,8 @@
         }
         img{
             margin-bottom: 20px;
+            position: absolute;
+            top: 0;
         }
     }
 }
