@@ -23,8 +23,26 @@
                 }
             }
         }
+
+        &.grid-gap-75{
+            gap: 75px;
+            grid-template-columns: 32% 10%;
+
+            @media(max-width: 991px){
+                gap: 50px;
+                grid-template-columns: 100%;
+            }
+        }
     }
     &.form{
+        &.reverse{
+            .form-container{
+                order: 2;
+            }
+            .iframe-container{
+                order: 2;
+            }
+        }
         .form-container{
             padding: 60px 40px;
             background-color: #fff;
