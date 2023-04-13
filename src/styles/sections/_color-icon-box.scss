@@ -1,0 +1,101 @@
+.color-icon-box {
+    padding-top: 30px;
+    padding-bottom: 50px;
+
+    &.bg-mountain {
+        padding-top: 100px;
+        padding-bottom: 70px;
+    }
+
+    .container {
+        @media (max-width: 991px) {
+            max-width: 100%;
+        }
+    }
+
+    .description {
+        padding-bottom: 30px;
+
+        h3 {
+            text-transform: initial;
+        }
+    }
+
+    &-wrapper {
+        display: flex;
+
+        @media (max-width: 767px) {
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .item {
+            padding: 40px;
+            width: 33.3333%;
+
+            @media (max-width: 991px) {
+                padding: 25px;
+            }
+
+            @media (max-width: 767px) {
+                width: 318px;
+                max-width: 100%;
+            }
+
+            &:hover {
+                transition: all 0.3s;
+                box-shadow: 0px 27px 40.5px rgba(0, 0, 0, 0.122132);
+            }
+
+            &-wrapper {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+
+            &.green {
+                background-color: $box-green;
+            }
+
+            &.orange {
+                background-color: $box-orange;
+            }
+
+            &.blue {
+                background-color: $box-blue;
+            }
+
+            .icon-wrapper {
+                max-width: 124px;
+
+                @media (max-width: 991px) {
+                    max-width: 105px;
+                }
+            }
+
+
+            p {
+                color: #fff;
+                font-size: 18px;
+                text-align: center;
+
+                @media (max-width: 991px) {
+                    font-size: 16px;
+                }
+
+                &.title {
+                    padding-top: 20px;
+                    margin-bottom: 8px;
+                    font-family: $font-lato-bold;
+                    font-size: 30px;
+                    text-transform: uppercase;
+
+                    @media (max-width: 991px) {
+                        font-size: 26px;
+                    }
+                }
+            }
+        }
+    }
+}
