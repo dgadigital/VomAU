@@ -59,3 +59,87 @@
     background: linear-gradient(to top,#f7f7f7 96%,transparent 50%),url(../../assets/images/mountain-bg.png) no-repeat center top/contain;
   }
 }
+
+.bg-grey-vertical {
+  background: url(../../assets/images/vertical-grey-background.png);
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(0%, #f7f7f7), color-stop(0%, transparent)), url(../../assets/images/vertical-grey-background.png) no-repeat center;
+  background-size: 90%;
+  height: 100%;
+  @media screen and (max-width: 1300px) {
+    background: url(../../assets/images/vertical-grey-background.png);
+    background: -webkit-gradient(linear, left bottom, left top, color-stop(0%, #f7f7f7), color-stop(0%, transparent)), url(../../assets/images/vertical-grey-background.png) no-repeat center;
+    background-size: cover;
+    height: auto;
+  }
+}
+
+.hover-overlay-green{
+  position: relative;
+  margin-bottom: 5%;
+  .content{
+    position: absolute;
+    bottom: 0;
+    padding: 1.5em;
+    color: #fff;
+    z-index: 999;
+    h2{
+      font-size: 40px;
+      @media (max-width: 1199px){
+        font-size: 30px;
+      }
+        @media (max-width: 767px){
+         font-size: 21px;
+      }
+    }
+    p{
+      visibility: hidden;
+      max-height: 0;
+      font-size: 13px;
+      line-height: 25px;
+      margin: 0;
+      opacity:0;
+      transition:visibility 0.3s linear,opacity 0.3s linear,max-height 0.45s ease-in;
+    }
+  }
+  &:hover{
+    .content{
+        p{
+            visibility: visible;
+            max-height: 500px;
+            opacity:1;
+            transition:visibility 0.3s linear,opacity 0.3s linear,max-height 0.45s ease-out;
+        }
+    }
+    &:after{
+        height: 100%;
+        transition: height 0.25s ease-out;
+    }
+  }
+  &:before{
+      content: '';
+      display: block;
+      position: absolute;
+      bottom: 0;
+      height: 0;
+      width: 100%;
+      background-color: rgba(0,0,0,.2);
+      z-index: 1;
+      transition: height 0.25s ease-in;
+  }
+  &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      bottom: 0;
+      height: 0;
+      width: 100%;
+      background-color: rgba(75,160,136,.85);
+      z-index: 1;
+      transition: height 0.25s ease-in;
+  }
+}
+
+hr.color-black {
+  border-bottom: 1.5px solid black;
+  box-shadow: none;
+}

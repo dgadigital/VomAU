@@ -1,0 +1,50 @@
+.recent-post-slider{
+    .column{
+        display: flex;
+        gap: 40px;
+        >div{
+            flex-basis: 49%;
+            flex-grow: 1;
+            &.image-wrapper{
+                img{
+                    object-fit: cover;
+                    min-height: 338px;
+                    height: 100%;
+                    width: 100%;
+                }
+            }
+            &.content-container{
+                padding: 30px;
+                padding-top: 60px;
+                padding-left: 0;
+                .recent-post-icon{
+                    display: flex;
+                    position: absolute;
+                    top: 0;
+                    padding: 1.5em;
+                    color: white;
+                    border-radius: 0px 0px 12px 12px;
+                    background-color: $dark-green;
+                    img{
+                        margin-right: 10px;
+                        object-fit: contain;
+                    }
+                    p{
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+    .slick-slider{
+        .slick-dots{
+            position: absolute;
+            width: 100%;
+            button{
+                width: 10px;
+                height: 10px;
+                border: 1px solid #000;
+            }
+        }
+    }
+}
