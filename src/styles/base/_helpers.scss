@@ -51,13 +51,60 @@
 .bg-mountain {
   background: url(../../assets/images/mountain-bg.png);
   background: -webkit-gradient(linear,left bottom,left top,color-stop(50%,#f7f7f7),color-stop(50%,transparent)),url(../../assets/images/mountain-bg.png) no-repeat center top/cover;
-  background: linear-gradient(to top,#f7f7f7 70%,transparent 50%),url(../../assets/images/mountain-bg.png) no-repeat center top/contain;
+  background: linear-gradient(to top,#f7f7f7 90%,transparent 50%),url(../../assets/images/mountain-bg.png) no-repeat center top/contain;
   @media(max-width: 1600px){
     background: linear-gradient(to top,#f7f7f7 90%,transparent 50%),url(../../assets/images/mountain-bg.png) no-repeat center top/contain;
   }
   @media(max-width: 980px){
     background: linear-gradient(to top,#f7f7f7 96%,transparent 50%),url(../../assets/images/mountain-bg.png) no-repeat center top/contain;
   }
+}
+
+
+.bg-mountain-white {
+  background: url(../../assets/images/mountain-white-bg.png);
+  background: -webkit-gradient(linear,left bottom,left top,color-stop(50%,#FFF),color-stop(50%,transparent)),url(../../assets/images/mountain-white-bg.png) no-repeat center top/cover;
+  background: linear-gradient(to top,#FFF 90%,transparent 50%),url(../../assets/images/mountain-white-bg.png) no-repeat center top/contain;
+  @media(max-width: 1600px){
+    background: linear-gradient(to top,#FFF 90%,transparent 50%),url(../../assets/images/mountain-white-bg.png) no-repeat center top/contain;
+  }
+  @media(max-width: 980px){
+    background: linear-gradient(to top,#FFF 96%,transparent 50%),url(../../assets/images/mountain-white-bg.png) no-repeat center top/contain;
+  }
+}
+
+.check-list{
+  list-style-type: none;
+  padding-left: 0;
+
+  li{
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 20px;
+  }
+
+  li::before {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 0;
+    display: inline-block;
+    margin-right: 0.5em;
+    width: 14px;
+    height: 14px;
+  }
+
+  &.green{
+    li::before{
+      background-image: url('../../assets/images/check-green.png');
+      background-size: contain;
+      background-repeat: no-repeat; 
+    }
+  }
+}
+
+.text-green{
+  color: $dark-green;
 }
 
 .font-uppercase {

@@ -127,6 +127,27 @@ AppName.Modules.ThemeModule = (function () {
       slidesToShow: 1,
       arrows: false,
     });
+  };
+
+  var _donate_iframe_container = function() {
+      // Adjust iframe height dynamically based on its content
+      var iframe = $('#donate-form-iframe');
+      
+      function resizeIframe() {
+        iframeHeight = iframe.contents().find('body').height() + 130;
+        iframe.height(iframeHeight);
+        $('.iframe-container').css('height', iframeHeight);
+      }
+      
+      $(window).on('resize', function() {
+        resizeIframe();
+      });
+
+      iframe.on('load', function() {
+        resizeIframe();
+      });
+      setInterval(resizeIframe, 500);
+
   }
   /////////////////////
   // Public Methods //
@@ -137,6 +158,7 @@ AppName.Modules.ThemeModule = (function () {
     _mainBannerSlider();
     _tabs();
     _slider_section();
+    _donate_iframe_container();
     _multi_level_menu();
     _stickynav();
   };

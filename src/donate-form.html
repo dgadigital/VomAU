@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate form</title>
+    <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet'>
+
+    <style>
+        * {
+            font-family: 'Lato';
+        }
+        body{
+            margin: 0;
+        }
+        .hide{
+            display: none;
+        }
+        h4{
+            margin-top: 15px;
+            margin-bottom: 0;
+            margin-right: 45px;
+            margin-left: 45px;
+            font-size: 21px;
+            font-weight: 500;
+        }
+        .form-description{
+            padding-top: 0;
+            margin-right: 45px;
+            margin-left: 45px;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 24px;
+        }
+        .form-title{
+            font-size: 44px;
+            margin-right: 45px;
+            margin-left: 45px;
+        }
+        .step-container{
+            margin-bottom: 20px;
+        }
+        .step-list{
+            display: flex;
+            padding: 0;
+            margin: 0;
+            justify-content: center;
+            list-style-type: none;
+        }
+        .step{
+            flex: 1;
+            padding: 10px;
+            font-size: 14px;
+            text-align: center;
+            color: #353535;
+            background-color: #E8E9E8;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+        }
+        .step.current-step{
+            color: #FFF;
+            background-color: #FF9C51;
+        }
+        .step.complete-step, .step.complete-step{
+            color: #FFF;
+            background-color: #FF9C51;
+        }
+        .donate-checkbox{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-gap: 20px;
+            margin: 0 45px;
+            margin-top: 45px;
+        }
+        .checkbox-button{
+            display: inline-block;
+            min-height: 50px;
+        }
+         /* Hide the default checkbox */
+        .checkbox-input {
+            display: none;
+        }
+
+        /* Style for the checkbox label */
+        .checkbox-label {
+            position: relative;
+            display: inline-block;
+            padding: 15px 0;
+            width: 82%;
+            font-size: 14px;
+            font-weight: 400;
+            text-align: center;  
+            color: #000;
+            background-color: #fff;
+            border: 1.25px solid #DEDEDE;
+            cursor: pointer;
+            z-index: 1;
+        }
+
+        /* Style for the checkbox label when checked */
+        .checkbox-input:checked + .checkbox-label {
+            background: #FF9C51;
+            color: #FFF;
+        }
+
+        /* Style for the checkbox label on hover */
+        .checkbox-label:hover {
+            background: #FF9C51;
+            color: #FFF;
+        }
+        
+        .tooltip {
+            position: absolute;
+            display: inline-block;
+            margin-top: 25px;
+            margin-left: 2px;
+            width: 18px;
+            height: 18px;
+            text-align: center;
+            line-height: 24px;
+            color: #fff;
+            font-size: 14px;
+            transform: translateY(-50%);
+            background-color: #E8E9E8;
+            border-radius: 50%;
+            transition: opacity 0.3s ease;
+            vertical-align: middle;
+            cursor: default;
+        }
+
+        /* Style for the tooltip text */
+        .tooltip-text {
+            position: absolute;
+            display: none;
+            padding: 4px 8px;
+            left: -505px;
+            width: 500px;
+            max-width: 400px;
+            color: #fff;
+            font-size: 12px;
+            background-color: #999;
+            transform: translateY(-100%);
+            border-radius: 4px;
+            transition: opacity 0.3s ease;
+            z-index: 99;
+            overflow-wrap: break-word;
+        }
+        .tooltip:hover{
+            max-height: 100%;
+        }
+        /* Show the tooltip text on hover */
+        .tooltip:hover .tooltip-text {
+            display: inline-block;
+        }
+
+        .tooltip:hover + .checkbox-label{
+            z-index: -1;
+        }
+
+        @media (max-width: 1800px){
+            .tooltip-text{
+                left: -305px;
+                width: 300px;
+            }
+        }
+        @media (max-width: 991px){
+            .tooltip-text{
+                left: -154px;
+                width: 137px;
+            }
+        }
+
+        @media (max-width: 426px){
+            .donate-checkbox{
+                grid-template-columns: 100%;
+            }
+            .checkbox-label{
+                width: 95%;
+            }
+        }
+        .btn-orange{
+            padding: 10px 45px;
+            margin-right: 45px;
+            margin-top: 15px;
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 24px;
+            color: #FFF;
+            background: #FF9C51;
+            border-radius: 7px;
+            text-decoration: none;
+            float: right;
+        }
+        .btn-orange:hover{
+            opacity: .7;
+        }
+        .btn-back{
+            padding: 10px 45px;
+            margin-left: 45px;
+            margin-top: 15px;
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 24px;
+            color: #000;
+            background: #E8E9E8;
+            border-radius: 7;
+            text-decoration: none;
+            float: left;
+        }
+        .btn-back:hover{
+            opacity: .7;
+        }
+        a.disable{
+            pointer-events: none;
+            opacity: .3;
+        }
+
+        .amountsection{
+            display: none;
+            background-color: #F6F6F6;
+            margin-right: 45px;
+            margin-left: 45px;
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+
+        .amountsection input[type='radio']{
+            display: none;
+        }
+
+        .donationLabel{
+            position: relative;
+            display: inline-block;
+            padding: 0px 20px;
+            margin: 10px 8.5px;
+            width: 9%;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 50px;  
+            color: #000;
+            text-align: center;
+            background-color: #fff;
+            border: 1.25px solid #DEDEDE;
+            cursor: pointer;
+            z-index: 1;
+        }
+        .donationLabel:hover, .amountsection input[type='radio']:checked+.donationLabel{
+            color: #FFF;
+            background: #FF9C51;
+        }
+
+        .final-field{
+            display: inline-block;
+            width: 9%;
+        }
+
+        .final-field input{
+            padding: 0px 20px;
+            margin: 10px 8.5px;
+            width: 100%;
+            font-size: 14px;
+            line-height: 50px;  
+            text-align: center;
+            border: 1.25px solid #DEDEDE;
+        }
+
+        .amountsection h5{
+            padding-top: 20px;
+            padding-left: 8.5px;
+            font-weight: 500;
+            font-size: 14px;
+        }
+
+        @media (max-width: 426px){
+            .donationLabel, .final-field, .final-field input{
+                padding: 0;
+                margin: 0;
+                margin-top: 10px;
+                width: 100%;
+            }
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            var form = $('#form');
+            var steps = $('.step');
+            var currentStep = 1;
+            $('#submit').hide();
+        
+            showStep(currentStep);
+        
+            function showStep(step) {
+                steps.removeClass('current-step incomplete-step');
+                for (var i = 1; i <= steps.length; i++) {
+                    if (i < step) {
+                        $(`#step${i}`).html('&#10004;');
+                        $(`#step${i}`).addClass('complete-step');
+                        $(`#step-${i}-tab`).addClass('hide');
+                    } else if (i === step) {
+                        $(`#step${i}`).addClass('current-step');
+                        $(`#step${i}`).removeClass('complete-step');
+                        $(`#step${i}`).html(i);
+                        $(`#step-${i}-tab`).removeClass('hide');
+                    } else {
+                        $(`#step${i}`).addClass('incomplete-step');
+                        $(`#step${i}`).removeClass('complete-step');
+                        $(`#step${i}`).html(i);
+                        $(`#step-${i}-tab`).addClass('hide');
+                    }
+                }
+                updateButtonVisibility();
+            }
+        
+            function nextStep() {
+                if (validateForm()) {
+                    currentStep++;
+                    showStep(currentStep);
+                }
+            }
+        
+            function prevStep() {
+                currentStep--;
+                showStep(currentStep);
+            }
+        
+            function validateForm() {
+                var currentFieldset = $(`#step${currentStep}`);
+                var inputs = currentFieldset.find(':input[required]');
+                for (var i = 0; i < inputs.length; i++) {
+                    if (!inputs[i].checkValidity()) {
+                        inputs[i].reportValidity();
+                        return false;
+                    }
+                }
+                return true;
+            }
+        
+            function updateButtonVisibility() {
+                if (currentStep === steps.length) {
+                    if($('#nextbuttonchange').attr('href') == ''){
+                        $('#nextbuttonchange').addClass('disable');
+                    }
+                }
+            }
+        
+            steps.on('click', function() {
+                var clickedStep = $(this).attr('id').replace('step', '');
+                if (clickedStep != currentStep && clickedStep <= steps.length && clickedStep > 0) {
+                    currentStep = parseInt(clickedStep);
+                    showStep(currentStep);
+                }
+            });
+        
+            $('#next').on('click', function() {
+                nextStep();
+            });
+        
+            $('#prev').on('click', function() {
+                prevStep();
+            });
+        
+            $('#form').on('submit', function(event) {
+                event.preventDefault();
+                if (validateForm()) {
+                    // Form submission logic here
+                    alert('Form submitted successfully!');
+                }
+            });
+
+            $('.tooltip').on('mouseenter', function() {
+                $('.checkbox-label').css('z-index','-1');
+            }).on('mouseleave', function() {
+                $('.checkbox-label').css('z-index','inherit');
+            });
+
+            // Attach a change event handler to the checkbox
+            $('.checkbox-input').change(function() {
+                if ($('.checkbox-input').is(':checked')) {
+                    $('.btn-orange').removeClass('disable');
+                } else {
+                    $('.btn-orange').addClass('disable');
+                }
+            });
+        });
+    </script>
+
+    <script>
+        function RevealSection(project){
+            console.log(project);
+			$("." + project + "Amount").slideToggle();
+		}
+		
+		function URLBuilder() {
+			//var baseURL = "https://voiceofthemartyrs.secure.force.com/AAkPay__CheckoutM";
+			var baseURL = "https://voiceofthemartyrsltd.my.salesforce-sites.com/AAkPay__CheckoutM";
+			var products = "";
+			var amountbuilder = 0;
+			//Product Details
+			if(document.getElementById('BibleChallengeAmountfinal').value > 0) {
+				var fieldvalue = document.getElementById('BibleChallengeAmountfinal').value;
+				products = products + "{%22itemcode%22%20:%20%22VOM1%22,%22quantity%22%20:%201.00,%20%22unitprice%22%20:" + fieldvalue +",%20%22tax%22%20:%2010.00},";
+				amountbuilder += +fieldvalue;
+			}
+			if(document.getElementById('VOMedicalAmountfinal').value > 0) {
+				var fieldvalue = document.getElementById('VOMedicalAmountfinal').value;
+				products = products + "{%22itemcode%22%20:%20%22VOM2%22,%22quantity%22%20:%201.00,%20%22unitprice%22%20:" + fieldvalue +",%20%22tax%22%20:%2010.00},";
+				amountbuilder += +fieldvalue;
+			}
+			if(document.getElementById('VOMMinistryFundAmountfinal').value > 0) {
+				var fieldvalue = document.getElementById('VOMMinistryFundAmountfinal').value;
+				products = products + "{%22itemcode%22%20:%20%22VOM3%22,%22quantity%22%20:%201.00,%20%22unitprice%22%20:" + fieldvalue +",%20%22tax%22%20:%2010.00},";
+				amountbuilder += +fieldvalue;
+			}
+			if(document.getElementById('FrontLineMinistryAmountfinal').value > 0) {
+				var fieldvalue = document.getElementById('FrontLineMinistryAmountfinal').value;
+				products = products + "{%22itemcode%22%20:%20%22VOM4%22,%22quantity%22%20:%201.00,%20%22unitprice%22%20:" + fieldvalue +",%20%22tax%22%20:%2010.00},";
+				amountbuilder += +fieldvalue;
+			}
+			if(document.getElementById('FamiliesofMartyrsAmountfinal').value > 0) {
+				var fieldvalue = document.getElementById('FamiliesofMartyrsAmountfinal').value;
+				products = products + "{%22itemcode%22%20:%20%22VOM5%22,%22quantity%22%20:%201.00,%20%22unitprice%22%20:" + fieldvalue +",%20%22tax%22%20:%2010.00},";
+				amountbuilder += +fieldvalue;
+			}
+			if(document.getElementById('AramaicBiblesforIraqiChristiansAmountfinal').value > 0) {
+				var fieldvalue = document.getElementById('AramaicBiblesforIraqiChristiansAmountfinal').value;
+				products = products + "{%22itemcode%22%20:%20%22VOM6%22,%22quantity%22%20:%201.00,%20%22unitprice%22%20:" + fieldvalue +",%20%22tax%22%20:%2010.00},";
+				amountbuilder += +fieldvalue;
+			}
+			if(document.getElementById('EmergencyResponseAfghanistanAmountfinal').value > 0) {
+				var fieldvalue = document.getElementById('EmergencyResponseAfghanistanAmountfinal').value;
+				products = products + "{%22itemcode%22%20:%20%22VOM7%22,%22quantity%22%20:%201.00,%20%22unitprice%22%20:" + fieldvalue +",%20%22tax%22%20:%2010.00},";
+				amountbuilder += +fieldvalue;
+			}
+			if(document.getElementById('BiblesLiteratureAmountfinal').value > 0) {
+				var fieldvalue = document.getElementById('BiblesLiteratureAmountfinal').value;
+				products = products + "{%22itemcode%22%20:%20%22VOM11%22,%22quantity%22%20:%201.00,%20%22unitprice%22%20:" + fieldvalue +",%20%22tax%22%20:%2010.00},";
+				amountbuilder += +fieldvalue;
+			}
+			if(document.getElementById('BiblesPlusAmountfinal').value > 0) {
+				var fieldvalue = document.getElementById('BiblesPlusAmountfinal').value;
+				products = products + "{%22itemcode%22%20:%20%22VOM10%22,%22quantity%22%20:%201.00,%20%22unitprice%22%20:" + fieldvalue +",%20%22tax%22%20:%2010.00},";
+				amountbuilder += +fieldvalue;
+			}
+			if(document.getElementById('UkraineAmountfinal').value > 0) {
+				var fieldvalue = document.getElementById('UkraineAmountfinal').value;
+				products = products + "{%22itemcode%22%20:%20%22VOM4.34%22,%22quantity%22%20:%201.00,%20%22unitprice%22%20:" + fieldvalue +",%20%22tax%22%20:%2010.00},";
+				amountbuilder += +fieldvalue;
+			}
+			
+			var productclean = products.slice(0, -1);
+			
+			var shoppingCartDetail = "?shoppingCartDetails={%22cartlines%22%20:%20[" + productclean + "]}"
+			var amountDetails = "&Amount=" + amountbuilder;
+			
+			var finalURL = baseURL + shoppingCartDetail + amountDetails;
+			
+		    document.getElementById("nextbuttonchange").href= finalURL; 
+			
+		    $("#nextbuttonchange").removeClass("disable");
+			
+			// Temporary Sum Box
+			//$("#totalcal").val(amountbuilder);
+			
+		}
+		
+		function AmountBuilder(project){
+			$('input[type="radio"').on('change', function() {
+	            var radioValue = $("input[name=" + project + "Amount]:checked").val();
+			    $("." + project + "Amount .donationamount").val('$'+radioValue);
+				URLBuilder();		
+			});
+		}
+		
+		function AmountBuilderInput(project){
+			$("input[name=" + project + "Amount]").prop('checked', false);
+			URLBuilder();		
+		}
+    </script>
+</head>
+<body>
+    <h2 class="form-title">Help Persecuted Christians Today</h2>
+    <div class="step-form">
+        <div class="step-container">
+            <ul class="step-list">
+                <li class="step" id="step1">1</li>
+                <li class="step incomplete-step" id="step2">2</li>
+            </ul>
+        </div>
+        <form id="form" method="post">
+            <!-- Form fields go here -->
+            <div id="step-1-tab" class="steps-tab">
+                <h4><strong>What would you like to donate towards?</strong> Please select one or more of the following options.</h4>
+                <p class="form-description"><i>Any funds raised in excess of campaign or project costs may be allocated to a similar overseas project.</i></p>
+
+                <div class="donate-checkbox">
+                    <div class="checkbox-button">
+                        <input type="checkbox" class="checkbox-input" id="FamiliesofMartyrs" name="FamiliesofMartyrs" value="FamiliesofMartyrs">
+                        <label class="checkbox-label" for="FamiliesofMartyrs" onClick="RevealSection('FamiliesofMartyrs')">Families of Martyrs</label>
+                        <span class="tooltip">i<span class="tooltip-text">Try this</span></span>
+                    </div>
+                    <div class="checkbox-button">
+                        <input type="checkbox" class="checkbox-input" id="FrontLineMinistry" name="FrontLineMinistry" value="FrontLineMinistry">
+                        <label class="checkbox-label" for="FrontLineMinistry" onClick="RevealSection('FrontLineMinistry')">Front Line Ministry</label>
+                        <span class="tooltip">i<span class="tooltip-text">Try this</span></span>
+                    </div>
+                    <div class="checkbox-button">
+                        <input type="checkbox" class="checkbox-input" id="VOMedical" name="VOMedical" value="VOMedical">
+                        <label class="checkbox-label" for="VOMedical" onClick="RevealSection('VOMedical')">VOMedical</label>
+                        <span class="tooltip">i<span class="tooltip-text">Try thisTry thisTry thisTry thisTry thisTry thisTry thisTry thisTry thisTry thisTry thisTry this</span></span>
+                    </div>
+                    <div class="checkbox-button">
+                        <input type="checkbox" class="checkbox-input" id="VOMMinistryFund" name="VOMMinistryFund" value="VOMMinistryFund">
+                        <label class="checkbox-label" for="VOMMinistryFund" onClick="RevealSection('VOMMinistryFund')">VOM Ministry Fund</label>
+                        <span class="tooltip">i<span class="tooltip-text">Try this</span></span>
+                    </div>
+                    <div class="checkbox-button">
+                        <input type="checkbox" class="checkbox-input" id="BiblesLiterature" name="BiblesLiterature" value="BiblesLiterature">
+                        <label class="checkbox-label" for="BiblesLiterature" onClick="RevealSection('BiblesLiterature')">Bibles & Literature</label>
+                        <span class="tooltip">i<span class="tooltip-text">Try this</span></span>
+                    </div>
+                    <div class="checkbox-button">
+                        <input type="checkbox" class="checkbox-input" id="BiblesPlus" name="BiblesPlus" value="BiblesPlus">
+                        <label class="checkbox-label" for="BiblesPlus" onClick="RevealSection('BiblesPlus')">Bibles Plus</label>
+                        <span class="tooltip">i<span class="tooltip-text">Try this</span></span>
+                    </div>
+                    <div class="checkbox-button">
+                        <input type="checkbox" class="checkbox-input" id="Ukraine" name="Ukraine" value="Ukraine">
+                        <label class="checkbox-label" for="Ukraine" onClick="RevealSection('Ukraine')">Ukraine Front Line Ministry</label>
+                        <span class="tooltip">i<span class="tooltip-text">Try this</span></span>
+                    </div>
+                </div>
+                <a href="#step2" class="btn-orange disable" id="next">Next</a>
+            </div>
+
+            <div id="step-2-tab" class="steps-tab hide">
+                <h4><strong>How much would you like to donate?</strong></h4>
+                <div class="donation-amount">
+                    
+                    <div class="BibleChallengeAmount amountsection">
+                        <h5>Bible Challenge</h5>
+                        <input type="radio" id="BibleChallengeAmount1" name="BibleChallengeAmount" value="40">
+                        <label for="BibleChallengeAmount1" class="donationLabel" onClick="AmountBuilder('BibleChallenge')">$40</label>
+                        <input type="radio" id="BibleChallengeAmount2" name="BibleChallengeAmount" value="80">
+                        <label for="BibleChallengeAmount2" class="donationLabel" onClick="AmountBuilder('BibleChallenge')">$80</label>
+                        <input type="radio" id="BibleChallengeAmount3" name="BibleChallengeAmount" value="120">
+                        <label for="BibleChallengeAmount3" class="donationLabel" onClick="AmountBuilder('BibleChallenge')">$120</label>
+                        <input type="radio" id="BibleChallengeAmount4" name="BibleChallengeAmount" value="160">
+                        <label for="BibleChallengeAmount4" class="donationLabel" onClick="AmountBuilder('BibleChallenge')">$160</label>
+                        <input type="radio" id="BibleChallengeAmount5" name="BibleChallengeAmount" value="200">
+                        <label for="BibleChallengeAmount5" class="donationLabel" onClick="AmountBuilder('BibleChallenge')">$200</label>
+                        <div class="final-field">
+                             <input type="text" readonly class="donationamount" value="$" id="BibleChallengeAmountfinal" name="BibleChallengeAmountfinal" onkeyup="AmountBuilderInput('BibleChallenge')">
+                        </div>
+                    </div>
+                    
+                    <div class="EmergencyResponseAfghanistanAmount amountsection">
+                        <h5>Emergency Response Afghanistan</h5>
+                        <input type="radio" id="EmergencyResponseAfghanistanAmount1" name="EmergencyResponseAfghanistanAmount" value="20">
+                        <label for="EmergencyResponseAfghanistanAmount1" class="donationLabel" onClick="AmountBuilder('EmergencyResponseAfghanistan')">$20</label>
+                        <input type="radio" id="EmergencyResponseAfghanistanAmount2" name="EmergencyResponseAfghanistanAmount" value="50">
+                        <label for="EmergencyResponseAfghanistanAmount2" class="donationLabel" onClick="AmountBuilder('EmergencyResponseAfghanistan')">$50</label>
+                        <input type="radio" id="EmergencyResponseAfghanistanAmount3" name="EmergencyResponseAfghanistanAmount" value="100">
+                        <label for="EmergencyResponseAfghanistanAmount3" class="donationLabel" onClick="AmountBuilder('EmergencyResponseAfghanistan')">$100</label>
+                        <input type="radio" id="EmergencyResponseAfghanistanAmount4" name="EmergencyResponseAfghanistanAmount" value="200">
+                        <label for="EmergencyResponseAfghanistanAmount4" class="donationLabel" onClick="AmountBuilder('EmergencyResponseAfghanistan')">$200</label>
+                        <input type="radio" id="EmergencyResponseAfghanistanAmount5" name="EmergencyResponseAfghanistanAmount" value="500">
+                        <label for="EmergencyResponseAfghanistanAmount5" class="donationLabel" onClick="AmountBuilder('EmergencyResponseAfghanistan')">$500</label>
+                        <div class="final-field">
+                             <input type="text" readonly class="donationamount" value="$" id="EmergencyResponseAfghanistanAmountfinal" name="EmergencyResponseAfghanistanAmountfinal" onkeyup="AmountBuilderInput('EmergencyResponseAfghanistan')">
+                        </div>
+                    </div>
+                    
+                    <div class="AramaicBiblesforIraqiChristiansAmount amountsection">
+                        <h5>Aramaic Bibles for Iraqi Christians</h5>
+                        <input type="radio" id="AramaicBiblesforIraqiChristiansAmount1" name="AramaicBiblesforIraqiChristiansAmount" value="10">
+                        <label for="AramaicBiblesforIraqiChristiansAmount1" class="donationLabel" onClick="AmountBuilder('AramaicBiblesforIraqiChristians')">$10</label>
+                        <input type="radio" id="AramaicBiblesforIraqiChristiansAmount2" name="AramaicBiblesforIraqiChristiansAmount" value="20">
+                        <label for="AramaicBiblesforIraqiChristiansAmount2" class="donationLabel" onClick="AmountBuilder('AramaicBiblesforIraqiChristians')">$20</label>
+                        <input type="radio" id="AramaicBiblesforIraqiChristiansAmount3" name="AramaicBiblesforIraqiChristiansAmount" value="50">
+                        <label for="AramaicBiblesforIraqiChristiansAmount3" class="donationLabel" onClick="AmountBuilder('AramaicBiblesforIraqiChristians')">$50</label>
+                        <input type="radio" id="AramaicBiblesforIraqiChristiansAmount4" name="AramaicBiblesforIraqiChristiansAmount" value="100">
+                        <label for="AramaicBiblesforIraqiChristiansAmount4" class="donationLabel" onClick="AmountBuilder('AramaicBiblesforIraqiChristians')">$100</label>
+                        <div class="final-field">
+                             <input type="text" readonly class="donationamount" value="$" id="AramaicBiblesforIraqiChristiansAmountfinal" name="AramaicBiblesforIraqiChristiansAmountfinal" onkeyup="AmountBuilderInput('AramaicBiblesforIraqiChristians')">
+                        </div>
+                    </div>
+                    
+                    <div class="FamiliesofMartyrsAmount amountsection">
+                        <h5>Families of Martyrs</h5>
+                        <input type="radio" id="FamiliesofMartyrsAmount1" name="FamiliesofMartyrsAmount" value="10">
+                        <label for="FamiliesofMartyrsAmount1" class="donationLabel" onClick="AmountBuilder('FamiliesofMartyrs')">$10</label>
+                        <input type="radio" id="FamiliesofMartyrsAmount2" name="FamiliesofMartyrsAmount" value="20">
+                        <label for="FamiliesofMartyrsAmount2" class="donationLabel" onClick="AmountBuilder('FamiliesofMartyrs')">$20</label>
+                        <input type="radio" id="FamiliesofMartyrsAmount3" name="FamiliesofMartyrsAmount" value="50">
+                        <label for="FamiliesofMartyrsAmount3" class="donationLabel" onClick="AmountBuilder('FamiliesofMartyrs')">$50</label>
+                        <input type="radio" id="FamiliesofMartyrsAmount4" name="FamiliesofMartyrsAmount" value="100">
+                        <label for="FamiliesofMartyrsAmount4" class="donationLabel" onClick="AmountBuilder('FamiliesofMartyrs')">$100</label>
+                        <div class="final-field">
+                             <input type="text" readonly class="donationamount" value="$" id="FamiliesofMartyrsAmountfinal" name="FamiliesofMartyrsAmountfinal" onkeyup="AmountBuilderInput('FamiliesofMartyrs')">
+                        </div>
+                    </div>
+                    
+                    <div class="FrontLineMinistryAmount amountsection">
+                        <h5>Front Line Ministry</h5>
+                        <input type="radio" id="FrontLineMinistryAmount1" name="FrontLineMinistryAmount" value="10">
+                        <label for="FrontLineMinistryAmount1" class="donationLabel" onClick="AmountBuilder('FrontLineMinistry')">$10</label>
+                        <input type="radio" id="FrontLineMinistryAmount2" name="FrontLineMinistryAmount" value="20">
+                        <label for="FrontLineMinistryAmount2" class="donationLabel" onClick="AmountBuilder('FrontLineMinistry')">$20</label>
+                        <input type="radio" id="FrontLineMinistryAmount3" name="FrontLineMinistryAmount" value="50">
+                        <label for="FrontLineMinistryAmount3" class="donationLabel" onClick="AmountBuilder('FrontLineMinistry')">$50</label>
+                        <input type="radio" id="FrontLineMinistryAmount4" name="FrontLineMinistryAmount" value="100">
+                        <label for="FrontLineMinistryAmount4" class="donationLabel" onClick="AmountBuilder('FrontLineMinistry')">$100</label>
+                        <div class="final-field">
+                             <input type="text" readonly class="donationamount" value="$" id="FrontLineMinistryAmountfinal" name="FrontLineMinistryAmountfinal" onkeyup="AmountBuilderInput('FrontLineMinistry')">
+                        </div>
+                    </div>
+                    
+                    <div class="VOMedicalAmount amountsection">
+                        <h5>VOMedical</h5>
+                        <input type="radio" id="VOMedicalAmount1" name="VOMedicalAmount" value="10">
+                        <label for="VOMedicalAmount1" class="donationLabel" onClick="AmountBuilder('VOMedical')">$10</label>
+                        <input type="radio" id="VOMedicalAmount2" name="VOMedicalAmount" value="20">
+                        <label for="VOMedicalAmount2" class="donationLabel" onClick="AmountBuilder('VOMedical')">$20</label>
+                        <input type="radio" id="VOMedicalAmount3" name="VOMedicalAmount" value="50">
+                        <label for="VOMedicalAmount3" class="donationLabel" onClick="AmountBuilder('VOMedical')">$50</label>
+                        <input type="radio" id="VOMedicalAmount4" name="VOMedicalAmount" value="100">
+                        <label for="VOMedicalAmount4" class="donationLabel" onClick="AmountBuilder('VOMedical')">$100</label>
+                        <div class="final-field">
+                             <input type="text" readonly class="donationamount" value="$" id="VOMedicalAmountfinal" name="VOMedicalAmountfinal" onkeyup="AmountBuilderInput('VOMedical')">
+                        </div>
+                    </div>
+                    
+                    <div class="VOMMinistryFundAmount amountsection">
+                        <h5>VOM Ministry Fund</h5>
+                        <input type="radio" id="VOMMinistryFundAmount1" name="VOMMinistryFundAmount" value="10">
+                        <label for="VOMMinistryFundAmount1" class="donationLabel" onClick="AmountBuilder('VOMMinistryFund')">$10</label>
+                        <input type="radio" id="VOMMinistryFundAmount2" name="VOMMinistryFundAmount" value="20">
+                        <label for="VOMMinistryFundAmount2" class="donationLabel" onClick="AmountBuilder('VOMMinistryFund')">$20</label>
+                        <input type="radio" id="VOMMinistryFundAmount3" name="VOMMinistryFundAmount" value="50">
+                        <label for="VOMMinistryFundAmount3" class="donationLabel" onClick="AmountBuilder('VOMMinistryFund')">$50</label>
+                        <input type="radio" id="VOMMinistryFundAmount4" name="VOMMinistryFundAmount" value="100">
+                        <label for="VOMMinistryFundAmount4" class="donationLabel" onClick="AmountBuilder('VOMMinistryFund')">$100</label>
+                        <div class="final-field">
+                             <input type="text" readonly class="donationamount" value="$" id="VOMMinistryFundAmountfinal" name="VOMMinistryFundAmountfinal" onkeyup="AmountBuilderInput('VOMMinistryFund')">
+                        </div>
+                    </div>
+                    
+                    <div class="BiblesLiteratureAmount amountsection">
+                        <h5>Bibles & Literature</h5>
+                        <input type="radio" id="BiblesLiteratureAmount1" name="BiblesLiteratureAmount" value="30">
+                        <label for="BiblesLiteratureAmount1" class="donationLabel" onClick="AmountBuilder('BiblesLiterature')">$30</label>
+                        <input type="radio" id="BiblesLiteratureAmount2" name="BiblesLiteratureAmount" value="60">
+                        <label for="BiblesLiteratureAmount2" class="donationLabel" onClick="AmountBuilder('BiblesLiterature')">$60</label>
+                        <input type="radio" id="BiblesLiteratureAmount3" name="BiblesLiteratureAmount" value="90">
+                        <label for="BiblesLiteratureAmount3" class="donationLabel" onClick="AmountBuilder('BiblesLiterature')">$90</label>
+                        <input type="radio" id="BiblesLiteratureAmount4" name="BiblesLiteratureAmount" value="120">
+                        <label for="BiblesLiteratureAmount4" class="donationLabel" onClick="AmountBuilder('BiblesLiterature')">$120</label>
+                        <input type="radio" id="BiblesLiteratureAmount5" name="BiblesLiteratureAmount" value="150">
+                        <label for="BiblesLiteratureAmount5" class="donationLabel" onClick="AmountBuilder('BiblesLiterature')">$150</label>
+                        <div class="final-field">
+                             <input type="text" readonly class="donationamount" value="$" id="BiblesLiteratureAmountfinal" name="BiblesLiteratureAmountfinal" onkeyup="AmountBuilderInput('BiblesLiterature')">
+                        </div>
+                        
+                    </div>
+                    
+                        <div class="BiblesPlusAmount amountsection">
+                        <h5>Bibles Plus</h5>
+                        <input type="radio" id="BiblesPlusAmount1" name="BiblesPlusAmount" value="30">
+                        <label for="BiblesPlusAmount1" class="donationLabel" onClick="AmountBuilder('BiblesPlus')">$30</label>
+                        <input type="radio" id="BiblesPlusAmount2" name="BiblesPlusAmount" value="60">
+                        <label for="BiblesPlusAmount2" class="donationLabel" onClick="AmountBuilder('BiblesPlus')">$60</label>
+                        <input type="radio" id="BiblesPlusAmount3" name="BiblesPlusAmount" value="90">
+                        <label for="BiblesPlusAmount3" class="donationLabel" onClick="AmountBuilder('BiblesPlus')">$90</label>
+                        <input type="radio" id="BiblesPlusAmount4" name="BiblesPlusAmount" value="120">
+                        <label for="BiblesPlusAmount4" class="donationLabel" onClick="AmountBuilder('BiblesPlus')">$120</label>
+                        <input type="radio" id="BiblesPlusAmount5" name="BiblesPlusAmount" value="150">
+                        <label for="BiblesPlusAmount5" class="donationLabel" onClick="AmountBuilder('BiblesPlus')">$150</label>
+                        <div class="final-field">
+                             <input type="text" readonly class="donationamount" value="$" id="BiblesPlusAmountfinal" name="BiblesPlusAmountfinal" onkeyup="AmountBuilderInput('BiblesPlus')">
+                        </div>
+                    </div>
+                    
+                    <div class="UkraineAmount amountsection">
+                        <h5>Ukraine Front Line Ministry</h5>
+                        <input type="radio" id="UkraineAmount1" name="UkraineAmount" value="30">
+                        <label for="UkraineAmount1" class="donationLabel" onClick="AmountBuilder('Ukraine')">$30</label>
+                        <input type="radio" id="UkraineAmount2" name="UkraineAmount" value="60">
+                        <label for="UkraineAmount2" class="donationLabel" onClick="AmountBuilder('Ukraine')">$60</label>
+                        <input type="radio" id="UkraineAmount3" name="UkraineAmount" value="90">
+                        <label for="UkraineAmount3" class="donationLabel" onClick="AmountBuilder('Ukraine')">$90</label>
+                        <input type="radio" id="UkraineAmount4" name="UkraineAmount" value="120">
+                        <label for="UkraineAmount4" class="donationLabel" onClick="AmountBuilder('Ukraine')">$120</label>
+                        <input type="radio" id="UkraineAmount5" name="UkraineAmount" value="150">
+                        <label for="UkraineAmount5" class="donationLabel" onClick="AmountBuilder('Ukraine')">$150</label>
+                        <div class="final-field">
+                             <input type="text" readonly class="donationamount" value="$" id="UkraineAmountfinal" name="UkraineAmountfinal" onkeyup="AmountBuilderInput('Ukraine')">
+                        </div>
+                    </div>
+                </div>
+                
+                <a href="#step1" class="btn-back" id="prev">Back</a>
+                <a id="nextbuttonchange" href="" class="btn-orange btn-next disable" id="next">Next</a>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
