@@ -172,13 +172,22 @@
                         width: 100%;
                     }
 
-                    img {
+                    img,
+                    iframe {
                         position: absolute;
                         top: 0;
                         left: 0;
                         width: 100%;
                         height: 100%;
                         object-fit: cover;
+                    }
+
+                    iframe {
+                        padding: 15px 0px 15px 15px;
+
+                        @media (max-width: 991px) {
+                            padding: 0;
+                        }
                     }
                 }
 
