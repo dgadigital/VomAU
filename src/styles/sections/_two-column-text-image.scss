@@ -3,7 +3,6 @@
         background: url('../../assets/images/mountain-bg.png');
         background: linear-gradient(to top, $mid-grey 50%, transparent 50%), url('../../assets/images/mountain-bg.png') no-repeat center top / cover;
     }
-    font-family: 'Lato';
         .row-container{
         display: flex;
         flex-wrap: wrap;
@@ -30,17 +29,11 @@
             }
             &.with-image-icon{
                 text-align: center;
-                
                 h2{
-                    line-height: 30px;
-                }
-                p{
-                    margin: 30px;
+                    font-size: 25px;
                 }
                 img{
-                    display: block;
-                    
-                    margin: 0px auto 20px auto;
+                    padding-bottom: 20px;
                 }
 
                 @media (max-width: 991px){
