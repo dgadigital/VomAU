@@ -1,0 +1,169 @@
+.cta-banner {
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    .container {
+        @media (max-width: 991px) {
+            max-width: 100%;
+        }
+    }
+
+    .banner-wrapper {
+        position: relative;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        min-height: 215px;
+        box-shadow: 0px 18px 27px rgba(0, 0, 0, 0.122132);
+
+        background-position: left;
+        background-repeat: no-repeat;
+        background-size: cover;
+    
+
+        @media (max-width: 767px) {
+            padding-top: 30px;
+            padding-bottom: 30px;
+            background-position: left -100px center;
+        }
+
+        .logo {
+            width: 50%;
+            padding-left: 20px;
+            padding-right: 20px;
+
+            @media (max-width: 767px) {
+                width: 100%;
+                padding-bottom: 20px;
+                text-align: center;
+            }
+
+            @media (max-width: 499px) {
+                
+               
+            }
+        }
+
+        .text {
+            width: 50%;
+            padding-right: 20px;
+            padding-left: 20px;
+
+            @media (max-width: 767px) {
+                width: auto;
+                text-align: center;
+            }
+
+            @media (max-width: 499px) {
+                
+               
+            }
+
+            &.white {
+                h3 {
+                    color: #fff;
+                }
+
+                p {
+                    color: #fff;
+                }
+            }
+
+            &.dark {
+                h3 {
+                    color: $text-color;
+                }
+
+                p {
+                    color: $text-color;
+                }
+            }
+
+            h3 {
+                text-transform: initial;
+                font-size: 28px;
+
+                @media (max-width: 1199px) {
+                    font-size: 22px;
+                }
+            }
+
+            .btn-solid {
+                @media (max-width: 1199px) {
+                    padding-top: 5px;
+                    padding-bottom: 5px;
+                    padding-left: 30px;
+                    padding-right: 30px;
+                }
+            }
+        }
+
+        &.show-bottom-left-dark {
+            .bottom-left-dark {
+                display: block;
+            }
+        }
+
+        &.show-bottom-right-dark {
+            .bottom-right-dark {
+                display: block;
+            }
+        }
+
+        &.show-bottom-right-light {
+            .bottom-right-light {
+                display: block;
+            }
+        }
+
+        &.show-top-left-dark {
+            .top-left-dark {
+                display: block;
+            }
+        }
+
+        &.show-top-left-light {
+            .top-left-light {
+                display: block;
+            }
+        }
+
+        .top-left-light,
+        .top-left-dark {
+            display: none;
+            position: absolute;
+            top: -45px;
+            left: -5px;
+
+            @media (max-width: 767px) {
+                width: 100px;
+            }
+        }
+
+        .bottom-right-light,
+        .bottom-right-dark{
+            display: none;
+            position: absolute;
+            right: -10px;
+            bottom: -43px;
+
+            @media (max-width: 767px) {
+                width: 100px;
+            }
+        }
+
+        .bottom-left-dark {
+            display: none;
+            position: absolute;
+            bottom: -20px;
+            left: 0;
+
+            @media (max-width: 767px) {
+                width: 100px;
+            }
+        }
+    }
+}

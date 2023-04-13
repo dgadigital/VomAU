@@ -30,7 +30,8 @@
   'components/buttons',
   'components/contact-form7',
   'components/forms',
-  'components/tabs';
+  'components/tabs',
+  'components/recent-post-boxes';
 
 // 6. Page-specific styles
 @import
@@ -64,4 +65,6 @@
   'sections/color-icon-box',
   'sections/global-need',
   'sections/stories-slider',
-  'sections/rolling-number'; 
+  'sections/rolling-number',
+  'sections/recent-post-type',
+  'sections/cta-banner'; 
