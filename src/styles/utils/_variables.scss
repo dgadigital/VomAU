@@ -59,6 +59,12 @@ $dark-orange:#FF9C51 !default;
 $mid-orange: #FFBA85 !default;
 $light-orange: #EEDEA9 !default;
 
+/// Boxes
+/// @type Color
+$box-green: #4BA088;
+$box-orange: #FF9C51;
+$box-blue: #7E9CCB;
+
 /// Relative or absolute URL where all assets are served from
 /// @type String
 /// @example scss - When using a CDN

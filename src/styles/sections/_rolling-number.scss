@@ -1,0 +1,88 @@
+.rolling-number {
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    .container {
+        @media(max-width: 991px){
+            max-width: 100%;
+        }
+    }
+
+    .counter-wrapper {
+        display: flex;
+        justify-content: space-evenly;
+
+        @media(max-width: 767px){
+            flex-direction: column;
+        }
+
+        &.green {
+            p {
+                color: $dark-green;
+            }
+        }
+
+        .item {
+            text-align: center;
+
+            @media(max-width: 767px){
+                padding-bottom: 30px;
+
+                &:last-child {
+                    padding-bottom: 0;
+                }
+            }
+
+            p {
+                width: 270px;
+                margin: 0 auto;
+                
+                @media(max-width: 1199px){
+                    width: 250px;
+                    max-width: 100%;
+                }
+                
+                &.number {
+                    margin-bottom: 0;
+                    width: auto;
+                    font-family: $font-lato-bold;
+                    font-size: 120px;
+                    line-height: 120px;
+
+                    @media(max-width: 1199px){
+                        font-size: 90px;
+                        line-height: 90px;
+                    }
+
+                    @media(max-width: 991px){
+                        font-size: 70px;
+                        line-height: 70px;
+                    }
+
+                    @media(max-width: 991px){
+                        font-size: 55px;
+                        line-height: 55px;
+                    }
+                }
+
+                &.title {
+                    width: auto;
+                    margin-bottom: 10px;
+                    font-family: $font-lato-bold;
+                    text-transform: uppercase;
+                    font-size: 30px;
+
+                    @media(max-width: 991px){
+                        font-size: 25px;
+                        margin-bottom: 5px;
+                    }
+
+                    @media(max-width: 767px){
+                        font-size: 20px;
+                        margin-bottom: 5px;
+                    }
+                }
+            }
+        }
+    }
+}
