@@ -59,16 +59,3 @@
     background: linear-gradient(to top,#f7f7f7 96%,transparent 50%),url(../../assets/images/mountain-bg.png) no-repeat center top/contain;
   }
 }
-
-.bg-grey-vertical {
-  background: url(../../assets/images/vertical-grey-background.png);
-  background: -webkit-gradient(linear, left bottom, left top, color-stop(0%, #f7f7f7), color-stop(0%, transparent)), url(../../assets/images/vertical-grey-background.png) no-repeat center;
-  background-size: 90%;
-  height: 100%;
-  @media screen and (max-width: 1300px) {
-    background: url(../../assets/images/vertical-grey-background.png);
-    background: -webkit-gradient(linear, left bottom, left top, color-stop(0%, #f7f7f7), color-stop(0%, transparent)), url(../../assets/images/vertical-grey-background.png) no-repeat center;
-    background-size: cover;
-    height: auto;
-  }
-}
