@@ -1,0 +1,255 @@
+.main-banner {
+    padding-top: 0;
+    padding-bottom: 30px;
+      
+    .main-banner-wrapper {
+        padding-top: 50px;
+        padding-bottom: 150px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        overflow: hidden;
+    
+        @media (max-width: 1700px) {
+            background-position: left -60px center;
+        }
+    }
+
+    .container {
+        @media (max-width: 991px) {
+            max-width: 100%;
+        }
+    }
+
+    .large-image {
+
+        .banner-wrapper {
+            position: relative;
+
+            .text {
+                // width: initial;
+                z-index: 1;
+
+                .text-wrapper {
+                    padding-top: 50px;
+                    
+                    @media (max-width: 1199px) {
+                        padding-top: 0;
+                    }
+                }
+            }
+
+            .image {
+                min-height: 470px;
+                text-align: left;
+                z-index: 0;
+
+                @media (max-width: 1199px) {
+                    display: flex;
+                    align-items: center;
+                }
+
+                @media (max-width: 991px) {
+                    min-height: 350px;
+                }
+
+                @media (max-width: 767px) {
+                    padding-top: 30px;
+                    min-height: auto;
+                }
+
+                img {
+                    position: absolute;
+                    top: 0;
+                    right: -140px;
+
+                    @media (max-width: 1199px) {
+                        position: initial;
+                    }
+
+                    @media (max-width: 767px) {
+                        width: 80%;
+                        margin: 0 auto;
+                    }
+                }
+            }
+        }
+    }
+    
+    .banner-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        @media (max-width: 767px) {
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .text {
+            width: 46%;
+
+            @media (max-width: 767px) {
+                width: 100%;
+            }
+        }
+
+        .image {
+            min-height: 425px;
+            width: 54%;
+            text-align: right;
+
+            @media (max-width: 991px) {
+                min-height: auto;
+            }
+
+            @media (max-width: 767px) {
+                padding-top: 30px;
+                width: 100%;
+                text-align: center;
+            }
+    
+            &.offset {
+                margin-left: -100px;
+            }
+        }
+    }
+
+    h2 {
+        font-family: $font-lato-regular;
+    }
+
+    .btn-wrapper {
+        padding-top: 20px;
+
+        .btn-solid:first-child {
+            margin-right: 20px;
+            @media (max-width: 767px) {
+                margin-right: 10px;
+            }
+        }
+    }
+
+
+    &-slider {
+        margin-top: -140px;
+
+        @media (max-width: 767px) {
+            margin-top: -50px;
+        }
+
+        .container {
+            @media (min-width: 1200px) {
+                max-width: 1218px;
+            }
+
+            @media (max-width: 1199px) {
+                max-width: 1035px;
+            }
+        }
+
+        .banner-slider {
+            .item {
+                display: flex;
+                background: #FFFFFF;
+                margin-bottom: 50px;
+                margin-left: 40px;
+                margin-right: 40px;
+                box-shadow: 0px 18px 27px rgba(0, 0, 0, 0.122132);
+
+                @media (max-width: 767px) {
+                    flex-direction: column;
+                    margin-left: 20px;
+                    margin-right: 20px;
+                }
+
+                .image {
+                    width: 52%;
+                    position: relative;
+
+                    @media (max-width: 767px) {
+                        padding-top: 57%;
+                        width: 100%;
+                    }
+
+                    img {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
+
+                .text {
+                    position: relative;
+                    display: flex;
+                    align-items: center;
+                    width: 48%;
+                    padding: 80px 40px 40px 40px;
+
+                    @media (max-width: 767px) {
+                        width: 100%;
+                    }
+                    
+                    .post-type {
+                        position: absolute;
+                        top: 0;
+                        left: 50px;
+                        display: flex;
+                        align-items: center;
+                        padding-left: 10px;
+                        padding-right: 10px;
+                        padding-bottom: 15px;
+                        padding-top: 15px;
+                        font-size: 14px;
+                        color: #fff;
+                        text-transform: uppercase;
+                        background-color: $dark-green;
+                        border-bottom-right-radius: 10px;
+                        border-bottom-left-radius: 10px;
+
+                        img {
+                            margin-right: 6px;
+                        }
+                    }
+
+                    .text-wrapper {
+                        
+                        p {
+                            padding-top: 5px;
+                        }
+
+                        .btn-green {
+                            margin-top: 5px;
+                            padding-top: 10px;
+                            padding-bottom: 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .slick-dots {
+        margin-top: -40px;
+
+        li {
+            margin: 0 0.5rem;
+
+            .slick-active {
+                button {
+                    background-color: $text-color;
+                }
+            }
+        }
+
+        button {
+            width: 10px;
+            height: 10px;
+            background-color: #fff;
+            border: 1px solid $text-color;
+        }
+    }
+}

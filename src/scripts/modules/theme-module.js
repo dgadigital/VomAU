@@ -5,15 +5,69 @@ AppName.Modules.ThemeModule = (function () {
   //////////////////////
   // Private Methods //
   ////////////////////
-  const _privateMethod = () => {
-    // private stuff
 
-    // const swiper = new Swiper('.swiper-container', {
-    //   pagination: {
-    //     el: '.swiper-pagination',
-    //   },
-    // });
-  };
+  var _rollingNumber = () => {
+
+    var roller = $( ".roller" );
+    var section = document.getElementById("counter-wrapper")
+
+    $(window).on('load scroll', function() {
+
+      roller.each(function(){
+        var number = $(this).attr('data-number');
+        $(this).attr('data-number', number)
+
+      });
+
+      if (isInViewport(section)) {
+        runRolling();
+      }
+    })
+
+    function isInViewport(el) {
+      const rect = el.getBoundingClientRect();
+      return (
+          rect.top >= 0 &&
+          rect.left >= 0 &&
+          rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+          rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+      );
+    }
+
+    function runRolling() {
+      roller.each(function(){ 
+       
+        var number = $(this).attr('data-number');        
+        $(this).attr('value',number);
+      });
+    }
+  }
+
+  var _storiesSlides = () => {
+    $('.stories-slides').slick({
+      dots: true,
+      infinite: false,
+      slidesToShow: 1,
+      arrows: false,
+    });
+  }
+
+  var _mainBannerSlider = () => {
+    $('.banner-slider').on("init", function(event, slick){
+      if(slick.slideCount == 1) {
+        $('.slider-controls').hide();
+        $('.slick-dots').hide();
+      }
+    });
+
+    $('.banner-slider').slick({
+      dots: true,
+      infinite: false,
+      slidesToShow: 1,
+      arrows: false,
+    });
+  }
+
   var _stickynav = function () {
     $(window).on("load scroll", function () {
       if ($(this).scrollTop() > 10) {
@@ -38,8 +92,6 @@ AppName.Modules.ThemeModule = (function () {
         $('.dropdown-submenu .show').removeClass("show");
         $(this).removeClass('show');
       });
-    
-    
       return false;
     });
   }
@@ -80,7 +132,9 @@ AppName.Modules.ThemeModule = (function () {
   // Public Methods //
   ///////////////////
   const init = function () {
-    _privateMethod();
+    _rollingNumber();
+    _storiesSlides();
+    _mainBannerSlider();
     _tabs();
     _slider_section();
     _multi_level_menu();
