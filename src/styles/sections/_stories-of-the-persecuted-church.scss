@@ -1,5 +1,20 @@
 .stories-of-the-persecuted-church{
+    padding: 0;
     .row-container{
+        padding-top: 30px;
+        padding-bottom: 30px;
+        .bg {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transform: translateX(-50%);
+            height: 100%;
+            width: auto;
+            z-index: -1;
+        }
         h2{
             text-align: center;
             margin-bottom: 30px;

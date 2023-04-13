@@ -7,6 +7,9 @@
     <title>Our Story</title>
     <link rel="icon" href="./assets/images/favicon.ico">
     <link rel="stylesheet" type="text/css" href="./styles/main.min.css">
+    <script>document.getElementsByTagName("html")[0].className += " js";</script>
+    <link rel="stylesheet" href="assets/timeline-assets/css/style.css">
+
 </head>
 <body>
     <main>
@@ -107,7 +110,7 @@
             </div>
         </section>
 
-        <section class="our-history box-shadow bg-mid-grey">
+        <!-- <section class="our-history box-shadow bg-mid-grey">
             <div class="container">
                 <div class="tab-container">
                     <ul class="tab-menu text-center text-green">
@@ -141,7 +144,102 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> -->
+
+        <section class="our-history box-shadow  cd-h-timeline js-cd-h-timeline margin-bottom-md ">
+          <div class="title text-center py-5">
+            <h3>OUR HISTORY</h3>
+          </div>
+            <div class="cd-h-timeline__container container history-container">
+              
+              <div class="cd-h-timeline__dates">
+                <div class="cd-h-timeline__line">
+                  <ol>
+                    <li><a href="#0" data-date="28/02/1909" class="cd-h-timeline__date cd-h-timeline__date--selected">1909</a></li>
+                    <li><a href="#0" data-date="28/02/1937" class="cd-h-timeline__date">1937</a></li>
+                    <li><a href="#0" data-date="20/04/1941" class="cd-h-timeline__date">1941</a></li>
+                    <li><a href="#0" data-date="20/05/1950" class="cd-h-timeline__date">1950</a></li>
+                    <li><a href="#0" data-date="20/05/1960" class="cd-h-timeline__date">1960</a></li>
+                    <li><a href="#0" data-date="20/05/1969" class="cd-h-timeline__date">1969</a></li>
+                    <li></li>
+                  </ol>
+        
+                  <span class="cd-h-timeline__filling-line" aria-hidden="true"></span>
+                </div> <!-- .cd-h-timeline__line -->
+              </div> <!-- .cd-h-timeline__dates -->
+                
+              <ul>
+                <li><a href="#0" class="prev-history  shadow-sm  text-replace cd-h-timeline__navigation our-history-navigation cd-h-timeline__navigation--prev cd-h-timeline__navigation--inactive">Prev</a></li>
+                <li><a href="#0" class="next-history shadow-sm text-replace cd-h-timeline__navigation our-history-navigation cd-h-timeline__navigation--next">Next</a></li>
+              </ul>
+            </div> <!-- .cd-h-timeline__container -->
+        
+            <div class="cd-h-timeline__events">
+              <ol>
+                <li class="cd-h-timeline__event cd-h-timeline__event--selected text-component">
+                  <div class="cd-h-timeline__event-content container">
+                    <h2 class="cd-h-timeline__event-title">Richard was born</h2>
+                    <em class="cd-h-timeline__event-date">24th March, 1909</em>
+                    <p class="cd-h-timeline__event-description our-history-description "> 
+                      Richard Wurmbrand is born on 24 March in Bucharest, Romania, the youngest of four boys in a jewish family.
+                    </p>
+                  </div>
+                </li>
+        
+                <li class="cd-h-timeline__event text-component">
+                  <div class="cd-h-timeline__event-content container">
+                    <h2 class="cd-h-timeline__event-title">Event title here</h2>
+                    <em class="cd-h-timeline__event-date">February 28th, 2014</em>
+                    <p class="cd-h-timeline__event-description our-history-description color-contrast-medium"> 
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus dolores porro doloribus.
+                    </p>
+                  </div>
+                </li>
+        
+                <li class="cd-h-timeline__event text-component">
+                  <div class="cd-h-timeline__event-content container">
+                    <h2 class="cd-h-timeline__event-title">Event title here</h2>
+                    <em class="cd-h-timeline__event-date">March 20th, 2014</em>
+                    <p class="cd-h-timeline__event-description our-history-description color-contrast-medium"> 
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus dolores porro doloribus.
+                    </p>
+                  </div>
+                </li>
+        
+                <li class="cd-h-timeline__event text-component">
+                  <div class="cd-h-timeline__event-content container">
+                    <h2 class="cd-h-timeline__event-title">Event title here</h2>
+                    <em class="cd-h-timeline__event-date">May 20th, 2014</em>
+                    <p class="cd-h-timeline__event-description our-history-description color-contrast-medium"> 
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus dolores porro doloribus.
+                    </p>
+                  </div>
+                </li>
+        
+                <li class="cd-h-timeline__event text-component">
+                  <div class="cd-h-timeline__event-content container">
+                    <h2 class="cd-h-timeline__event-title">Event title here</h2>
+                    <em class="cd-h-timeline__event-date">July 9th, 2014</em>
+                    <p class="cd-h-timeline__event-description our-history-description color-contrast-medium"> 
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus dolores porro doloribus.
+                    </p>
+                  </div>
+                </li>
+
+                <li class="cd-h-timeline__event text-component">
+                  <div class="cd-h-timeline__event-content container">
+                    <h2 class="cd-h-timeline__event-title">Event title here</h2>
+                    <em class="cd-h-timeline__event-date">July 9th, 2014</em>
+                    <p class="cd-h-timeline__event-description our-history-description color-contrast-medium"> 
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus dolores porro doloribus.
+                    </p>
+                  </div>
+                </li>
+        
+                
+              </ol>
+            </div> <!-- .cd-h-timeline__events -->
+          </section>
 
         <section class="vom-office">
             <div class="container">
@@ -176,6 +274,10 @@
     </main>
 
     <!-- build:js scripts/about.min.js -->
+    <script src="assets/timeline-assets/js/util.js"></script> <!-- util functions included in the CodyHouse framework -->
+  <script src="assets/timeline-assets/js/swipe-content.js"></script> <!-- A Vanilla JavaScript plugin to detect touch interactions -->
+  <script src="assets/timeline-assets/js/main.js"></script>
+  <script src="assets/timeline-assets/js/main.js"></script>
     <script src="./scripts/vendors/jquery.min.js"></script>
     <script src="./scripts/vendors/popper.min.js"></script>
     <script src="./scripts/vendors/bootstrap.min.js"></script>
@@ -184,6 +286,7 @@
     <script src="./scripts/core/base.js"></script>
     <script src="./scripts/modules/theme-module.js"></script>
     <script src="./scripts/bootstrapper.js"></script>
+    
     <!-- endbuild -->
 </body>
 </html>
