@@ -147,18 +147,30 @@
                         <input type="text" placeholder="Search by keyword" id="search-box">
                         <button id="search-btn" class="btn btn-solid green"> <img src="./assets/images/search-white.png" alt="search icon"></button>
                         <div class="dropdown">
-                            <button class="dropdown-toggle text-left" type="button" id="filter-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Filter by Category</button>
+                            <input class="dropdown-toggle text-left" type="text" id="filter-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" placeholder="Filter by Category">
                             <div class="dropdown-menu" aria-labelledby="filter-dropdown">
                                 <div class="dropdown-item">
-                                    <label class="input-container"><input type="checkbox" class="category-option" value="cute"><span class="checkmark"></span> Cute</label>
+                                    <label class="input-container"><input type="checkbox" class="category-option" value="cute"><span class="checkmark"></span> Bibles Plus</label>
                                 </div>
                                 <div class="dropdown-item">
-                                    <label class="input-container"><input type="checkbox" class="category-option" value="wild"><span class="checkmark"></span> Wild</label>
+                                    <label class="input-container"><input type="checkbox" class="category-option" value="wild"><span class="checkmark"></span> Families of Martyrs</label>
+                                </div>
+                                <div class="dropdown-item">
+                                    <label class="input-container"><input type="checkbox" class="category-option" value="wild"><span class="checkmark"></span> Christmas Care</label>
+                                </div>
+                                <div class="dropdown-item">
+                                    <label class="input-container"><input type="checkbox" class="category-option" value="wild"><span class="checkmark"></span> Front Line Ministry</label>
+                                </div>
+                                <div class="dropdown-item">
+                                    <label class="input-container"><input type="checkbox" class="category-option" value="wild"><span class="checkmark"></span> Bibles and Literature</label>
+                                </div>
+                                <div class="dropdown-item">
+                                    <label class="input-container"><input type="checkbox" class="category-option" value="wild"><span class="checkmark"></span> Other</label>
                                 </div>
                             </div>
                         </div>
                         <div class="dropdown">
-                            <button class="dropdown-toggle text-left" type="button" id="filter-dropdown-country" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Filter by Country</button>
+                            <input class="dropdown-toggle text-left" type="text" id="filter-dropdown-country" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" placeholder="Filter by Country">
                             <div class="dropdown-menu" aria-labelledby="filter-dropdown-country">
                                 <div class="dropdown-item">
                                     <label class="input-container"><input type="checkbox" class="country-option" value="australia"><span class="checkmark"></span> Australia</label>
@@ -168,15 +180,16 @@
                                 </div>
                             </div>
                         </div>
+
+                        
                     </div>
 
                     <div class="image-container">
-                        <div class="row">
+                         <div class="row">
                             <div class="image" data-category="cute" data-country="australia">
                                 <img src="./assets/images/stories-1.png" alt="New Heart Baptist" >
                                 <h5>cute bird animal</h5>
                             </div>
-                            
                             <div class="image" data-category="wild" data-country="philippines">
                                 <img src="./assets/images/stories-2.png" alt="New Heart Baptist" >
                                 <h5>cute bird animal</h5>
@@ -187,7 +200,6 @@
                                 <img src="./assets/images/stories-1.png" alt="New Heart Baptist" >
                                 <h5>cute bird animal</h5>
                             </div>
-                            
                             <div class="image" data-category="wild" data-country="philippines">
                                 <img src="./assets/images/stories-1.png" alt="New Heart Baptist" >
                                 <h5>wild reptile animal</h5>
@@ -316,7 +328,14 @@
         </div>
     </footer>
     <!-- build:js scripts/about.min.js -->
+ 
     <script src="./scripts/vendors/jquery.min.js"></script>
+    <script>
+       
+        $('.dropdown-menu').click(function(e){
+            e.stopPropagation();
+        });
+    </script>
     <script src="./scripts/vendors/popper.min.js"></script>
     <script src="./scripts/vendors/bootstrap.min.js"></script>
     <script src="./scripts/vendors/swiper.min.js"></script>
