@@ -6,6 +6,20 @@ AppName.Modules.ThemeModule = (function () {
   // Private Methods //
   ////////////////////
 
+  var _navbarToggler = () => {
+    var toggler = $('.navbar-toggler');
+    var navbarCollapse = $('.navbar-collapse');
+
+    $('.navbar-toggler').click((e)=> {
+      if (navbarCollapse.hasClass('show')) {
+        toggler.attr('aria-expanded', false);
+      } else {
+        toggler.attr('aria-expanded', true);
+      }
+      navbarCollapse.toggleClass('show');
+    })
+  }
+
   var _rollingNumber = () => {
 
     var roller = $( ".roller" );
@@ -132,6 +146,7 @@ AppName.Modules.ThemeModule = (function () {
   // Public Methods //
   ///////////////////
   const init = function () {
+    _navbarToggler();
     _rollingNumber();
     _storiesSlides();
     _mainBannerSlider();
