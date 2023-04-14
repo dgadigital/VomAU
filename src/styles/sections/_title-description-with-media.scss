@@ -3,9 +3,22 @@
         h2{
             font-size: 30px;
         }
-        .btn-solid{
-            &:first-of-type{
-                margin-right: 20px;
+        .color-mark{
+            display: inline-block;
+            padding-top: 13px;
+            padding-bottom: 13px;
+            padding-left: 50px;
+            padding-right: 50px;
+            color: #fff;
+            font-size: 16px;
+            border-radius: 10px;
+            margin: 0px 10px;
+
+            &.dark-orange{
+                background-color: #FF5000;
+            }
+            &.red{
+                background-color: #DA322A;
             }
         }
 

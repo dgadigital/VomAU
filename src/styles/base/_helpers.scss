@@ -49,6 +49,7 @@
 }
 
 .bg-mountain {
+  padding-top: 100px;
   background: linear-gradient(to bottom,transparent 0px,#F7F7F7 200px),url(../../assets/images/mountain-bg.png) no-repeat center top/contain;
   @media (max-width: 768px){
     background: linear-gradient(to bottom,transparent 0px,#F7F7F7 100px),url(../../assets/images/mountain-bg.png) no-repeat center top/contain;
@@ -57,6 +58,7 @@
 
 
 .bg-mountain-white {
+  padding-top: 100px;
   background: linear-gradient(to bottom,transparent 0px,#F7F7F7 200px),url(../../assets/images/mountain-white-bg.png) no-repeat center top/contain;
   @media (max-width: 768px){
     background: linear-gradient(to bottom,transparent 0px,#F7F7F7 100px),url(../../assets/images/mountain-white-bg.png) no-repeat center top/contain;

@@ -10,15 +10,15 @@
 </head>
 <body>
     <main>
-        <section class="two-column-form-iframe-description form bg-mountain-white reverse">
+        <section class="two-column-form-iframe-description form reverse">
             <div class="container">
                 <div class="row-container grid-gap-75">
                     <div class="iframe-container box-shadow">
-                        <iframe src="./donate-form.html" frameborder="0" id="donate-form-iframe"></iframe>
+                        <iframe src="./donate-form.html" frameborder="0" id="donate-form-iframe" width="100%"></iframe>
                     </div>
                     <div class="sidebar-container">
                         <img src="./assets/images/charity-logo.png" alt="Charity Logo">
-                        <h3>AUSTRALIAN-BASED REGISTERED CHARITY</h3>
+                        <h2>AUSTRALIAN-BASED REGISTERED CHARITY</h2>
                         
                         <ul class="check-list green">
                             <li>Since 1969, Voice of the Martyrs Australia has been giving hope to persecuted Christians around the world.</li>
@@ -30,7 +30,40 @@
             </div>
         </section>
 
-        <section class="two-column-text-image">
+        
+        <section class="rolling-number">
+            <div class="container">
+      
+              <div class="counter-wrapper black" id="counter-wrapper">
+                
+                <div class="item">
+                  <p class="number" tesst="asd">
+                    <layflags-rolling-number class="roller" style="--roll-duration:2000ms" value="0" data-number="167"></layflags-rolling-number>
+                  </p>
+                  <p class="title">PROJECTS</p>
+                  <p>In 2022 VOM Australia financially supported 167 projects in 33 countries.</p>
+                </div>
+                <div class="item">
+                  <p class="number">
+                    <layflags-rolling-number class="roller" style="--roll-duration:2000ms" value="0" data-number="226"></layflags-rolling-number>
+                  </p>
+                  <p class="title">EVANGELISTS</p>
+                  <p>In 2022 VOM Australia supported 226 evangelists and Bible college students in restricted nations.</p>
+                </div>
+                <div class="item">
+                  <p class="number">
+                    <layflags-rolling-number class="roller" style="--roll-duration:2000ms" value="0" data-number="31650"></layflags-rolling-number>
+                  </p>
+                  <p class="title">BIBLES</p>
+                  <p>In 2022 VOM Australia distributed more than 31,650 Bibles.</p>
+                </div>
+      
+              </div>
+      
+            </div>
+        </section>
+
+        <section class="two-column-text-image bg-mountain">
             <div class="container">
                 <div class="row-container reverse">
                     <div class="text-container">
@@ -68,6 +101,70 @@
                 </div>
             </div>
         </section>
+
+        <section class="why-section border-top">
+            <div class="container">
+                <div class="text-center">
+                    <h2>WHY GIVE TO VOICE OF THE MARTYRS?</h2>
+                </div>
+
+                <div class="post-boxes">
+                    <div class="post-card box-shadow">
+                      <div class="group">
+                        <div class="image">
+                          <img src="./assets/images/post-image.png">
+                        </div>
+                        <div class="outer-wrapper">
+                          <div class="title-wrapper">
+                            <p class="title">WE HAVE MORE THAN 50 YEARS HISTORY</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="text">
+                        <p class="description">
+                            Since 1969, Voice of the Martyrs Australia has been giving hope to persecuted Christians around the world. 
+                        </p>
+                      </div>
+                    </div>
+                    
+                    <div class="post-card box-shadow">
+                        <div class="group">
+                          <div class="image">
+                            <img src="./assets/images/donation-gifted.png">
+                          </div>
+                          <div class="outer-wrapper">
+                            <div class="title-wrapper">
+                              <p class="title">100% OF ALL DONATIONS ARE GIFTED </p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="text">
+                          <p class="description">
+                            You can trust that 100% of donations given to Bibles and Literature, Front Line Ministry, Families of Martyrs, VOMedical or any of our campaigns, is used to fund overseas projects. 
+                          </p>
+                        </div>
+                      </div>
+                      
+                    <div class="post-card box-shadow">
+                        <div class="group">
+                          <div class="image">
+                            <img src="./assets/images/registered-charity-org.png">
+                          </div>
+                          <div class="outer-wrapper">
+                            <div class="title-wrapper">
+                              <p class="title">REGISTERED CHARITY ORGANISATION</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="text">
+                          <p class="description">
+                            We are an Australian-based registered charity. VOM is an endorsed deductible gift recipient (DGR) by the Australian government. This means you can claim tax deductions for all donations of $2 or more (Aus residents only). 
+                          </p>
+                        </div>
+                      </div>
+                </div>
+            </div>
+        </section>
     </main>
     <!-- build:js scripts/about.min.js -->
     <script src="./scripts/vendors/jquery.min.js"></script>
@@ -78,6 +175,7 @@
     <script src="./scripts/core/base.js"></script>
     <script src="./scripts/modules/theme-module.js"></script>
     <script src="./scripts/bootstrapper.js"></script>
+    <script type="module" src="./scripts/vendors/rolling-number.js"></script>
     <!-- endbuild -->
 </body>
 </html>
