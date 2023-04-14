@@ -1,8 +1,11 @@
-.stories-of-the-persecuted-church{
-    padding: 0;
-    .row-container{
-        padding-top: 30px;
-        padding-bottom: 30px;
+.stories-of-the-persecuted-church {
+    padding-top: 0px;
+    padding-bottom: 30px;
+
+    .container {
+        position: relative;
+        max-width: 100%;
+
         .bg {
             position: absolute;
             top: 0;
@@ -15,33 +18,57 @@
             width: auto;
             z-index: -1;
         }
-        h2{
-            text-align: center;
-            margin-bottom: 30px;
+    }
+
+    .title-wrapper {
+        padding-top: 70px;
+        padding-bottom: 30px;
+        padding-left: 20px;
+        padding-right: 20px;
+        z-index: 1;
+    }
+
+    .stories-container {
+        max-width: 970px;
+        margin: 0 auto;
+        padding-bottom: 20px;
+
+        .item {
+            padding-left: 20px;
+            padding-right: 20px;
         }
-        .image-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
+
+        .image {
+            position: relative;
+            padding-top: 42%;
 
             img {
-            max-width: 100%;
-            }
-        
-            img:first-child {
-                flex: 1;
-            }
-            
-            img:last-child {
-                flex: 2;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
             }
         }
-        
-        .text-container{
-            margin: 30px;
-            h4{
-                font-weight: 600;
+
+        .content {
+            padding: 30px 30px 0 30px;
+
+            @media (max-width: 767px) {
+                padding: 30px 0px 0 0px;
+            }
+
+            p {
+                &.title {
+                    font-family: $font-lato-bold;
+                    font-size: 20px;
+                }
+            }
+
+            .btn-solid {
+                margin-top: 10px;
             }
         }
-    }   
+    }
 }
