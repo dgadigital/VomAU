@@ -33,8 +33,10 @@ AppName.Modules.ThemeModule = (function () {
 
       });
 
-      if (isInViewport(section)) {
-        runRolling();
+      if ($('#counter-wrapper').length) {
+        if (isInViewport(section)) {
+          runRolling();
+        }
       }
     })
 
@@ -46,6 +48,7 @@ AppName.Modules.ThemeModule = (function () {
           rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
           rect.right <= (window.innerWidth || document.documentElement.clientWidth)
       );
+
     }
 
     function runRolling() {
