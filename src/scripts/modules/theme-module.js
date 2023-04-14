@@ -149,10 +149,18 @@ AppName.Modules.ThemeModule = (function () {
       setInterval(resizeIframe, 500);
 
   }
+
+  var _masonry = function() {
+    $('.grid').masonry({
+      // options
+      itemSelector: '.grid-item',
+    });
+  }
   /////////////////////
   // Public Methods //
   ///////////////////
   const init = function () {
+    _masonry();
     _rollingNumber();
     _storiesSlides();
     _mainBannerSlider();
