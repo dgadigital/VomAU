@@ -1,9 +1,5 @@
 .two-column-text-image{
-    &.bg-mountain{
-        background: url('../../assets/images/mountain-bg.png');
-        background: linear-gradient(to top, $mid-grey 50%, transparent 50%), url('../../assets/images/mountain-bg.png') no-repeat center top / cover;
-    }
-        .row-container{
+    .row-container{
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
@@ -79,7 +75,7 @@
             width: 79%;
         }
     }
-     .column-content{
+    .column-content{
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
@@ -138,7 +134,7 @@
             font-weight: 900;
             font-size: 25px;
         }
-     }
+    }
 
 
 }
