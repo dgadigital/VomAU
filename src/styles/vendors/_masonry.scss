@@ -1,0 +1,47 @@
+.grid{
+    .grid-item{
+        display:inline;
+        padding: 10px;
+        box-sizing: border-box;
+
+        .img-container {
+            position: relative;
+            .image-title {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                padding: 15px 10px;
+                background-color: rgba(0, 0, 0, 0.5);
+                color: #fff;
+                text-align: left;
+                margin: 0;
+                font-size: 18px;
+                font-weight: 500;
+                box-sizing: border-box;
+            }
+            &:hover {
+                .image-title{
+                    background-color: rgba(62, 137, 116, 0.8);
+                }
+            }
+        }
+    }
+    @media (min-width: 500px) {
+        .grid-item {
+          width: 50%;
+        }
+    }
+      
+    @media (min-width: 1000px) {
+        .grid-item {
+          width: 33.333%;
+        }
+    }
+      
+    @media (min-width: 2100px) {
+        .grid-item {
+          width: 25%;
+        }
+    }
+}

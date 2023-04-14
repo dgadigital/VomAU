@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stories of the Persecuted Church</title>
-    <link rel="icon" href="./assets/images/favicon.ico">
+    <link rel="icon" href=".\assets\images\favicon.ico">
     <link rel="stylesheet" type="text/css" href="./styles/main.min.css">
 </head>
 <body>
@@ -14,7 +14,7 @@
             <div class="container">
                 <div class="top-navbar-wrapper">
                 <div class="header-logo">
-                    <a href="/"><img src="./assets/images/logo.png"></a>
+                    <a href="/"><img src=".\assets\images\logo.png"></a>
                 </div>
                 <div class="btn-wrapper">
                     <a href="/" class="btn btn-solid green">SUBSCRIBE</a>
@@ -109,7 +109,7 @@
                     <a href="#" class="nav-link">SHOP</a>
                     </li>
                     <li class="nav-item">
-                    <a href="#" class="nav-link"><img src="./assets/images/search.png"></a>
+                    <a href="#" class="nav-link"><img src=".\assets\images\search.png"></a>
                     </li>
                 </ul>
                 <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -125,40 +125,44 @@
 
     <div class="main">
         <section class="main-banner">
-        <div class="main-banner-wrapper" style="background-image: url('../assets/images/banner-bg.png');">
-            <div class="container">
-            <div class="banner-wrapper">
-                <div class="text">
-                <div class="text-wrapper">
-                    <h1>Stories of the Persecuted Christians</h1>
-                    <h2>Global stories from the persecuted church.</h2>
-                    <h2>Hear them. Pray for them.</h2>
-                </div>
-                </div>
-                <div class="image">
-                <img src="./assets/images/banner-1.png">
-                </div>
-            </div>
-            </div>
-        </div>
-        </section>
-        <section class="stories-of-the-persecuted-church ">
-            <div class="container">
-                <div class="row-container">
-                    <img src="./assets/images/stories-bg.png" class="bg">
-                    <h2>STORIES OF PERSECUTED CHRISTIANS</h2>
-                    <div class="image-container">
-                        <img src="./assets/images/stories-banner-img.png" alt="img for stories">
+            <div class="main-banner-wrapper" style="background-image: url('../assets/images/banner-bg.png');">
+                <div class="container">
+                <div class="banner-wrapper">
+                    <div class="text">
+                    <div class="text-wrapper">
+                        <h1>Stories of the Persecuted Christians</h1>
+                        <h2>Global stories from the persecuted church.</h2>
+                        <h2>Hear them. Pray for them.</h2>
                     </div>
-                    <div class="text-container">
-                        <h4>MYANMER: Bringing Aid to the Family of a Martyr</h4>
-                        <p>Pastor Nay dedicated his life to serving his community as a pastor. As part of the violent coup, the military burnt more than 160 houses and three church buildings in the Thantalang area. Despite the danger and chaos, Pastor Nay bravely rushed to help the victims during the attack.</p>
-                        <a href="#" class="btn btn-solid green">Read Article</a>
                     </div>
+                    <div class="image">
+                        <img src=".\assets\images\stories-banner-img.png">
+                    </div>
+                </div>
                 </div>
             </div>
         </section>
 
+        <section class="stories-of-the-persecuted-church">
+            <div class="container">
+                <img src=".\assets\images\stories-bg.png" class="bg">
+                <div class="title-wrapper text-center">
+                    <h3>STORIES OF PERSECUTED CHRISTIANS</h3>
+                </div>
+                <div class="stories-container">
+                    <div class="item">
+                        <div class="image">
+                            <img src=".\assets\images\story.png">
+                        </div>
+                        <div class="content">
+                            <p class="title">MYANMAR: Bringing Aid to the Family of a Martyr</p>
+                            <p>Pastor Nay dedicated his life to serving his community as a pastor. As part of the violent coup, the military burnt more than 160 houses and three church buildings in the Thantalang area. Despite the danger and chaos, Pastor Nay bravely rushed to help the victims during the attack.</p>
+                            <a href="/" class="btn btn-solid green">Read Article</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
         <section class="post-filter"> 
             <div class="container">
@@ -167,18 +171,30 @@
                         <input type="text" placeholder="Search by keyword" id="search-box">
                         <button id="search-btn" class="btn btn-solid green"> <img src="./assets/images/search-white.png" alt="search icon"></button>
                         <div class="dropdown">
-                            <button class="dropdown-toggle text-left" type="button" id="filter-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Filter by Category</button>
+                            <input class="dropdown-toggle text-left" type="text" id="filter-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" placeholder="Filter by Category">
                             <div class="dropdown-menu" aria-labelledby="filter-dropdown">
                                 <div class="dropdown-item">
-                                    <label class="input-container"><input type="checkbox" class="category-option" value="cute"><span class="checkmark"></span> Cute</label>
+                                    <label class="input-container"><input type="checkbox" class="category-option" value="cute"><span class="checkmark"></span> Bibles Plus</label>
                                 </div>
                                 <div class="dropdown-item">
-                                    <label class="input-container"><input type="checkbox" class="category-option" value="wild"><span class="checkmark"></span> Wild</label>
+                                    <label class="input-container"><input type="checkbox" class="category-option" value="wild"><span class="checkmark"></span> Families of Martyrs</label>
+                                </div>
+                                <div class="dropdown-item">
+                                    <label class="input-container"><input type="checkbox" class="category-option" value="wild"><span class="checkmark"></span> Christmas Care</label>
+                                </div>
+                                <div class="dropdown-item">
+                                    <label class="input-container"><input type="checkbox" class="category-option" value="wild"><span class="checkmark"></span> Front Line Ministry</label>
+                                </div>
+                                <div class="dropdown-item">
+                                    <label class="input-container"><input type="checkbox" class="category-option" value="wild"><span class="checkmark"></span> Bibles and Literature</label>
+                                </div>
+                                <div class="dropdown-item">
+                                    <label class="input-container"><input type="checkbox" class="category-option" value="wild"><span class="checkmark"></span> Other</label>
                                 </div>
                             </div>
                         </div>
                         <div class="dropdown">
-                            <button class="dropdown-toggle text-left" type="button" id="filter-dropdown-country" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Filter by Country</button>
+                            <input class="dropdown-toggle text-left" type="text" id="filter-dropdown-country" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" placeholder="Filter by Country">
                             <div class="dropdown-menu" aria-labelledby="filter-dropdown-country">
                                 <div class="dropdown-item">
                                     <label class="input-container"><input type="checkbox" class="country-option" value="australia"><span class="checkmark"></span> Australia</label>
@@ -189,88 +205,64 @@
                             </div>
                         </div>
 
+                    </section>
+                        
         <section class="grid-stories">
             <div class="container"> 
-                <div class="grid-wrapper">
-                    <div class="tall">
-                        <a href="#">
-                            <div class="img-container">
-                                <h2 class="image-title">SRI LANKA: Pastor's Home, Church in Danger</h2>
-                                <img src="./assets/images/stories-1.png" alt=""> 
-                            </div>
-                        </a>
+                <div class="grid">
+                    <div class="grid-item">
+                        <div class="img-container">
+                            <h2 class="image-title">SRI LANKA: Pastor's Home, Church in Danger</h2>
+                            <img src=".\assets\images\stories-1.png"/>
+                        </div>
                     </div>
-                    <div class="big">
-                        <a href="#">
-                            <div class="img-container">
-                                <h2 class="image-title">NIGER: A Burning Desire to Evangelise Muslims</h2>
-                                <img src="./assets/images/stories-2.png" alt="">
-                            </div>
-                        </a>
+                    <div class="grid-item">
+                        <div class="img-container">
+                            <h2 class="image-title">NIGER: A Burning Desire to Evangelise Muslims</h2>
+                            <img src=".\assets\images\stories-2.png"/>
+                        </div>
                     </div>
-                    <div class="normal">
-                        <a href="#">
-                            <div class="img-container">
-                                <h2 class="image-title">When Hate Crosses the Border</h2>
-                                <img src="./assets/images/stories-3.png" alt="">
-                            </div>
-                        </a>
+                    <div class="grid-item">
+                        <div class="img-container">
+                            <h2 class="image-title">When Hate Crosses the Border</h2>
+                            <img src=".\assets\images\stories-3.png"/>
+                        </div>
                     </div>
-                    <div class="tall">
-                        <a href="#">
-                            <div class="img-container">
-                                <h2 class="image-title">CUBA: Sledgehammers, Buldozers and Imprisonments Can't Stop the Gospel</h2>
-                                <img src="./assets/images/stories-4.png" alt="">
-                            </div>
-                        </a>
+                    <div class="grid-item">
+                        <div class="img-container">
+                            <h2 class="image-title">CUBA: Sledgehammers, Buldozers and Imprisonments Can't Stop the Gospel</h2>
+                            <img src=".\assets\images\stories-4.png"/>
+                        </div>
                     </div>
-                    <div class="normal">
-                        <a href="#">
+                    <div class="grid-item">
                         <div class="img-container">
                             <h2 class="image-title">LAOS: Aroun Voraphorn</h2>
-                            <img src="./assets/images/stories-5.png" alt="">
+                            <img src=".\assets\images\stories-5.png"/>
                         </div>
-                        </a>
                     </div>
-                    <div class="tall">
-                        <a href="#">
-                            <div class="img-container">
-                                <h2 class="image-title">PAKISTAN: Christian Schoolgirl Escapes from Kidnapper After a Year</h2>
-                                <img src="./assets/images/stories-6.png" alt="">
-                            </div>
-                        </a>
+                    <div class="grid-item">
+                        <div class="img-container">
+                            <h2 class="image-title">PAKISTAN: Christian Schoolgirl Escapes from Kidnapper After a Year</h2>
+                            <img src=".\assets\images\stories-6.png"/>
+                        </div>
                     </div>
-                    <div class="tall">
-                        <a href="#">
-                            <div class="img-container">
-                                <h2 class="image-title">PAKISTAN: 52 Days in Captivity</h2>
-                                <img src="./assets/images/stories-7.png" alt="">
-                            </div>
-                        </a>
+                    <div class="grid-item">
+                        <div class="img-container">
+                            <h2 class="image-title">PAKISTAN: 52 Days in Captivity</h2>
+                            <img src=".\assets\images\stories-7.png"/>
+                        </div>
                     </div>
-                    <div class="normal">
-                        <a href="#">
-                            <div class="img-container">
-                                <h2 class="image-title">UZBEKISTAN: Sisterhood of Undercover Disciple-Makers</h2>
-                                <img src="./assets/images/stories-8.png" alt="">
-                            </div>
-                        </a>
-                    </div> 
-                    <div class="big">
-                        <a href="#">
-                            <div class="img-container">
-                                <h2 class="image-title">LIBYA: Young Christian Convert Sentenced to Death</h2>
-                                <img src="./assets/images/stories-9.png" alt="">
-                            </div>
-                        </a>
+                    <div class="grid-item">
+                        <div class="img-container">
+                            <h2 class="image-title">UZBEKISTAN: Sisterhood of Undercover Disciple-Makers</h2>
+                            <img src=".\assets\images\stories-8.png"/>
+                        </div>
                     </div>
-                    <div class="tall">
-                        <a href="#">
-                            <div class="img-container">
-                                <h2 class="image-title">NIGERIA: Three Christians Murdered by ISWAP Militants in Chibok</h2>
-                                <img src="./assets/images/stories-10.png" alt="">
-                            </div>
-                        </a>
+                    <div class="grid-item">
+                        <div class="img-container">
+                            <h2 class="image-title">NIGERIA: Three Christians Murdered by ISWAP Militants in Chibok</h2>
+                            <img src=".\assets\images\stories-9.png"/>
+                        </div>
                     </div>
                 </div>
                 <div class="button-container text-center">
@@ -278,17 +270,37 @@
                 </div>
             </div>
         </section>
-    </div>
+
+        <section class="cta-banner">
+            <div class="container">
+                <div class="banner-wrapper show-top-left-dark show-bottom-right-dark mt-0" style="background-image: url('./assets/images/cta-banner.png'); margin-top: -200px; margin-bottom: 0px;">
+                <img src=".\assets\images\bottom-left-dark.png" class="bottom-left-dark">
+                <img src=".\assets\images\bottom-right-dark.png" class="bottom-right-dark">
+                <img src=".\assets\images\bottom-right-light.png" class="bottom-right-light">
+                <img src=".\assets\images\top-left-dark.png" class="top-left-dark">
+                <img src=".\assets\images\top-left-light.png" class="top-left-light">
+                <div class="logo">
+                    <img src=".\assets\images\cta-logo.png">
+                </div>
+                <!-- white or dark text-color -->
+                <div class="text white">
+                    <h3>Choose where 100% of your gift will go</h3>
+                    <p>Learn more about our four core Project Funds, where 100% of your donation will contribute to supporting projects in the field.</p>
+                    <a href="/" class="btn btn-solid orange">Learn More</a>
+                </div>
+                </div>
+            </div>
+        </section>
 
     <footer>
         <div class="footer-main">
         <div class="container">
             <div class="row upper">
             <div class="col-md-4">
-                <a href="#"><img src="./assets/images/footer-logo.png"></a>
+                <a href="#"><img src=".\assets\images\footer-logo.png"></a>
             </div>
             <div class="col-md-7">
-                <p>“Remember the prisoners as if chained with them – those who are mistreated – since you yourselves are in the body also.” Hebrews 13:3</p>
+                <p>“Remember the prisoners as if chained with them - those who are mistreated - since you yourselves are in the body also.” Hebrews 13:3</p>
             </div>
             </div>
             <div class="bottom">
@@ -380,9 +392,9 @@
             <div class="social">
                 <div class="social-media-footer">
                 <div class="title">Follow us</div>
-                <div class="icon"><a href="/"><img src="./assets/images/facebook.png"></a></div>
-                <div class="icon"><a href="/"><img src="./assets/images/twitter.png"></a></div>
-                <div class="icon"><a href="/"><img src="./assets/images/linkedin.png"></a></div>
+                <div class="icon"><a href="/"><img src=".\assets\images\facebook.png"></a></div>
+                <div class="icon"><a href="/"><img src=".\assets\images\twitter.png"></a></div>
+                <div class="icon"><a href="/"><img src=".\assets\images\linkedin.png"></a></div>
                 </div>
             </div>
             <div class="copyright">
@@ -393,10 +405,18 @@
         </div>
     </footer>
     <!-- build:js scripts/about.min.js -->
+ 
     <script src="./scripts/vendors/jquery.min.js"></script>
+    <script>
+       
+        $('.dropdown-menu').click(function(e){
+            e.stopPropagation();
+        });
+    </script>
     <script src="./scripts/vendors/popper.min.js"></script>
     <script src="./scripts/vendors/bootstrap.min.js"></script>
     <script src="./scripts/vendors/swiper.min.js"></script>
+    <script src="./scripts/vendors/masonry.js"></script>
     <script src="./scripts/vendors/slick.js"></script>
     <script src="./scripts/core/base.js"></script>
     <script src="./scripts/modules/theme-module.js"></script>
