@@ -178,7 +178,6 @@ AppName.Modules.ThemeModule = (function () {
   ///////////////////
   const init = function () {
     _navbarToggler();
-    _masonry();
     _rollingNumber();
     _storiesSlides();
     _mainBannerSlider();
@@ -187,6 +186,7 @@ AppName.Modules.ThemeModule = (function () {
     _donate_iframe_container();
     _multi_level_menu();
     _stickynav();
+    _masonry();
   };
 
   return {
