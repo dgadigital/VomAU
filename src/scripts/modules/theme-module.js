@@ -166,12 +166,17 @@ AppName.Modules.ThemeModule = (function () {
       setInterval(resizeIframe, 500);
 
   }
-
-  var _masonry = function() {
-    $('.grid').masonry({
-      // options
-      itemSelector: '.grid-item',
-    });
+  
+  if ($('section').hasClass('grid-stories')) {
+    var _masonry = function() {
+      $('.grid-story').masonry({
+        itemSelector: '.grid-item',
+      });
+    }
+  } else {
+    var _masonry = function() {
+      return;
+    }
   }
   /////////////////////
   // Public Methods //
