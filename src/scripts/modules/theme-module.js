@@ -166,12 +166,17 @@ AppName.Modules.ThemeModule = (function () {
       setInterval(resizeIframe, 500);
 
   }
-
-  var _masonry = function() {
-    $('.grid').masonry({
-      // options
-      itemSelector: '.grid-item',
-    });
+  
+  if ($('section').hasClass('post-filter')) {
+    var _masonry = function() {
+      $('.grid-stories').masonry({
+        itemSelector: '.grid-item',
+      });
+    }
+  } else {
+    var _masonry = function() {
+      return;
+    }
   }
 
   var _search_filter = function(){
@@ -217,7 +222,6 @@ AppName.Modules.ThemeModule = (function () {
   ///////////////////
   const init = function () {
     _navbarToggler();
-    _masonry();
     _rollingNumber();
     _storiesSlides();
     _mainBannerSlider();
@@ -227,6 +231,7 @@ AppName.Modules.ThemeModule = (function () {
     _multi_level_menu();
     _stickynav();
     _search_filter();
+    _masonry();
   };
 
   return {
