@@ -4,9 +4,6 @@
         gap: 6%;
         flex-wrap: wrap;
 
-        @media(max-width: 991px){
-            flex-direction: column;
-        }
         >div{
             position: relative;
             flex-basis: 47%;
@@ -14,6 +11,7 @@
             &:first-child{
                 @media(max-width: 991px){
                     margin-bottom: 30px;
+                    flex-basis: 100%;
                 }
             }
         }
