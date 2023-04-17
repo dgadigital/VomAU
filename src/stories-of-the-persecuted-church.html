@@ -7,19 +7,12 @@
     <title>Stories of the Persecuted Church</title>
     <link rel="icon" href=".\assets\images\favicon.ico">
     <link rel="stylesheet" type="text/css" href="./styles/main.min.css">
-
-
-	<link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.4/css/select2.min.css" rel="stylesheet" />
 </head>
 
 <style>
-    body { 
-	font-family: 'Ubuntu', sans-serif;
-	font-weight: bold;
-    }
+  
     .select2-container {
     min-width: 400px;
-    
     }
 
     .select2-results__option {
@@ -271,42 +264,7 @@
                         <input type="text" placeholder="Search by keyword" id="search-box">
                         <button id="search-btn" class="btn btn-solid green"> <img src="./assets/images/search-white.png" alt="search icon"></button>
                         <div class="dropdown">
-                            <input class="dropdown-toggle text-left" type="text" id="filter-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" placeholder="Filter by Category">
-                            <div class="dropdown-menu" aria-labelledby="filter-dropdown">
-                                <div class="dropdown-item">
-                                    <label class="input-container"><input type="checkbox" class="category-option" value="cute"><span class="checkmark"></span> Bibles Plus</label>
-                                </div>
-                                <div class="dropdown-item">
-                                    <label class="input-container"><input type="checkbox" class="category-option" value="wild"><span class="checkmark"></span> Families of Martyrs</label>
-                                </div>
-                                <div class="dropdown-item">
-                                    <label class="input-container"><input type="checkbox" class="category-option" value="wild"><span class="checkmark"></span> Christmas Care</label>
-                                </div>
-                                <div class="dropdown-item">
-                                    <label class="input-container"><input type="checkbox" class="category-option" value="wild"><span class="checkmark"></span> Front Line Ministry</label>
-                                </div>
-                                <div class="dropdown-item">
-                                    <label class="input-container"><input type="checkbox" class="category-option" value="wild"><span class="checkmark"></span> Bibles and Literature</label>
-                                </div>
-                                <div class="dropdown-item">
-                                    <label class="input-container"><input type="checkbox" class="category-option" value="wild"><span class="checkmark"></span> Other</label>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="dropdown">
-                            <input class="dropdown-toggle text-left" type="text" id="filter-dropdown-country" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" placeholder="Filter by Country">
-                            <div class="dropdown-menu" aria-labelledby="filter-dropdown-country">
-                                <div class="dropdown-item">
-                                    <label class="input-container"><input type="checkbox" class="country-option" value="australia"><span class="checkmark"></span> Australia</label>
-                                </div>
-                                <div class="dropdown-item">
-                                    <label class="input-container"><input type="checkbox" class="country-option" value="philippines"><span class="checkmark"></span> Philippines</label>
-                                </div> 
-                            </div>
-                        </div>
-                        <div class="dropdown">
-                            <div class="row">
-                                <select class="js-select2 " multiple="multiple">
+                                <select class="js-select2" id="filter-dropdown-category" multiple="multiple">
                                     <option value="O1" data-badge="">Option1</option>
                                     <option value="O2" data-badge="">Option2</option>
                                     <option value="O3" data-badge="">Option3</option>
@@ -321,27 +279,25 @@
                                     <option value="O12" data-badge="">Option12</option>
                                     <option value="O13" data-badge="">Option13</option>
                                 </select>
-                                <div class="select-icon" style="margin-top: 40px;">
-                                <h4>icons</h4>
-                                    <select class="icons_select2" single="single">
-                                        <option value="" class="placeholder"></option>
-                                        <option value="O1" data-icon="fa-apple" data-badge="55">Option1</option>
-                                        <option value="O2" data-icon="fa-android" data-badge="55">Option2</option>
-                                        <option value="O3" data-icon="fa-windows" data-badge="55">Option3</option>
-                                        <option value="O4" data-icon="fa-dropbox" data-badge="55">Option4</option>
-                                        <option value="O5" data-icon="fa-github" data-badge="55">Option5</option>
-                                        <option value="O6" data-icon="fa-cloud" data-badge="55">Option6</option>
-                                        <option value="O7" data-badge="55">Option7</option>
-                                        <option value="O8" data-badge="55">Option8</option>
-                                        <option value="O9" data-badge="55">Option9</option>
-                                        <option value="O10" data-badge="55">Option10</option>
-                                        <option value="O11" data-badge="55">Option11</option>
-                                        <option value="O12" data-badge="55">Option12</option>
-                                        <option value="O13" data-badge="55">Option13</option>
-                                    </select>
-                                </div>
-                            </div>
                         </div>
+                        <div class="dropdown">
+                            <select class="js-select2" id="filter-dropdown-country" multiple="multiple">
+                                <option value="AU" data-badge="">Australia</option>
+                                <option value="PH" data-badge="">Philippines</option>
+                            </select>
+                        </div>
+                        <!-- <div class="dropdown">
+                            <input class="dropdown-toggle text-left" type="text" id="filter-dropdown-country" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" placeholder="Filter by Country">
+                            <div class="dropdown-menu" aria-labelledby="filter-dropdown-country">
+                                <div class="dropdown-item">
+                                    <label class="input-container"><input type="checkbox" class="country-option" value="australia"><span class="checkmark"></span> Australia</label>
+                                </div>
+                                <div class="dropdown-item">
+                                    <label class="input-container"><input type="checkbox" class="country-option" value="philippines"><span class="checkmark"></span> Philippines</label>
+                                </div> 
+                            </div>
+                        </div> -->
+                       
                         
 
         </section>
@@ -547,7 +503,6 @@
  
     <script src="./scripts/vendors/jquery.min.js"></script>
     <script>
-       
         $('.dropdown-menu').click(function(e){
             e.stopPropagation();
         });
@@ -561,36 +516,6 @@
     <script src="./scripts/modules/theme-module.js"></script>
     <script src="./scripts/bootstrapper.js"></script>
     <!-- endbuild -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
-    <script>
-        
-		$(".js-select2").select2({
-			closeOnSelect : false,
-			placeholder : "Filter By Category",
-			allowHtml: true,
-			allowClear: true,
-			tags: true // создает новые опции на лету
-		});
-
-			$('.icons_select2').select2({
-				width: "100%",
-				templateSelection: iformat,
-				templateResult: iformat,
-				allowHtml: true,
-				placeholder: "Placeholder",
-				dropdownParent: $( '.select-icon' ),//обавили класс
-				allowClear: true,
-				multiple: false
-			});
-	
-
-				function iformat(icon, badge,) {
-					var originalOption = icon.element;
-					var originalOptionBadge = $(originalOption).data('badge');
-				 
-					return $('<span><i class="fa ' + $(originalOption).data('icon') + '"></i> ' + icon.text + '<span class="badge">' + originalOptionBadge + '</span></span>');
-				}
-
-    </script>
+    <script type="text/javascript" src="./scripts/vendors/select2.min.js"></script>
 </body>
 </html>

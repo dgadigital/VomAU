@@ -173,6 +173,45 @@ AppName.Modules.ThemeModule = (function () {
       itemSelector: '.grid-item',
     });
   }
+
+  var _search_filter = function(){
+        
+		$("#filter-dropdown-category").select2({
+			closeOnSelect : false,
+			placeholder : "  Filter By Category",
+			allowHtml: true,
+			allowClear: true,
+			tags: true 
+		});
+        
+        $("#filter-dropdown-country").select2({
+			closeOnSelect : false,
+			placeholder : "  Filter By Country",
+			allowHtml: true,
+			allowClear: true,
+			tags: true,
+          
+		});
+
+        $('#filter-dropdown-country').on('select2:select', function (e) {
+            var selectedCountry  = $('#filter-dropdown-country').val();
+            console.log(selectedCountry)
+        });
+        $('#filter-dropdown-country').on('select2:unselect', function (e) {
+            var selectedCountry  = $('#filter-dropdown-country').val();
+            console.log(selectedCountry)
+        });
+
+        $('#filter-dropdown-category').on('select2:select', function (e) {
+            var selectedCategory  = $('#filter-dropdown-category').val();
+            console.log(selectedCategory)
+        });
+        $('#filter-dropdown-category').on('select2:unselect', function (e) {
+            var selectedCategory  = $('#filter-dropdown-category').val();
+            console.log(selectedCategory)
+        });
+  }
+
   /////////////////////
   // Public Methods //
   ///////////////////
@@ -187,6 +226,7 @@ AppName.Modules.ThemeModule = (function () {
     _donate_iframe_container();
     _multi_level_menu();
     _stickynav();
+    _search_filter();
   };
 
   return {
