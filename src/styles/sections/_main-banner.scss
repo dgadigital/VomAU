@@ -1,14 +1,29 @@
 .main-banner {
     padding-top: 0;
     padding-bottom: 30px;
+
+    .bg-holder {
+        position: relative;
+
+        .bg-bottom {
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 100%;
+            height: auto;
+            z-index: 0;
+        }
+    }
       
     .main-banner-wrapper {
+        position: relative;
         padding-top: 50px;
         padding-bottom: 150px;
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
         overflow: hidden;
+        z-index: -1;
     
         @media (max-width: 1700px) {
             background-position: left -60px center;
