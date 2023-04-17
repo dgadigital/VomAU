@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <meta name="format-detection" content="telephone=no">
+
+  <title>Modular Gulp Template</title>
+
+  <link rel="icon" href=".\assets\images\favicon.ico">
+  <link rel="stylesheet" type="text/css" href="./styles/main.min.css">
+  <!--[if lte IE 9]>
+    <link href="stylesheets/non-responsive.css" rel="stylesheet" />
+  <![endif]-->
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+  <!--[if lt IE 9]>
+    <div id="browser-notification" class="alert alert-danger">
+      <div class="container">
+        We are sorry but it looks like your <a href="http://www.whatbrowser.org/intl/en_us/" target=_blank>browser</a> doesn't support our website features. In order to get the full experience please download a new version of <a title="Download Chrome" href="http://www.google.com/chrome/" target=_blank>Chrome</a>, <a title="Download Safari" href="http://www.apple.com/safari/download/" target=_blank>Safari</a>, <a title="Download Firefox" href="http://www.mozilla.com/firefox/" target=_blank>Firefox</a>, or <a title="Download Internet Explorer" href="http://www.microsoft.com/windows/internet-explorer/default.aspx" target=_blank>Internet Explorer</a>.
+      </div>
+    </div>
+  <![endif]-->
+
+  <header>
+
+    <nav class="top-navbar">
+      <div class="container">
+        <div class="top-navbar-wrapper">
+          <div class="header-logo">
+            <a href="/"><img src=".\assets\images\logo.png"></a>
+          </div>
+          <div class="btn-wrapper">
+              <a href="/" class="btn btn-solid green">SUBSCRIBE</a>
+              <a href="/" class="btn btn-solid orange">DONATE</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <nav class="navbar navbar-expand-md">
+      <div class="container">
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a href="#" class="nav-link nav-primary">HOME</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle nav-primary" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">ABOUT</a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+
+                
+                <div class="dropdown-submenu">
+                  <a class="dropdown-item dropdown-toggle" href="#">Our Story</a>
+                  <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#">
+                      <span>Pray for the Persecuted Church</span>  
+                      <span class="description">Learn about persecuted christians around the world. Pray for them.</span>                  
+                    </a>
+                    <a class="dropdown-item" href="#">
+                      <span>Pray for the Persecuted Church</span>  
+                      <span class="description">Learn about persecuted christians around the world. Pray for them. christians around the world. Pray for them.</span>                  
+                    </a>
+                    <a class="dropdown-item" href="#">Test</a>
+                    <a class="dropdown-item" href="#">Test</a>
+                    <a class="dropdown-item" href="#">
+                      <span>Pray for the Persecuted Church</span>  
+                      <span class="description">Learn about persecuted</span>                  
+                    </a>
+                    <a class="dropdown-item" href="#">Test</a>
+                  </div>
+
+                </div>
+                <a class="dropdown-item" href="#">Persecuted Christians</a>
+                <div class="dropdown-submenu">
+                  <a class="dropdown-item dropdown-toggle" href="#">Test</a>
+                  <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#">Test</a>
+                    <a class="dropdown-item" href="#">Test</a>
+                    <a class="dropdown-item" href="#">Test</a>
+                  </div>
+                </div>
+                <div class="dropdown-submenu">
+                  <a class="dropdown-item dropdown-toggle" href="#">Contact Us</a>
+                  <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#">Contact Us</a>
+                  </div>
+                </div>
+
+              </div>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle nav-primary" href="#" id="navbarDropdownMenuLink2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">GET INVOLVED</a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink2">
+                <div class="dropdown-submenu">
+                  <a class="dropdown-item" href="#">Another action</a>
+                  <a class="dropdown-item dropdown-toggle" href="#">Action</a>
+                  <div class="dropdown-menu">
+                    <div class="description-block">
+                      <p class="title">Voice of the Martyrs Australia</p>
+                      <p class="text">Our ministry is inspired by Hebrews 13:3: “Remember the prisoners as if chained with them – those who are mistreated – since you yourselves are in the body also.”</p>
+                    </div>
+                    <a class="dropdown-item" href="#">Our Story</a>
+                  </div>
+                <a class="dropdown-item" href="#">Another action</a>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </div>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle nav-primary" href="#" id="navbarDropdownMenuLink3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">LATEST NEWS</a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink3">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="nav-right">
+          <ul class="navbar-nav ">
+            <li class="nav-item">
+              <a href="#" class="nav-link">CONTACT US</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">SHOP</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link"><img src=".\assets\images\search.png"></a>
+            </li>
+          </ul>
+          <button class="navbar-toggler navbar-toggler-right" type="button">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          </button>
+        </div>
+
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    
+    <section class="main-banner">
+      <div class="bg-holder">
+        <img src="./assets/images/banner-bottom-bg.png" class="bg-bottom">
+        <div class="main-banner-wrapper" style="background-image: url('../assets/images/bg-banner-full.png');">
+          <div class="container">
+            <div class="banner-wrapper">
+              <div class="text">
+                <div class="text-wrapper">
+                  <h1>SERVING PERSECUTED CHRISTIANS</h1>
+                  <h2>Bless a family with a Bibles Plus Pack.</h2>
+                  <div class="btn-wrapper">
+                    <a href="/" class="btn btn-solid green">Subscribe</a>
+                    <a href="/" class="btn btn-solid orange">Donate</a>
+                  </div>
+                </div>
+              </div>
+              <div class="image">
+                <img src=".\assets\images\gif-banner.gif">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="main-banner-slider">
+        <div class="container">
+          <div class="banner-slider">
+            
+            <div class="item-wrap">
+              <div class="item">
+                <div class="image">
+                  <img src=".\assets\images\banner-slider.png">
+                  <!-- <iframe src="https://www.youtube.com/embed/a3ICNMQW7Ok" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> -->
+                </div>
+                <div class="text">
+                  <div class="post-type"><img src=".\assets\images\star.png">Campaign</div>
+                  <div class="text-wrapper">
+                    <h3>BIBLES PLUS 1</h3>
+                    <p>Our Bibles Plus campaign aims to provide spiritual and practical support for our brothers and sisters struggling with spiritual and physical hunger. Bibles Plus packs send a message of care and compassion to our brothers and sisters in Christ, who struggle with both persecution and poverty.</p>
+                    <a href="/" class="btn btn-solid green">Read More</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="item-wrap">
+              <div class="item">
+                <div class="image">
+                  <img src=".\assets\images\banner-slider.png">
+                </div>
+                <div class="text">
+                  <div class="post-type"><img src=".\assets\images\star.png">Campaign</div>
+                  <div class="text-wrapper">
+                    <h3>BIBLES PLUS 1</h3>
+                    <p>Our Bibles Plus campaign aims to provide spiritual and practical support for our brothers and sisters struggling with spiritual and physical hunger. Bibles Plus packs send a message of care and compassion to our brothers and sisters in Christ, who struggle with both persecution and poverty.</p>
+                    <a href="/" class="btn btn-solid green">Read More</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="color-icon-box">
+      <div class="container">
+        <div class="description text-center">
+          <h3>You can help Voice of the Martyrs</h3>
+          <p>Christians face persecution in more than 50 countries. Today, with persecution against Christians greater than ever before, we continue Richard’s mission to equip and support the persecuted church and act as their voice in the free world. Explore the different ways to get involved.</p>
+        </div>
+        <div class="color-icon-box-wrapper">
+          <div class="item green">
+            <div class="item-wrapper">
+              <div class="icon-wrapper">
+                <img src=".\assets\images\pray-icon.png">
+              </div>
+              <p class="title">Pray</p>
+              <p>Pray for the Persecuted Church and subscribe to monthly magazine.</p>
+            </div>
+          </div>
+          <div class="item orange">
+            <div class="item-wrapper">
+              <div class="icon-wrapper">
+                <img src=".\assets\images\hand-up.png">
+              </div>
+              <p class="title">Connect</p>
+              <p>Invite a Speaker to your church or fundraise for us.</p>
+            </div>
+          </div>
+          <div class="item blue">
+            <div class="item-wrapper">
+              <div class="icon-wrapper">
+                <img src=".\assets\images\give.png">
+              </div>
+              <p class="title">Give</p>
+              <p>Donate, Shop for resources or give gifts in will.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    
+    <section class="rolling-number">
+      <div class="container">
+
+        <div class="counter-wrapper black" id="counter-wrapper">
+          
+          <div class="item">
+            <p class="number" tesst="asd">
+              <layflags-rolling-number class="roller" style="--roll-duration:2000ms" value="0" data-number="44"></layflags-rolling-number>
+            </p>
+            <p class="title">Countries</p>
+            <p>Voice of the Martyrs International works in 68 countries..</p>
+          </div>
+          <div class="item">
+            <p class="number">
+              <layflags-rolling-number class="roller" style="--roll-duration:2000ms" value="0" data-number="1003236"></layflags-rolling-number>
+            </p>
+            <p class="title">LIFE PACKS DISTRIBUTED</p>
+            <p>Over 8,700+ life packs were distributed by Voice of the Martyrs Australia in 2022.</p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <section class="recent-post-type bg-mountain large-bottom-padding">
+      <div class="container">
+
+        <div class="title-bar">
+          <h3>Recent articles</h3>
+          <a href="/" class="btn btn-solid green">View All</a>
+        </div>
+
+        <div class="post-boxes">
+
+          <div class="post-card box-shadow">
+            <div class="group">
+              <div class="image hover-overlay-green">
+                <div class="month">sept</div>
+                <img src=".\assets\images\post-image.png">
+                <div class="content">
+                  <p>Read More</p>
+                </div>
+              </div>
+              <div class="outer-wrapper">
+                <div class="title-wrapper">
+                  <p class="title">SE ASIA: Spreading the Good News in a Muslim-dominated NationMuslim-dominated NationMuslim-dominated Nation</p>
+                </div>
+              </div>
+            </div>
+            <div class="text">
+              <p class="description">
+                Our Bibles Plus campaign aims to provide spiritual and practical support for our brothers and sisters struggling with spiritual and physical hunger. 
+              </p>
+            </div>
+          </div>
+
+          <div class="post-card">
+            <div class="group">
+              <div class="image">
+                <div class="month">sept</div>
+                <img src=".\assets\images\post-image.png">
+              </div>
+              <div class="outer-wrapper">
+                <div class="title-wrapper">
+                  <p class="title">Our Bibles Plus campaign aims to provide spiritual and practical support</p>
+                </div>
+              </div>
+            </div>
+            <div class="text">
+              <p class="description">
+                The situation in Ukraine is deteriorating.The Russians in the occupied areas are demanding there be no Christianity! Any pastor or leader with a following is on a hit list. Church buildings are being confiscated and Christians receive harsher treatment at Russian military checkpoints.
+              </p>
+            </div>
+          </div>
+
+          <div class="post-card">
+            <div class="group box-shadow">
+              <div class="image">
+                <div class="month">sept</div>
+                <img src=".\assets\images\post-image.png">
+              </div>
+              <div class="outer-wrapper">
+                <div class="title-wrapper">
+                  <p class="title">Ukraine Front Line Ministry Appeal</p>
+                </div>
+              </div>
+            </div>
+            <div class="text">
+              <p class="description">
+                VOMedical assists persecuted Christians who have been attacked for their faith. Many Christians in Pakistan suffer discrimination in education and employment; they live in Christian colonies or slums and struggle to provide for themselves and their families.
+              </p>
+            </div>
+          </div>
+
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <section class="cta-banner" style="margin-top: -200px; margin-bottom: 0px;">
+      <div class="container">
+        <div class="banner-wrapper show-top-left-dark show-bottom-right-dark" style="background-image: url('./assets/images/cta-banner.png');">
+          <img src=".\assets\images\bottom-left-dark.png" class="bottom-left-dark">
+          <img src=".\assets\images\bottom-right-dark.png" class="bottom-right-dark">
+          <img src=".\assets\images\bottom-right-light.png" class="bottom-right-light">
+          <img src=".\assets\images\top-left-dark.png" class="top-left-dark">
+          <img src=".\assets\images\top-left-light.png" class="top-left-light">
+          <div class="logo">
+            <img src=".\assets\images\cta-logo.png">
+          </div>
+          <!-- white or dark text-color -->
+          <div class="text white">
+            <h3>Choose where 100% of your gift will go</h3>
+            <p>Learn more about our four core Project Funds, where 100% of your donation will contribute to supporting projects in the field.</p>
+            <a href="/" class="btn btn-solid orange">Learn More</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="global-need">
+      <div class="container text-center">
+        <h3>THE GLOBAL NEED</h3>
+        <p>Christians face persecution in more than 50 countries. Today, with persecution against Christians greater than ever before, we continue Richard’s mission to equip and support the persecuted church and act as their voice in the free world. The map selected movements of Christians displaced by war and persecution.</p>
+        <a href="/" class="btn btn-solid orange">Learn More</a>
+        <img src=".\assets\images\global-need.png">
+      </div>
+    </section>
+
+
+    <section class="stories-slider">
+      <div class="container">
+       
+        <img src=".\assets\images\stories-bg.png" class="bg">
+        
+        <div class="title-wrapper text-center">
+          <h3>STORIES OF PERSECUTED CHRISTIANS</h3>
+        </div>
+
+        <div class="stories-slides">
+          <div class="item">
+            <div class="image">
+              <img src=".\assets\images\story.png">
+            </div>
+            <div class="content">
+              <p class="title">MYANMAR: Bringing Aid to the Family of a Martyr</p>
+              <p>Pastor Nay dedicated his life to serving his community as a pastor. As part of the violent coup, the military burnt more than 160 houses and three church buildings in the Thantalang area. Despite the danger and chaos, Pastor Nay bravely rushed to help the victims during the attack.</p>
+              <a href="/" class="btn btn-solid green">Read Article</a>
+            </div>
+          </div>
+          <div class="item">
+            <div class="image">
+              <img src=".\assets\images\story.png">
+            </div>
+            <div class="content">
+              <p class="title">MYANMAR: Bringing Aid to the Family of a Martyr</p>
+              <p>Pastor Nay dedicated his life to serving his community as a pastor. As part of the violent coup, the military burnt more than 160 houses and three church buildings in the Thantalang area. Despite the danger and chaos, Pastor Nay bravely rushed to help the victims during the attack.</p>
+              <a href="/" class="btn btn-solid green">Read Article</a>
+            </div>
+          </div>
+          <div class="item">
+            <div class="image">
+              <img src=".\assets\images\story.png">
+            </div>
+            <div class="content">
+              <p class="title">MYANMAR: Bringing Aid to the Family of a Martyr</p>
+              <p>Pastor Nay dedicated his life to serving his community as a pastor. As part of the violent coup, the military burnt more than 160 houses and three church buildings in the Thantalang area. Despite the danger and chaos, Pastor Nay bravely rushed to help the victims during the attack.</p>
+              <a href="/" class="btn btn-solid green">Read Article</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+  </main>
+
+  <footer>
+
+    <div class="footer-main">
+      <div class="container">
+
+        <div class="row upper">
+          <div class="col-md-4">
+            <a href="#"><img src=".\assets\images\footer-logo.png"></a>
+          </div>
+          <div class="col-md-7">
+            <p>“Remember the prisoners as if chained with them – those who are mistreated – since you yourselves are in the body also.” Hebrews 13:3</p>
+          </div>
+        </div>
+
+        <div class="bottom">
+            <div class="footer-links">
+              <div class="links-wrapper first-menu">
+                <div class="menu-wrapper">
+                  <p class="footer-title">About</p>
+                  <ul>
+                    <li><a href="/">The VOM Story</a></li>
+                    <li><a href="/">Persecuted Christians</a></li>
+                    <li><a href="/">Our Impact</a></li>
+                  </ul>
+                </div>
+                <div class="more-links">
+                  <ul>
+                    <li><a href="/">Contact Us</a></li>
+                    <li><a href="/">Shop</a></li>
+                    <li><a href="/">Search</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="links-wrapper">
+                <p class="footer-title">GET INVOVLED</p>
+                <p class="footer-sub-title">Pray</p>
+                <ul>
+                  <li><a href="/">Pray for Persecuted Church</a></li>
+                  <li><a href="/">Subscribe</a></li>
+                  <li><a href="/">Stay Informed</a></li>
+                  <li><a href="/">Get Free Resources</a></li>
+                </ul>
+                <p class="footer-sub-title">Connect</p>
+                <ul>
+                  <li><a href="/">Invite a Speaker</a></li>
+                  <li><a href="/">Be a Voice</a></li>
+                  <li><a href="/">Fundraise</a></li>
+                  <li><a href="/">Church Visits</a></li>
+                </ul>
+                <p class="footer-sub-title">Give</p>
+                <ul>
+                  <li><a href="/">Donate</a></li>
+                  <li><a href="/">Bequest</a></li>
+                  <li><a href="/">Fundraise</a></li>
+                  <li><a href="/">Shop</a></li>
+                </ul>
+              </div>
+              <div class="links-wrapper">
+                <p class="footer-title">LATEST NEWS</p>
+                <p class="footer-sub-title">STAY UPDATED</p>
+                <ul>
+                  <li><a href="/">Weekly Prayers</a></li>
+                  <li><a href="/">Latest Project Updates</a></li>
+                </ul>
+                <p class="footer-sub-title">STORIES</p>
+                <ul>
+                  <li><a href="/">Stories of Persecution</a></li>
+                  <li><a href="/">Testimonials</a></li>
+                </ul>
+                <p class="footer-sub-title">MEDIA</p>
+                <ul>
+                  <li><a href="/">VOMOz Radio</a></li>
+                  <li><a href="/">From the Archive</a></li>
+                  <li><a href="/">VOM App</a></li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="footer-form">
+              <p class="footer-title">Contact Us</p>
+              <div class="form-wrapper">
+                  <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Name">
+                  </div>
+                  <div class="form-group">
+                    <input type="Email" class="form-control" placeholder="Email Address">
+                  </div>
+                  <div class="form-group">
+                    <textarea type="text" class="form-control" placeholder="Send us a message"></textarea>
+                  </div>
+                  <button type="submit" class="btn btn-solid green">Submit</button>
+              </div>
+            </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+        <div class="footer-bottom-wrapper">
+          <div class="social">
+            <div class="social-media-footer">
+              <div class="title">Follow us</div>
+              <div class="icon"><a href="/"><img src=".\assets\images\facebook.png"></a></div>
+              <div class="icon"><a href="/"><img src=".\assets\images\twitter.png"></a></div>
+              <div class="icon"><a href="/"><img src=".\assets\images\linkedin.png"></a></div>
+            </div>
+          </div>
+          <div class="copyright">
+            <p>Copyright © 2023 Voice of the Martyrs Australia.  All rights reserved.<a href="#">Privacy Policy</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="scripts/main.min.js"></script>
+
+  <!--[if lte IE 9]>
+    <script src="javascripts/non-responsive.js"></script>
+  <![endif]-->
+</body>
+
+</html>
