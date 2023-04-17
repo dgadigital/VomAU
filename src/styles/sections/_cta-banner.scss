@@ -65,10 +65,16 @@
             &.white {
                 h3 {
                     color: #fff;
+                    &.text-black{
+                        color: #000;
+                    }
                 }
 
                 p {
                     color: #fff;
+                    &.text-black{
+                        color: #000;
+                    }
                 }
             }
 
