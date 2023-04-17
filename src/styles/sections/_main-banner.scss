@@ -24,10 +24,6 @@
         background-position: center;
         overflow: hidden;
         z-index: -1;
-    
-        @media (max-width: 1700px) {
-            background-position: left -60px center;
-        }
     }
 
     .container {
