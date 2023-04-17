@@ -58,8 +58,10 @@
 
 
 .bg-mountain-white {
-  padding-top: 100px;
+  margin-top: -200px;
+  padding-top: 200px;
   background: linear-gradient(to bottom,transparent 0px,#F7F7F7 200px),url(../../assets/images/mountain-white-bg.png) no-repeat center top/contain;
+  background-size: cover;
   @media (max-width: 768px){
     background: linear-gradient(to bottom,transparent 0px,#F7F7F7 100px),url(../../assets/images/mountain-white-bg.png) no-repeat center top/contain;
   }
@@ -123,13 +125,14 @@
     .read-more{
       position: absolute;
       bottom: 0;
+      margin: 0;
+      padding: 1em;
+      font-size: 30px;
+      color: #fff;
       z-index: 999;
       visibility: hidden;
       max-height: 0;
-      margin: 0;
-      padding: 1em;
       opacity:0;
-      color: #fff;
       transition:visibility 0.3s linear,opacity 0.3s linear,max-height 0.45s ease-in;
     }
     &:hover{
