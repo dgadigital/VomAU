@@ -1347,6 +1347,7 @@ ul {
 
 .our-history{
     padding-bottom: 100px;
+	background: #F7F7F7;
     .tab-container {
         display: flex;
         flex-direction: column;
@@ -1553,30 +1554,54 @@ ul {
         border: none !important;
         transition: border-color 0.3s;
         
-        &::after { // arrow icon
-          content: '';
-          position: absolute;
-          height: 26px;
-          width: 16px;
-          top: 50%;
-          left: 50%;
-          transform: translateX(-50%) translateY(-50%);
-        //   background: url(../img/history-arrow.svg) no-repeat 0 0 !important;
-        }
     
         &:hover {
           border-color: red !important;
         }
-      }
 
+		
+      }
+	  .prev-history::after { // arrow icon
+		content: '';
+		position: absolute;
+		width: 16px;
+		height: 26px;
+		top: 50%;
+		left: 50%;
+		transform: translateX(-50%) translateY(-50%);
+		background: url(../../assets/images/our-history-arrow.svg) no-repeat 0 0 !important;
+	  }
+	  .next-history::after { // arrow icon
+		content: '';
+		position: absolute;
+		width: 16px;
+		height: 26px;
+		top: 50%;
+		left: 50%;
+		transform: translateX(-50%) translateY(-50%);
+		background: url(../../assets/images/our-history-arrow-next.svg) no-repeat 0 0 !important;
+	  }
       .cd-h-timeline__navigation--inactive {
         cursor: not-allowed;
         color: #2b2929 !important;
         background: #E8E9E8 !important;
     }
 
- 
+	
+	
      //end of custom horizontal timeline class styling
 }
-
-
+.js .cd-h-timeline__dates::before {
+	left: 0;
+	background: -webkit-gradient(linear,left top,right top,from(#f7f7f7),to(rgba(247,247,247,0))) !important;
+	background: linear-gradient(to right,#f7f7f7,rgba(247,247,247,0)) !important;
+	background: -webkit-gradient(linear,left top,right top,from(var(--cd-color-3)),to(hsla(var(--cd-color-3-h),var(--cd-color-3-s),var(--cd-color-3-l),0)));
+	background: linear-gradient(to right,var(--cd-color-3),hsla(var(--cd-color-3-h),var(--cd-color-3-s),var(--cd-color-3-l),0));
+}
+.js .cd-h-timeline__dates::after {
+    right: 0;
+    background: -webkit-gradient(linear,right top,left top,from(#f7f7f7),to(rgba(247,247,247,0))) !important;
+    background: linear-gradient(to left,#f7f7f7,rgba(247,247,247,0)) !important;
+    background: -webkit-gradient(linear,right top,left top,from(var(--cd-color-3)),to(hsla(var(--cd-color-3-h),var(--cd-color-3-s),var(--cd-color-3-l),0)));
+    background: linear-gradient(to left,var(--cd-color-3),hsla(var(--cd-color-3-h),var(--cd-color-3-s),var(--cd-color-3-l),0));
+}
