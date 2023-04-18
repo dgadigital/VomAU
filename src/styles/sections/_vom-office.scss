@@ -1,7 +1,13 @@
 .vom-office{
     background: url('../../assets/images/map-bg.png');
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: bottom center;
+    background-size: 50%;
+
+    &.large-x-padding {
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
 
     .title{
         h2{
