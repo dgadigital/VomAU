@@ -72,6 +72,9 @@
     .text-container{
         font-family: 'Lato Regular';
     }
+    .content-container:last-child{
+        border-bottom: 0 !important;
+    }
   
 }
 
