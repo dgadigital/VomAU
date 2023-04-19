@@ -54,12 +54,13 @@
                 @media(max-width: 991px){
                     flex-basis: 48%;
                 }
-                img{
+                .image-wrapper{
                     display: flex;
-                    width: auto;
-                    height: 263px;
                     margin: auto;
                     margin-top: 10px;
+                    justify-content: center;
+                    width: auto;
+                    height: 263px;
                     margin-bottom: 20px;
                     object-fit: contain;
                 }
@@ -78,8 +79,5 @@
                 }
             }
         }
-    }
-    &.negative-margin-top{
-        margin-top: -65px;
     }
 }
