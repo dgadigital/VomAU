@@ -50,9 +50,9 @@
 
 .bg-mountain {
   padding-top: 100px;
-  background: linear-gradient(to bottom,transparent 0px,#F7F7F7 200px),url(../../assets/images/mountain-bg.png) no-repeat center top/contain;
+  background: linear-gradient(to bottom,transparent 0px,#F7F7F7 200px),url(../assets/images/mountain-bg.png) no-repeat center top/contain;
   @media (max-width: 768px){
-    background: linear-gradient(to bottom,transparent 0px,#F7F7F7 100px),url(../../assets/images/mountain-bg.png) no-repeat center top/contain;
+    background: linear-gradient(to bottom,transparent 0px,#F7F7F7 100px),url(../assets/images/mountain-bg.png) no-repeat center top/contain;
   }
 }
 
@@ -60,10 +60,10 @@
 .bg-mountain-white {
   margin-top: -200px;
   padding-top: 200px;
-  background: linear-gradient(to bottom,transparent 0px,#F7F7F7 200px),url(../../assets/images/mountain-white-bg.png) no-repeat center top/contain;
+  background: linear-gradient(to bottom,transparent 0px,#F7F7F7 200px),url(../assets/images/mountain-white-bg.png) no-repeat center top/contain;
   background-size: cover;
   @media (max-width: 768px){
-    background: linear-gradient(to bottom,transparent 0px,#F7F7F7 100px),url(../../assets/images/mountain-white-bg.png) no-repeat center top/contain;
+    background: linear-gradient(to bottom,transparent 0px,#F7F7F7 100px),url(../assets/images/mountain-white-bg.png) no-repeat center top/contain;
   }
 }
 
@@ -90,7 +90,7 @@
 
   &.green{
     li::before{
-      background-image: url('../../assets/images/check-green.png');
+      background-image: url('../assets/images/check-green.png');
       background-size: contain;
       background-repeat: no-repeat; 
     }
@@ -221,4 +221,7 @@ hr.color-black {
 }
 .l-negative-margin-top{
   margin-top: -178px;
+}
+.s-negative-margin-top{
+  margin-top: -65px;
 }

@@ -1,6 +1,6 @@
 .post{
     padding-top: 150px;
-    background: url(../../assets/images/blue-banner-bg.png) no-repeat center top/contain;
+    background: url(../assets/images/blue-banner-bg.png) no-repeat center top/contain;
 
     .content-container{
         display: flex;
@@ -113,7 +113,7 @@
 
                 h3{
                     &::before{
-                        content: url('../../assets/images/pray.png');
+                        content: url('../assets/images/pray.png');
                         display: inline-block;
                         width: 63px;
                         height: 63px;
@@ -133,14 +133,14 @@
                 color: $dark-green;
 
                 &.btn-prev::before{
-                    content: url('../../assets/images/arrow-green.svg');
+                    content: url('../assets/images/arrow-green.svg');
                     display: inline-block;
                     margin-right: 10px;
                     vertical-align: middle;
                 }
 
                 &.btn-next::after{
-                    content: url('../../assets/images/arrow-green.svg');
+                    content: url('../assets/images/arrow-green.svg');
                     display: inline-block;
                     transform: rotate(180deg);
                     margin-left: 10px;

@@ -1,9 +1,17 @@
 .vom-office{
-    background: url('../../assets/images/map-bg.png');
+    background: url('../assets/images/map-bg.png');
     background-repeat: no-repeat;
     background-position: bottom center;
     background-size: 50%;
 
+    @media (max-width: 1199px){
+        background-size: 75%;
+        background-position: center;
+    }
+
+    @media (max-width: 991px){
+        background-size: cover;
+    }
     &.large-x-padding {
         padding-top: 100px;
         padding-bottom: 100px;
@@ -52,7 +60,7 @@
                 }
 
                 &::after{
-                    content: url('../../assets/images/arrow-red.svg');
+                    content: url('../assets/images/arrow-red.svg');
                     margin-left: 15px;
                     transition: transform 0.3s ease-out;
                 }
