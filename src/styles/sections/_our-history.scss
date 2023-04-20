@@ -1569,7 +1569,7 @@ ul {
 		top: 50%;
 		left: 50%;
 		transform: translateX(-50%) translateY(-50%);
-		background: url(/assets/images/our-history-arrow.svg) no-repeat 0 0 !important;
+		background: url('https://dev-vom-au.pantheonsite.io/wp-content/uploads/2023/04/our-history-arrow.png') no-repeat 0 0 !important;
 	  }
 	  .next-history::after { // arrow icon
 		content: '';
@@ -1579,7 +1579,7 @@ ul {
 		top: 50%;
 		left: 50%;
 		transform: translateX(-50%) translateY(-50%);
-		background: url(/assets/images/our-history-arrow-next.svg) no-repeat 0 0 !important;
+		background: url('https://dev-vom-au.pantheonsite.io/wp-content/uploads/2023/04/our-history-arrow-next.png') no-repeat 0 0 !important;
 	  }
       .cd-h-timeline__navigation--inactive {
         cursor: not-allowed;
