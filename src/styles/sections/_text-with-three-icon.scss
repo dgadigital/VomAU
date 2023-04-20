@@ -14,7 +14,7 @@
     
         div{
             flex-grow: 1;
-            padding: 0 10px;
+            padding: 0px;
         }
         .three-icons-container{
             flex-basis: 50%;
@@ -30,7 +30,7 @@
             }
         }
         .text-title-container{
-            flex-basis: 50%;
+            flex-basis: 43%;
             align-self: center;
 
             @media (max-width: 991px){
