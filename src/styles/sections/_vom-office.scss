@@ -5,7 +5,7 @@
     background-position: bottom center;
     background-size: 50%;
 
-    @media (min-width: 1800px){
+    @media (min-width: 200px){
         padding-top: 150px;
         padding-bottom: 150px;
         background-size: 40%;
@@ -21,6 +21,8 @@
     }
 
     .title{
+        margin-bottom: 30px;
+
         h2{
             font-weight: 700;
             font-size: 30px;
