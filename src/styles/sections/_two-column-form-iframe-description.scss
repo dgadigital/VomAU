@@ -24,6 +24,30 @@
             }
         }
     }
+    .big-form{
+        display: flex;
+        gap: 3%;
+        flex-wrap: wrap;
+   
+
+        @media(max-width: 991px){
+            flex-direction: column;
+        }
+
+        &>div{
+            flex-basis: 15%;
+            flex-grow: 1;
+            padding: 15px;
+            
+            &:first-child {
+                flex-basis: 60%;
+                flex-grow: 1;
+                @media(max-width: 991px){
+                    margin-bottom: 30px;
+                }
+            }
+        }
+    }
     &.reverse{
         .row-container{
             .form-container{
