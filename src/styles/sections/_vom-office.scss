@@ -1,8 +1,15 @@
 .vom-office{
-    background: url('../assets/images/map-bg.png');
+    padding-top: 100px;
+    padding-bottom: 100px;
     background-repeat: no-repeat;
     background-position: bottom center;
     background-size: 50%;
+
+    @media (min-width: 1800px){
+        padding-top: 150px;
+        padding-bottom: 150px;
+        background-size: 40%;
+    }
 
     @media (max-width: 1199px){
         background-size: 75%;
@@ -11,10 +18,6 @@
 
     @media (max-width: 991px){
         background-size: cover;
-    }
-    &.large-x-padding {
-        padding-top: 100px;
-        padding-bottom: 100px;
     }
 
     .title{
@@ -39,35 +42,43 @@
         }
 
         .country-list{
-            flex: 1;
-            margin: 10px;
+            columns: 3;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            margin-left: auto;
+            margin-right: auto;
 
             @media (max-width: 767px){
-                flex-basis: 100%;
-                margin: 0;
-                text-align: center;
+                columns : 1;
             }
 
-            a{
-                display: block;
-                color: #000;
-                font-weight: 700;
-                font-size: 30px;
-                line-height: 57px;
-
-                @media (max-width: 991px){
-                    font-size: 24px;
+            li{
+                @media (max-width: 767px){
+                    text-align: center;
                 }
 
-                &::after{
-                    content: url('../assets/images/arrow-red.svg');
-                    margin-left: 15px;
-                    transition: transform 0.3s ease-out;
-                }
+                a{
+                    display: block;
+                    color: #000;
+                    font-weight: 700;
+                    font-size: 30px;
+                    line-height: 57px;
 
-                &:hover{
+                    @media (max-width: 991px){
+                        font-size: 24px;
+                    }
+
                     &::after{
-                        margin-left: 20px;
+                        content: url('../assets/images/arrow-red.svg');
+                        margin-left: 15px;
+                        transition: transform 0.3s ease-out;
+                    }
+
+                    &:hover{
+                        &::after{
+                            margin-left: 20px;
+                        }
                     }
                 }
             }

@@ -1,8 +1,11 @@
 .title-description-with-two-column{
     h2{
-        font-size: 30px;
-        line-height: 57px;
         text-transform: uppercase;
+        
+        .italic{
+            font-weight: 400;
+            font-style: italic;
+        }
     }
    
     .content-container{
