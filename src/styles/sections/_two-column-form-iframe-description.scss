@@ -63,11 +63,13 @@
             input{
                 margin-bottom: 10px;
                 font-family: $font-lato-regular;
+                width: 100%;
             }
             textarea{
                 height: 130px;
                 font-family: $font-lato-regular;
                 margin-bottom: 30px;
+                width: 100%;
             }
             .button-container{
                 display: flex;
