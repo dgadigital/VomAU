@@ -1,4 +1,5 @@
 .why-section{
+    padding-bottom: 100px;
 
     .post-boxes {
         display: flex;
@@ -11,9 +12,5 @@
             flex-direction: column;
             align-items: center;
         }
-    }
-
-    &.pb-100{
-        padding-bottom: 100px;
     }
 }

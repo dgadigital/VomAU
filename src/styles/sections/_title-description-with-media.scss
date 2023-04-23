@@ -14,11 +14,20 @@
             border-radius: 10px;
             margin: 0px 10px;
 
+            &.orange{
+                background-color: $orange;
+            }
             &.dark-orange{
-                background-color: #FF5000;
+                background-color: $dark-orange;
             }
             &.red{
-                background-color: #DA322A;
+                background-color: $red;
+            }
+            &.green{
+                background-color: $dark-green;
+            }
+            &.mid-grey{
+                background-color: $mid-grey;
             }
         }
 
