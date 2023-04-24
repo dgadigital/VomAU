@@ -234,6 +234,30 @@ AppName.Modules.ThemeModule = (function () {
     }
   }
 
+  var _post_filter = function(){
+    $('#search-box').on('change', function(event) {
+		console.log('changed');
+
+		var searchQuery = $('#search-box').val();
+
+		$.ajax({
+		  url: ajaxurl,
+		  type: 'POST',
+		  data: {
+			action: 'post_search',
+			search_query: searchQuery
+		  },
+		  success: function(response) {
+			// your success code here
+			console.log(response);
+		  },
+		  error: function(xhr, status, error) {
+			// your error code here
+		  }
+		});
+	  });
+  }
+
   /////////////////////
   // Public Methods //
   ///////////////////
@@ -249,7 +273,8 @@ AppName.Modules.ThemeModule = (function () {
     _stickynav();
     _faq_accordion();
     _search_filter();
-    _masonry()
+    _masonry();
+    _post_filter()
   };
 
   return {
