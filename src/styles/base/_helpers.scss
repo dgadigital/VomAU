@@ -229,3 +229,23 @@ hr.color-black {
 .s-negative-margin-top{
   margin-top: -65px;
 }
+
+.link-with-underline{
+  text-decoration: underline;
+
+  &.green{
+    color: $dark-green;
+  }
+  &.red{
+    color: $red;
+  }
+  &.grey{
+    color: $dark-grey
+  }
+  &.orange{
+    color: $orange;
+  }
+  &.dark-orange{
+    color: $dark-orange;
+  }
+}
