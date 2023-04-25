@@ -18,7 +18,6 @@
         }
         .three-icons-container{
             flex-basis: 50%;
-
             @media (max-width: 991px){
                 flex-basis: 100%;
             }
@@ -28,7 +27,8 @@
                 margin-right: auto;
                 margin-left: auto;
             }
-            gap: 10px;
+            gap: 10px !important;
+            
         }
         }
         .text-title-container{
@@ -58,11 +58,12 @@
             @media (max-width: 991px){
                 flex-direction: column;
             }
+
         }
         .three-icons-container img{
             margin:6px;
         }
     }
-}
+
 
 
