@@ -38,12 +38,10 @@
     @media (min-width: 1000px) {
         .grid-item {
           width: 33.333%;
-        }
-    }
-      
-    @media (min-width: 2100px) {
-        .grid-item {
-          width: 25%;
+          
+          &.grid-item-big{
+            width: 66%;
+            }
         }
     }
 }
