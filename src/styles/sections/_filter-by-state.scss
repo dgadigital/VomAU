@@ -124,6 +124,9 @@
     }
 
     &.church-visit{
+        li .title{
+            display: none;
+        }
         .tab-content{
             .testimonial-container{
                 .text-container{
