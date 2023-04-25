@@ -41,6 +41,9 @@
           
           &.grid-item-big{
             width: 66.5%;
+            .image-title{
+                width: auto;
+            }
           }
         }
     }
