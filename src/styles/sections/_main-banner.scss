@@ -261,6 +261,18 @@
                 }
             }
         }
+        &.w-media{
+            .banner-slider{
+                .item{
+                    .text{
+                        padding: 80px 40px 80px 40px;
+                        .text-wrapper>p{
+                            margin-bottom: 0;
+                        }
+                    }
+                }
+            }
+        }
     }
 
     .slick-dots {
