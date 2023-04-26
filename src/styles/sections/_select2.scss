@@ -64,7 +64,6 @@ $border-color_3: #5897fb;
 			box-sizing: border-box;
 			border: none;
 			font-size: 100%;
-			margin-top: 5px;
 			padding: 0;
 			&::-webkit-search-cancel-button {
 				-webkit-appearance: none;
@@ -686,6 +685,7 @@ $border-color_3: #5897fb;
         
         border-radius: 6px;
         box-shadow: 0 0 10px rgba(0,0,0,0.5);
+		top: 32px;
 
     }
     .select2-selection .select2-selection--multiple:after {
