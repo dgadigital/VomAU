@@ -186,7 +186,7 @@ header {
             
             .dropdown-submenu {
 
-                .dropdown-item {
+                .dropdown-toggle {
                     position: relative;
 
                     &:after {
@@ -280,9 +280,9 @@ header {
                         color: $dark-green;
                     }
 
-                    .nav-link{ 
+                    .nav-primary{ 
 
-                        &.dropdown-item:after {
+                        &.dropdown-toggle:after {
                              background-image: url('../assets/images/nav-show.png');
 
                              @media (max-width: 767px) {
@@ -293,14 +293,14 @@ header {
                     }
                 }
 
-                .nav-link{
+                .nav-primary{
                     position: relative;
                     padding-right: 1.8rem;
                     margin-right: 10px;
                     color: $text-color;
                     font-family: $font-lato-bold;
                     
-                    &.dropdown-item:after {
+                    &.dropdown-toggle:after {
                         content: "";
                         position: absolute;
                         top: 50%;
