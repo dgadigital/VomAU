@@ -48,9 +48,8 @@
             padding: 10px;
             font-size: 14px;
             text-align: center;
-            color: #353535;
+            color: #FFF;
             background-color: #E8E9E8;
-            cursor: pointer;
             transition: background-color 0.3s ease-in-out;
         }
         .step.current-step{
@@ -340,13 +339,13 @@
                 }
             }
         
-            steps.on('click', function() {
+            /* steps.on('click', function() {
                 var clickedStep = $(this).attr('id').replace('step', '');
                 if (clickedStep != currentStep && clickedStep <= steps.length && clickedStep > 0) {
                     currentStep = parseInt(clickedStep);
                     showStep(currentStep);
                 }
-            });
+            }); */
         
             $('#next').on('click', function() {
                 nextStep();
