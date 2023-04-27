@@ -1,13 +1,16 @@
 .grid-stories{
     margin: 30px 0px;
-
+    .grid-sizer,
     .grid-item{
         display:inline;
-        padding: 10px;
+        padding: 5px;
         box-sizing: border-box;
 
         .img-container {
             position: relative;
+            img{
+                width: 100%;
+            }
             .image-title {
                 position: absolute;
                 top: 0;
@@ -29,15 +32,15 @@
             }
         }
     }
-    @media (min-width: 500px) {
+    @media (min-width: 768px) {
         .grid-item {
-          width: 50%;
+          width: 49.4%;
         }
     }
       
     @media (min-width: 1000px) {
         .grid-item {
-          width: 33.333%;
+          width: 33.0%;
           
           &.grid-item-big{
             width: 66.5%;
@@ -47,4 +50,10 @@
           }
         }
     }
+}
+
+.grid-stories:after {
+    content: '';
+    display: block;
+    clear: both;
 }
