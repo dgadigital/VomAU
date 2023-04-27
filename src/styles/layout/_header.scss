@@ -117,8 +117,10 @@ header {
 
             // DROPDOWN 
             .dropdown-menu {
-                top: 118%;
-                left: -50%;
+                top: -2px;
+                left: 99%;
+                height: auto;
+                min-height: 100%;
                 padding: 0;
                 background-color: $semi-mid-grey;
                 border: 0;
@@ -280,7 +282,7 @@ header {
                         color: $dark-green;
                     }
 
-                    .nav-primary{ 
+                    .nav-link{ 
 
                         &.dropdown-toggle:after {
                              background-image: url('../assets/images/nav-show.png');
@@ -293,7 +295,7 @@ header {
                     }
                 }
 
-                .nav-primary{
+                .nav-link{
                     position: relative;
                     padding-right: 1.8rem;
                     margin-right: 10px;
