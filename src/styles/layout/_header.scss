@@ -156,7 +156,7 @@ header {
                     &:active {
                         color: #fff;
                         background-color: $dark-green;
-                        border-bottom: 0;
+                        border-bottom: 0.5px solid #DADADA;
 
                         @media (max-width: 767px) {
                             background-color: #f6f6f6;
@@ -173,7 +173,7 @@ header {
                             margin-bottom: 4px;
                         }
 
-                        &.description {
+                        &.menu-item-description {
                             font-family: $font-lato-regular;
                             font-size: 11px;
                         }
