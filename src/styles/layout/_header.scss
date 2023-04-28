@@ -141,7 +141,7 @@ header {
                     font-family: $font-lato-bold;
                     font-size: 12px;
                     font-family: "Lato Bold";
-                    border-bottom: 0;
+                    border-bottom: 0.5px solid #DADADA;
 
                     @media (max-width: 767px) {
                         width: 100%;
@@ -161,7 +161,7 @@ header {
                         @media (max-width: 767px) {
                             background-color: #f6f6f6;
                             color: $text-color;
-                            border-bottom: 0
+                            border-bottom: 0.5px solid #DADADA;
                         }
                     }
 
@@ -220,7 +220,7 @@ header {
                     &.show {
                         background-color: $dark-green;
                         color: #fff;
-                        border-bottom: 0;
+                        border-bottom: 0.5;
 
                         @media (max-width: 767px) {
                             background-color: #f6f6f6;
