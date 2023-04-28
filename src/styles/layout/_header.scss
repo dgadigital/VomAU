@@ -117,10 +117,8 @@ header {
 
             // DROPDOWN 
             .dropdown-menu {
-                top: -2px;
-                left: 99%;
-                height: auto;
-                min-height: 100%;
+                top: 118%;
+                left: -50%;
                 padding: 0;
                 background-color: $semi-mid-grey;
                 border: 0;
@@ -131,7 +129,7 @@ header {
                     box-shadow: none;
                 }
 
-                .dropdown-item {
+                .dropdown-item{
                     display: flex;
                     flex-direction: column;
                     justify-content: center;
@@ -143,7 +141,7 @@ header {
                     font-family: $font-lato-bold;
                     font-size: 12px;
                     font-family: "Lato Bold";
-                    border-bottom: 0.5px solid #DADADA;
+                    border-bottom: 0;
 
                     @media (max-width: 767px) {
                         width: 100%;
@@ -163,7 +161,7 @@ header {
                         @media (max-width: 767px) {
                             background-color: #f6f6f6;
                             color: $text-color;
-                            border-bottom: 0.5px solid #DADADA;
+                            border-bottom: 0
                         }
                     }
 
@@ -186,7 +184,7 @@ header {
 
             // SUB MENU
             
-            .dropdown-submenu {
+            .dropdown-menu {
 
                 .dropdown-toggle {
                     position: relative;
@@ -222,7 +220,7 @@ header {
                     &.show {
                         background-color: $dark-green;
                         color: #fff;
-                        border-bottom: 0.5px solid #DADADA;
+                        border-bottom: 0;
 
                         @media (max-width: 767px) {
                             background-color: #f6f6f6;
@@ -245,7 +243,7 @@ header {
 
                 .dropdown-menu {
                     top: -2px;
-                    left: 99%;
+                    left: 100%;
                     height: auto;
                     min-height: 100%;
                     clip-path: inset(-5px -30px -42px 0px);
@@ -282,7 +280,7 @@ header {
                         color: $dark-green;
                     }
 
-                    .nav-link{ 
+                    .nav-primary{ 
 
                         &.dropdown-toggle:after {
                              background-image: url('../assets/images/nav-show.png');
@@ -295,7 +293,7 @@ header {
                     }
                 }
 
-                .nav-link{
+                .nav-primary{
                     position: relative;
                     padding-right: 1.8rem;
                     margin-right: 10px;

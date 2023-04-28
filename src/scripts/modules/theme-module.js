@@ -111,6 +111,10 @@ AppName.Modules.ThemeModule = (function () {
       });
       return false;
     });
+
+    $('#menu-main-menu > li > a').addClass('nav-primary');
+    $('#menu-main-menu > li > ul > li > a').addClass('dropdown-item');
+    $('#menu-main-menu > li > ul > li > a').removeClass('nav-link');
   }
 
   var _tabs = function () {
