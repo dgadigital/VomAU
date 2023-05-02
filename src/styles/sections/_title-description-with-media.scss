@@ -39,13 +39,19 @@
             display: flex;
             flex-direction: column;
             width: 100%;
+
+            @media (min-width: 1200px){
+                .tab-description{
+                    padding: 10px 180px;
+                }
+            }
     
             .tab-menu {
                 display: flex;
                 justify-content: center;
                 align-items: center;
                 gap: 26px;
-                margin: 0;
+                margin: 10px 0 0 0;
                 padding: 0;
                 padding-bottom: 20px;
                 list-style: none;
@@ -61,22 +67,23 @@
                 }
                 @media (max-width: 767px){
                     li:last-child {
-                        line-height: 35px;
+                        line-height: 45px;
                     }
                 }
     
                 li{
                     font-family: $font-lato-regular;
                     font-size: 16px;
+                    width: 250px;
                     line-height: 45px;
                     font-weight: 500;
                     background-color: #D5D5D3;
                     border-radius: 10px;
                     @media (max-width: 980px){
-                        width: 20%;
+                        width: 25%;
                     }
                     @media (max-width: 400px){
-                        width: 45%;
+                        width: 45%;  
                     }
                     a{
                         display: block;
@@ -84,6 +91,9 @@
                         text-decoration: none;
                         color: #fff;
                         border-radius: 10px;
+                        @media (max-width: 767px){
+                            padding: 0 11px; 
+                        }
                     }
                     &:hover{
                         color: #FFF;
