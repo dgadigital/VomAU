@@ -34,17 +34,16 @@
         img{
             margin-top: 45px;
         }
+        @media (min-width: 1200px){
+            .tab-description{
+                padding: 10px 180px;
+            }
+        }
 
         .tab-container {
             display: flex;
             flex-direction: column;
             width: 100%;
-
-            @media (min-width: 1200px){
-                .tab-description{
-                    padding: 10px 180px;
-                }
-            }
     
             .tab-menu {
                 display: flex;
