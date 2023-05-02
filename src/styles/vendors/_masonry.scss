@@ -3,7 +3,8 @@
     .grid-sizer,
     .grid-item{
         display:inline;
-        padding: 5px;
+        border: 2px solid transparent;
+        padding: 10px;
         box-sizing: border-box;
 
         .img-container {
@@ -41,9 +42,20 @@
     @media (min-width: 1000px) {
         .grid-item {
           width: 33.0%;
-          
+          &.grid-item-normal{
+            height: 255px;
+            img{
+                height: 230px;
+            }
+          }
+          &.grid-item-tall{
+            height: 431px;
+            img{
+                height: 408px;
+            }
+          }
           &.grid-item-big{
-            width: 66.5%;
+            width: 66%;
             .image-title{
                 width: auto;
             }
