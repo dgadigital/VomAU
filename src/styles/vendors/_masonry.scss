@@ -3,7 +3,7 @@
     .grid-sizer,
     .grid-item{
         display:inline;
-        // border: 2px solid transparent;
+        width: 100%;
         padding: 5px;
         box-sizing: border-box;
 
@@ -32,10 +32,8 @@
                 }
             }
         }
-    }
-    @media (min-width: 768px) {
-        .grid-item {
-          width: 49.4%;
+        @media (min-width: 768px) {
+            width: 49.4%;
         }
     }
       
