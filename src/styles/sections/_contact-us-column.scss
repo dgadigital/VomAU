@@ -15,11 +15,16 @@
             flex-basis: 15%;
             flex-grow: 1;
             &:first-child{
-                flex-basis: 22%;
+                flex-basis: 25%;
                 @media(max-width: 991px){
                     margin-bottom: 30px;
                 }
+            p{
+                font-size: 14px;
+                padding-right: 28px;
             }
+            }
+
         }
         img{
             margin-bottom: 20px;
@@ -48,7 +53,9 @@
                 margin-top: 17px;
             }
 
-           
+           h2{
+            margin-bottom: 14px;
+           }
         }
     }
 }
