@@ -50,20 +50,27 @@
                 font-size: 28px;
             }
         }
-        .three-icons-container{
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            font-family: 'Lato';
-            @media (max-width: 991px){
-                flex-direction: column;
-            }
-
-        }
-        .three-icons-container img{
-            margin:6px;
-        }
+     
     }
 
+    .three-icons-container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: 'Lato';
+        @media (min-width: 767px) and (max-width:1180px){
+            flex-direction: column;
+            align-items: left;
 
+        }
+        @media (max-width: 480px){
+            flex-direction: column;
+            align-items: center;
+
+        }
+
+    }
+    .three-icons-container img{
+        margin:6px;
+    }
 

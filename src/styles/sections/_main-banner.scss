@@ -24,6 +24,13 @@
         background-position: center;
         overflow: hidden;
         z-index: 1;
+
+        .text-wrapper{
+            @media (max-width: 1199px) {
+            text-align: center;
+            }
+            
+        }
     }
 
     .container {
@@ -257,6 +264,7 @@
                             padding-top: 10px;
                             padding-bottom: 10px;
                         }
+                
                     }
                 }
             }
