@@ -62,7 +62,7 @@
 
         .tab-content {
             margin-top: 20px;
-            padding: 20px;
+            padding: 20px 0;
             border-top: none;
 
             @media (max-width: 767px){
@@ -99,6 +99,9 @@
                         @media (max-width: 400px){
                             left: 45px;
                         }
+                    }
+                    h2{
+                        text-transform: unset;
                     }
                     p{
                         font-family: $font-lato-regular;
