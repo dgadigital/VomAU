@@ -301,4 +301,26 @@
             border: 1px solid $text-color;
         }
     }
+    .three-icons-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: 'Lato';
+        @media (min-width: 767px) and (max-width:1180px){
+            align-items: left;
+            flex-direction: column;
+
+        }
+        @media (max-width: 480px){
+            flex-direction: column;
+            align-items: center;
+
+        }
+
+    }
+    .three-icons-container img{
+        margin:6px;
+    }
+
+
 }
