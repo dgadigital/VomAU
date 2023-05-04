@@ -36,6 +36,12 @@
                     margin-top: 15px;
                 }
             }
+            @media (max-width: 991px){
+                padding-left: 15px;
+                margin-bottom: 20px;
+                margin-top: 30px;
+                width: 100%;
+            }
         }
 
         .image-container{
@@ -50,16 +56,19 @@
     
             @media (max-width: 991px){
                 flex-direction: column-reverse;
-            }
+            }  
 
             .text-container{
                 padding-left: 60px ;
                 @media (max-width: 991px){
                     padding-left: 15px;
-                    margin-bottom: 50px;
+                    margin-bottom: 20px;
                     margin-top: 30px;
                 }
             }
+        }
+        @media (max-width: 991px){
+            flex-direction: column-reverse;
         }
     }
 
