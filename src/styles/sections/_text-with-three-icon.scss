@@ -21,11 +21,17 @@
             @media (max-width: 991px){
                 flex-basis: 100%;
             }
+            @media (max-width: 480px) and (min-width: 350px){
+                flex-direction: row;
+            }
 
             img{
                 display: block;
                 margin-right: auto;
                 margin-left: auto;
+                @media (max-width: 480px){
+                    height: 55px;
+                }
             }
             gap: 10px !important;
             
