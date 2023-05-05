@@ -66,6 +66,10 @@
                     max-height: 150px;
                     margin-bottom: 20px;
                     object-fit: contain;
+
+                    img{
+                        height: 100%;
+                    }
                 }
                 .product-name{
                     margin-bottom: 10px;
