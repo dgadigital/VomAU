@@ -96,6 +96,7 @@ AppName.Modules.ThemeModule = (function () {
   };
 
   const _multi_level_menu = () => {
+    
     $('.dropdown-menu a.dropdown-toggle').on('click', function(e) {
       if (!$(this).next().hasClass('show')) {
         $(this).parents('.dropdown-menu').first().find('.show').removeClass("show");
