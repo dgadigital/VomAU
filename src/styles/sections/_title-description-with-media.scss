@@ -135,4 +135,9 @@
             }
         }
     }
+    &.bg-mountain{
+        @media (max-width: 768px){
+            padding-top: 50px;
+        }
+    }
 }
