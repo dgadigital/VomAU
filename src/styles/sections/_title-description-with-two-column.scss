@@ -39,19 +39,19 @@
                 }
             }
             .two-column-list {
-                padding-left: 0;
+                padding-left: 20px;
                 columns: 2;
 
                 li{
                     display: list-item;
                     width: 100%;
                     padding: 5px;
+                    padding-right: 10px;
                     list-style: disc;
                     break-inside: avoid-column;
                 }
 
                 @media (max-width: 678px){
-                    padding-left: 20px;
                     columns: 1;
                 }
             }
