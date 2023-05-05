@@ -96,6 +96,13 @@ AppName.Modules.ThemeModule = (function () {
   };
 
   const _multi_level_menu = () => {
+    $('.dropdown').mouseenter(function(){
+      if(!$('.navbar-toggle').is(':visible')) { // disable for mobile view
+          if(!$(this).hasClass('open')) { // Keeps it open when hover it again
+              $('.dropdown-toggle', this).trigger('click');
+          }
+      }
+     });
     $('.dropdown-menu a.dropdown-toggle').on('click', function(e) {
       if (!$(this).next().hasClass('show')) {
         $(this).parents('.dropdown-menu').first().find('.show').removeClass("show");
