@@ -57,9 +57,11 @@
                 @media(max-width: 991px){
                     flex-basis: 48%;
                 }
+                @media (max-width: 768px){
+                    flex-basis: 100%;
+                }
                 .image-wrapper{
                     display: flex;
-                    margin: auto;
                     margin-top: 10px;
                     justify-content: center;
                     width: auto;
