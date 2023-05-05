@@ -140,8 +140,134 @@ footer {
                                 }
                             }
                         }
+                    } 
+                } 
+
+                @media (max-width: 575px){
+                    display: none;
+                } 
+            }
+
+            .mobile-footer-links{
+                display: inline;
+                width: 100%;
+                text-align: center;
+                .links-wrapper {
+                    ul {
+                        margin-bottom: 5px;
+                        padding: 0;
+                        list-style: none;
+
+                        li a {
+                            color: $text-color;
+                            font-size: 12px;
+
+                            &:hover {
+                                color: $brand-color;
+                            }
+                        }
                     }
+                    .menu-wrapper{
+                        .mobile-links {
+                            ul {
+                                li {
+                                    padding-bottom: 20px;
+                                    
+                                    &:first-child {
+                                        padding-top: 20px;
+                                    }
+                                    &:last-child {
+                                        padding-bottom: 10px;
+                                    }
+        
+                                    a {
+                                        color: $brand-color;
+                                        font-family: $font-lato-regular;
+                                        font-weight: 300px;
+                                        font-size: 18px;
+                                        text-transform: uppercase;
+        
+                                        @media (max-width: 767px){
+                                            font-size: 14px;
+                                        }
+        
+                                        &:hover {
+                                            color: $dark-green;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    
+                    @media (max-width: 575px){
+                        .nav-item {
+                            &.show {
+                                .nav-link {
+                                    color: $dark-green;
+                                }
+            
+                                .nav-primary{ 
+            
+                                    &.dropdown-toggle:after {
+                                        background-image: url('../assets/images/nav-show.png');
+                                    }
+                                }
+                            }
+            
+                            .nav-primary{
+                                color: $dark-green;
+                                font-family: $font-lato-bold;
+                                
+                                &.dropdown-toggle:after {
+                                    content: "";
+                                    position: inline-block;
+                                    top: 50%;
+                                    right: 0px;
+                                    margin-left: 3%;
+                                    transform: translateY(25%);
+                                    height: 8.58px;
+                                    width: 15px;
+                                    border: 0;
+                                    background-image: url('../assets/images/menu-dropdown.png');
+                                    background-size: cover;
+                                    background-position: center;
+                                    background-repeat: no-repeat;
+                                    
+                                }
+                            }
+                            
+                            &:not(.show) + .show {
+                                .about{
+                                    margin-bottom: 80px;
+                                }
+                                .get-involved{
+                                    margin-bottom: 330px;
+                                }
+                                .latest{
+                                    margin-bottom: 230px;
+                                }
+                            }
+                            .dropdown-menu{
+                                position: fixed;
+                                bottom: 100%;
+                                padding: 0;
+                                text-align: center;
+                                min-width: 100%;
+                                border: none;
+                                background-color: transparent;
+                                z-index: 9999;
+                            }
+                        }
+                    }    
+                } 
+                @media (min-width: 576px){
+                    display: none;
                 }
+
+                @media (max-width: 575px){
+                    display: block;
+                } 
             }
 
             .footer-form {
@@ -171,6 +297,21 @@ footer {
                         @media (max-width: 767px){
                             width: 100%;
                         }
+                    }
+                }
+            }
+
+            @media (max-width: 576px) {
+                .mobile-footer-links {
+                    order: 2;
+                }
+
+                .footer-form {
+                    padding-top: 20px;
+                    order: 1;
+
+                    .footer-title{
+                        text-align: left;
                     }
                 }
             }
