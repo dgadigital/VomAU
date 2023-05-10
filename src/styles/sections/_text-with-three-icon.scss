@@ -18,17 +18,20 @@
         }
         .three-icons-container{
             flex-basis: 47%;
+            flex-direction: row;
+
             @media (max-width: 991px){
                 flex-basis: 100%;
             }
-            @media (max-width: 480px) and (min-width: 350px){
-                flex-direction: row;
+            @media (max-width: 540px){
+                flex-direction: column;
             }
 
             img{
                 display: block;
                 margin-right: auto;
                 margin-left: auto;
+               
             }
             gap: 15px !important;
             
