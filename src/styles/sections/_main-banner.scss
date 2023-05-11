@@ -322,5 +322,52 @@
         margin:6px;
     }
 
+    &.landing-page{
+        .main-banner-wrapper{
+            padding-top: 200px;
+            padding-bottom: 300px;
 
+            @media (max-width: 768px){
+                padding-top: 100px;
+                padding-bottom: 150px;
+            }
+        }
+        .landing-page-title{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            margin-bottom: 30px;
+
+            @media (max-width: 768px){
+                justify-content: center;
+            }
+
+            h1{
+                font-size: 88px;
+
+                @media (max-width: 991px){
+                    font-size: 78px;
+                }
+                @media (max-width: 768px){
+                    font-size: 66px;
+                }
+            }
+        }
+
+        .main-banner-slider{
+            margin-top: -250px;
+
+            @media (max-width: 768px){
+                margin-top: -200px;
+            }
+
+            .banner-slider{
+                .item{
+                    justify-content: center;
+                    box-shadow: none;
+                    min-height: 350px;
+                }
+            }
+        }
+    }
 }
