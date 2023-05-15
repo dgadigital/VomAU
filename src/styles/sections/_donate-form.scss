@@ -1,0 +1,30 @@
+.donate-form{
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background: rgba(126, 156, 203, 0.4);
+    mix-blend-mode: multiply;
+
+    .form-container{
+        margin-right: auto;
+        margin-left: auto;
+        width: 70%; 
+        background: #FFF;
+
+        @media (max-width: 991px){
+            width: 100%;
+        }
+
+        .form-title{
+            text-transform:none; 
+            font-size:44px; 
+            padding: 20px 40px;
+
+            @media (max-width: 991px){
+                font-size: 36px;
+            }
+            @media (max-width: 768px){
+                font-size: 28px;
+            }
+        }
+    }
+}

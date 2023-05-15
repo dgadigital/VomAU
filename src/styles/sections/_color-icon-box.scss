@@ -66,6 +66,18 @@
                 background-color: $box-blue;
             }
 
+            &.white{
+                background-color: #FFF;
+
+                .icon-wrapper{
+                    img{
+                        mix-blend-mode: normal;
+                    }
+                }
+                p{
+                    color: #353535;
+                }
+            }
             .icon-wrapper {
                 max-width: 124px;
 
