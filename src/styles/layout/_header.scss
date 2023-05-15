@@ -73,6 +73,14 @@ header {
                     padding-right: 15px;
                     border-radius: 3px;
                 }
+
+                &.f-20{
+                    font-size: 20px;
+
+                    @media (max-width: 767px){
+                        font-size: 14px;
+                    }
+                }
             }
         }
     }

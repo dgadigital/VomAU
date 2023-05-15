@@ -316,6 +316,17 @@ footer {
                 }
             }
         }
+
+        .text-with-three-icon{
+            .content-container{
+                .three-icons-container{
+                    
+                    @media (max-width: 540px){
+                        flex-direction: row;
+                    }
+                }
+            }
+        }
     }
 
    
