@@ -331,6 +331,12 @@
                 padding-top: 100px;
                 padding-bottom: 150px;
             }
+
+            .banner-wrapper{
+                .text{
+                    width: 100%;
+                }
+            }
         }
         .landing-page-title{
             display: flex;
@@ -344,6 +350,7 @@
 
             h1{
                 font-size: 88px;
+                letter-spacing: -1.5px;
 
                 @media (max-width: 991px){
                     font-size: 78px;
