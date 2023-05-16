@@ -18,8 +18,26 @@
             padding: 0 10px;
         }
         .image-container{
+            position: relative;
             flex-basis: 30%;
             text-align: center;
+
+            .tag{
+                position: absolute;
+                top: 0;
+                left: 10px;
+                padding-left: 8px;
+                padding-right: 8px;
+                padding-top: 15px;
+                padding-bottom: 15px;
+                font-size: 16px;
+                text-transform: uppercase;
+                color: #fff;
+                background: #4ba088;
+                border-bottom-left-radius: 10px;
+                border-bottom-right-radius: 10px;
+                z-index: 10;
+            }
         }
         .text-container{
             flex-basis: 70%;
@@ -64,6 +82,17 @@
                     margin-top: 20px;
                     text-align: center;
                 }
+            }
+        }
+
+        &.large-gap{
+            gap: 50px;
+
+            .image-container{
+                flex-basis: 25%;
+            }
+            .text-container{
+                flex-basis: 65%;
             }
         }
     }

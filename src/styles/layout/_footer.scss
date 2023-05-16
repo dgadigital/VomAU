@@ -318,11 +318,31 @@ footer {
         }
 
         .text-with-three-icon{
+            padding-top: 0;
+
             .content-container{
                 .three-icons-container{
                     
                     @media (max-width: 540px){
                         flex-direction: row;
+                    }
+                }
+            }
+        }
+
+        &.landing-page{
+            .footer-title{
+                text-align: left;
+                color: #353535;
+                font-size: 30px;
+                text-transform: capitalize;
+            }
+
+            .form-wrapper{
+                .button-wrapper{
+                    
+                    @media (max-width: 767px){
+                        text-align: left;
                     }
                 }
             }

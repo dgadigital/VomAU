@@ -1,0 +1,142 @@
+.banner-event{
+    position: relative;
+    padding-top: 0px;
+    padding-bottom: 0px;
+
+    .bg-holder{
+        position: relative;
+        padding-top: 150px;
+        padding-bottom: 100px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        overflow: hidden;
+
+        @media (max-width: 678px){
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
+    }
+
+    .upper-banner{
+        .content-container{
+            display: flex;
+            flex-direction: row;
+
+            @media (max-width: 991px){
+                flex-direction: column;
+            }
+
+            .content{
+                flex-basis: 40%;
+            }
+            .image-wrapper{
+                flex-basis: 60%;
+            }
+        }
+    }
+
+    .lower-banner{
+        &.two-column-text-image{
+            .row-container{
+                flex-wrap: nowrap;
+                flex-direction: row;
+                
+                .text-container{
+                    padding: 0 45px;
+
+                    h2{
+                        margin-top: 30px;
+                        margin-bottom: 0;
+
+                        @media (max-width: 500px){
+                            font-size: 24px;
+                        }
+
+                        @media (max-width: 425px){
+                            font-size: 20px;
+                        }
+                    }
+
+                    .event-container{
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: flex-start;
+                        gap: 15px;
+                        padding: 20px 0;
+                        border-bottom: 1px solid #CCCCCC;
+
+                        @media (max-width: 500px){
+                            flex-direction: column;
+                        }
+
+                        .event-wrapper{
+                            flex-basis: 60%;
+                            padding: 0;
+
+                            @media (max-width: 991px){
+                                flex-basis: 50%;
+                            }
+                            
+                            .event-details{
+                                display: flex;
+                                flex-direction: row;
+                                justify-content: flex-start;
+                                padding: 0;
+
+                                @media (max-width: 500px){
+                                    justify-content: space-between;
+                                }
+                                
+                                
+                                .event-title{
+                                    flex-basis: 25%;
+                                    padding: 0;
+                                    line-height: 24px;
+
+                                    @media (max-width: 500px){
+                                        flex-basis: 45%;
+                                    }
+                                }
+
+                                .event-content{
+                                    flex-basis: 70%;
+                                    padding: 0;
+                                    line-height: 24px;
+
+                                    @media (max-width: 500px){
+                                        flex-basis: 45%;
+                                    }
+                                }
+                            }
+                        }
+                        .button-wrapper{
+                            display: flex;
+                            flex-basis: 40%;
+                            align-self: center;
+                            justify-content: flex-end;
+                            padding: 0;
+
+                            @media (max-width: 991px){
+                                flex-basis: 50%;
+                            }
+                        }
+                    }
+                }
+                .image-container{
+                    padding: 0;
+                }
+
+                &.reverse{
+                    flex-direction: row-reverse;
+
+                    @media (max-width: 991px){
+                        flex-direction: column;
+                    }
+                }
+            }
+        }
+    }
+
+
+}
