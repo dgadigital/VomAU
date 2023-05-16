@@ -46,8 +46,8 @@
             @media (max-width: 991px){
                 flex-basis: 100%;
                 margin: auto;
-               
             }
+
             h3{
                 margin-bottom: 20px;
 
@@ -88,11 +88,31 @@
         &.large-gap{
             gap: 50px;
 
+            @media (max-width: 991px){
+                gap: 0;
+            } 
+
             .image-container{
                 flex-basis: 25%;
+
+                @media (max-width: 991px){
+                    flex-basis: 100%;
+                    margin: auto;
+                }
+
+                img{
+                    @media (max-width: 991px){
+                        width: 100%;
+                    } 
+                }
             }
             .text-container{
                 flex-basis: 65%;
+
+                @media (max-width: 991px){
+                    flex-basis: 100%;
+                    margin: auto;
+                }
             }
         }
     }
