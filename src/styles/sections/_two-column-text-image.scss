@@ -5,7 +5,7 @@
         justify-content: center;
         align-items: center;
 
-        div{
+        > div{
             flex-grow: 1;
             flex-basis: calc(100% / 2);
             padding: 0 15px;
@@ -49,8 +49,6 @@
 
             img{
                 width: 100%;
-                -webkit-filter: drop-shadow(2px 3px 10px  rgba(0,0,0,0.19));
-                filter: drop-shadow(2px 3px 10px  rgba(0,0,0,0.19));
             }
         }
         &.reverse{

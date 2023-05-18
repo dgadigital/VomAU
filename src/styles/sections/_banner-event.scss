@@ -22,16 +22,21 @@
         .content-container{
             display: flex;
             flex-direction: row;
+            gap: 30px;
 
             @media (max-width: 991px){
                 flex-direction: column;
             }
 
             .content{
-                flex-basis: 40%;
+                flex-basis: 50%;
             }
-            .image-wrapper{
-                flex-basis: 60%;
+            .media{
+                flex-basis: 50%;
+
+                @media (max-width: 991px){
+                    margin-bottom: 50px;
+                }
             }
         }
     }
@@ -138,5 +143,16 @@
         }
     }
 
+    iframe{
+        width: 100%;
+        min-height: 450px;
 
+        @media (max-width: 991px){
+            min-height: 300px;
+        }
+
+        @media (max-width: 425px){
+            min-height: 200px;
+        }
+    }
 }
