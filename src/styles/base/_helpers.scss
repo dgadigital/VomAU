@@ -248,4 +248,59 @@ hr.color-black {
   &.dark-orange{
     color: $dark-orange;
   }
+
+  &:hover{
+    opacity: .7;
+  }
+}
+
+.links{
+  text-decoration: none;
+  color: #353535;
+
+  &.green{
+    color: $dark-green;
+
+    &:hover{
+      color: $dark-green;
+      opacity: .7;
+    }
+  }
+  &.red{
+    color: $red;
+
+    &:hover{
+      color: $red;
+      opacity: .7;
+    }
+  }
+  &.grey{
+    color: $dark-grey;
+
+    &:hover{
+      color: $dark-grey;
+      opacity: .7;
+    }
+  }
+  &.orange{
+    color: $orange;
+
+    &:hover{
+      color: $orange;
+      opacity: .7;
+    }
+  }
+  &.dark-orange{
+    color: $dark-orange;
+
+    &:hover{
+      color: $dark-orange;
+      opacity: .7;
+    }
+  }
+
+  &:hover{
+    opacity: .7;
+    color: #353535;
+  }
 }

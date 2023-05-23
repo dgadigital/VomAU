@@ -245,10 +245,24 @@
         }
 
         .final-field{
+            position: relative;
             display: inline-block;
             width: 9%;
         }
-
+        .final-field .dollar-sign{
+            
+            position: absolute;
+            top: 50%;
+            left: 70%;
+            transform: translateY(-50%);
+        }
+        @media (max-width: 425px){
+            .final-field .dollar-sign{
+                top: 59%;
+                left: 44%;
+                transform: translateY(-50%);
+            } 
+        }
         .final-field input{
             padding: 0px 20px;
             margin: 10px 8.5px;
@@ -266,6 +280,7 @@
             font-size: 14px;
         }
 
+        
         @media (max-width: 426px){
             .donationLabel, .final-field, .final-field input{
                 padding: 0;
@@ -315,6 +330,9 @@
             }
         
             function prevStep() {
+                $('.amountsection input[type="radio"]').prop('checked', false);
+                $('.donationamount').val('');
+                URLBuilder();
                 currentStep--;
                 showStep(currentStep);
             }
@@ -391,54 +409,66 @@
 			var baseURL = "https://voiceofthemartyrsltd.my.salesforce-sites.com/AAkPay__CheckoutM";
 			var products = "";
 			var amountbuilder = 0;
+
+            var bibleChallengeAmount = document.getElementById('BibleChallengeAmountfinal').value.replace('$', '');
+            var vomedicalAmount = document.getElementById('VOMedicalAmountfinal').value.replace('$', '');
+            var vomMinistryFundAmount = document.getElementById('VOMMinistryFundAmountfinal').value.replace('$', '');
+            var frontLineMinistryAmount = document.getElementById('FrontLineMinistryAmountfinal').value.replace('$', '');
+            var familiesofMartyrsAmount = document.getElementById('FamiliesofMartyrsAmountfinal').value.replace('$', '');
+            var aramaicBiblesforIraqiChristiansAmount = document.getElementById('AramaicBiblesforIraqiChristiansAmountfinal').value.replace('$', '');
+            var emergencyResponseAfghanistanAmount = document.getElementById('EmergencyResponseAfghanistanAmountfinal').value.replace('$', '')
+            var biblesLiteratureAmount = document.getElementById('BiblesLiteratureAmountfinal').value.replace('$', '');
+            var biblesPlusAmount = document.getElementById('BiblesPlusAmountfinal').value.replace('$', '');
+            var ukraineAmount = document.getElementById('UkraineAmountfinal').value.replace('$', '');
+
 			//Product Details
-			if(document.getElementById('BibleChallengeAmountfinal').value > 0) {
-				var fieldvalue = document.getElementById('BibleChallengeAmountfinal').value;
+			if(bibleChallengeAmount > 0) {
+				var fieldvalue = bibleChallengeAmount;
 				products = products + "{%22itemcode%22%20:%20%22VOM1%22,%22quantity%22%20:%201.00,%20%22unitprice%22%20:" + fieldvalue +",%20%22tax%22%20:%2010.00},";
 				amountbuilder += +fieldvalue;
 			}
-			if(document.getElementById('VOMedicalAmountfinal').value > 0) {
-				var fieldvalue = document.getElementById('VOMedicalAmountfinal').value;
+			if(vomedicalAmount > 0) {
+				var fieldvalue = vomedicalAmount;
 				products = products + "{%22itemcode%22%20:%20%22VOM2%22,%22quantity%22%20:%201.00,%20%22unitprice%22%20:" + fieldvalue +",%20%22tax%22%20:%2010.00},";
 				amountbuilder += +fieldvalue;
 			}
-			if(document.getElementById('VOMMinistryFundAmountfinal').value > 0) {
-				var fieldvalue = document.getElementById('VOMMinistryFundAmountfinal').value;
+			if(vomMinistryFundAmount > 0) {
+				var fieldvalue = vomMinistryFundAmount;
 				products = products + "{%22itemcode%22%20:%20%22VOM3%22,%22quantity%22%20:%201.00,%20%22unitprice%22%20:" + fieldvalue +",%20%22tax%22%20:%2010.00},";
 				amountbuilder += +fieldvalue;
 			}
-			if(document.getElementById('FrontLineMinistryAmountfinal').value > 0) {
-				var fieldvalue = document.getElementById('FrontLineMinistryAmountfinal').value;
+			if(frontLineMinistryAmount > 0) {
+				var fieldvalue = frontLineMinistryAmount;
 				products = products + "{%22itemcode%22%20:%20%22VOM4%22,%22quantity%22%20:%201.00,%20%22unitprice%22%20:" + fieldvalue +",%20%22tax%22%20:%2010.00},";
 				amountbuilder += +fieldvalue;
 			}
-			if(document.getElementById('FamiliesofMartyrsAmountfinal').value > 0) {
-				var fieldvalue = document.getElementById('FamiliesofMartyrsAmountfinal').value;
+			if(familiesofMartyrsAmount > 0) {
+				var fieldvalue = familiesofMartyrsAmount;
 				products = products + "{%22itemcode%22%20:%20%22VOM5%22,%22quantity%22%20:%201.00,%20%22unitprice%22%20:" + fieldvalue +",%20%22tax%22%20:%2010.00},";
 				amountbuilder += +fieldvalue;
 			}
-			if(document.getElementById('AramaicBiblesforIraqiChristiansAmountfinal').value > 0) {
-				var fieldvalue = document.getElementById('AramaicBiblesforIraqiChristiansAmountfinal').value;
+			if(aramaicBiblesforIraqiChristiansAmount > 0) {
+				var fieldvalue = aramaicBiblesforIraqiChristiansAmount;
 				products = products + "{%22itemcode%22%20:%20%22VOM6%22,%22quantity%22%20:%201.00,%20%22unitprice%22%20:" + fieldvalue +",%20%22tax%22%20:%2010.00},";
 				amountbuilder += +fieldvalue;
 			}
-			if(document.getElementById('EmergencyResponseAfghanistanAmountfinal').value > 0) {
-				var fieldvalue = document.getElementById('EmergencyResponseAfghanistanAmountfinal').value;
+			if(emergencyResponseAfghanistanAmount > 0) {
+				var fieldvalue = emergencyResponseAfghanistanAmount;
 				products = products + "{%22itemcode%22%20:%20%22VOM7%22,%22quantity%22%20:%201.00,%20%22unitprice%22%20:" + fieldvalue +",%20%22tax%22%20:%2010.00},";
 				amountbuilder += +fieldvalue;
 			}
-			if(document.getElementById('BiblesLiteratureAmountfinal').value > 0) {
-				var fieldvalue = document.getElementById('BiblesLiteratureAmountfinal').value;
+			if(biblesLiteratureAmount > 0) {
+				var fieldvalue = biblesLiteratureAmount;
 				products = products + "{%22itemcode%22%20:%20%22VOM11%22,%22quantity%22%20:%201.00,%20%22unitprice%22%20:" + fieldvalue +",%20%22tax%22%20:%2010.00},";
 				amountbuilder += +fieldvalue;
 			}
-			if(document.getElementById('BiblesPlusAmountfinal').value > 0) {
-				var fieldvalue = document.getElementById('BiblesPlusAmountfinal').value;
+			if(biblesPlusAmount > 0) {
+				var fieldvalue = biblesPlusAmount;
 				products = products + "{%22itemcode%22%20:%20%22VOM10%22,%22quantity%22%20:%201.00,%20%22unitprice%22%20:" + fieldvalue +",%20%22tax%22%20:%2010.00},";
 				amountbuilder += +fieldvalue;
 			}
-			if(document.getElementById('UkraineAmountfinal').value > 0) {
-				var fieldvalue = document.getElementById('UkraineAmountfinal').value;
+			if(ukraineAmount > 0) {
+				var fieldvalue = ukraineAmount;
 				products = products + "{%22itemcode%22%20:%20%22VOM4.34%22,%22quantity%22%20:%201.00,%20%22unitprice%22%20:" + fieldvalue +",%20%22tax%22%20:%2010.00},";
 				amountbuilder += +fieldvalue;
 			}
@@ -460,10 +490,13 @@
 		}
 		
 		function AmountBuilder(project){
-			$('input[type="radio"').on('change', function() {
+			$('input[type="radio"]').on('change', function() {
 	            var radioValue = $("input[name=" + project + "Amount]:checked").val();
-			    $("." + project + "Amount .donationamount").val('$'+radioValue);
-				URLBuilder();		
+                if(radioValue != undefined){
+                    $("#" + project + "Amountfinal").val('$'+radioValue);
+                    console.log($("#" + project + "Amountfinal").val());
+                    URLBuilder();
+                }		
 			});
 		}
 		
@@ -544,7 +577,8 @@
                         <input type="radio" id="BibleChallengeAmount5" name="BibleChallengeAmount" value="200">
                         <label for="BibleChallengeAmount5" class="donationLabel" onClick="AmountBuilder('BibleChallenge')">$200</label>
                         <div class="final-field">
-                             <input type="text" readonly class="donationamount" value="$" id="BibleChallengeAmountfinal" name="BibleChallengeAmountfinal" onkeyup="AmountBuilderInput('BibleChallenge')">
+                            
+                             <input type="text"  class="donationamount" readonly value="$" id="BibleChallengeAmountfinal" name="BibleChallengeAmountfinal" onkeyup="AmountBuilderInput('BibleChallenge')">
                         </div>
                     </div>
                     
@@ -561,7 +595,8 @@
                         <input type="radio" id="EmergencyResponseAfghanistanAmount5" name="EmergencyResponseAfghanistanAmount" value="500">
                         <label for="EmergencyResponseAfghanistanAmount5" class="donationLabel" onClick="AmountBuilder('EmergencyResponseAfghanistan')">$500</label>
                         <div class="final-field">
-                             <input type="text" readonly class="donationamount" value="$" id="EmergencyResponseAfghanistanAmountfinal" name="EmergencyResponseAfghanistanAmountfinal" onkeyup="AmountBuilderInput('EmergencyResponseAfghanistan')">
+                            
+                             <input type="text"  class="donationamount" readonly value="$" id="EmergencyResponseAfghanistanAmountfinal" name="EmergencyResponseAfghanistanAmountfinal" onkeyup="AmountBuilderInput('EmergencyResponseAfghanistan')">
                         </div>
                     </div>
                     
@@ -576,7 +611,8 @@
                         <input type="radio" id="AramaicBiblesforIraqiChristiansAmount4" name="AramaicBiblesforIraqiChristiansAmount" value="100">
                         <label for="AramaicBiblesforIraqiChristiansAmount4" class="donationLabel" onClick="AmountBuilder('AramaicBiblesforIraqiChristians')">$100</label>
                         <div class="final-field">
-                             <input type="text" readonly class="donationamount" value="$" id="AramaicBiblesforIraqiChristiansAmountfinal" name="AramaicBiblesforIraqiChristiansAmountfinal" onkeyup="AmountBuilderInput('AramaicBiblesforIraqiChristians')">
+                            
+                             <input type="text"  class="donationamount" readonly value="$" id="AramaicBiblesforIraqiChristiansAmountfinal" name="AramaicBiblesforIraqiChristiansAmountfinal" onkeyup="AmountBuilderInput('AramaicBiblesforIraqiChristians')">
                         </div>
                     </div>
                     
@@ -591,7 +627,8 @@
                         <input type="radio" id="FamiliesofMartyrsAmount4" name="FamiliesofMartyrsAmount" value="100">
                         <label for="FamiliesofMartyrsAmount4" class="donationLabel" onClick="AmountBuilder('FamiliesofMartyrs')">$100</label>
                         <div class="final-field">
-                             <input type="text" readonly class="donationamount" value="$" id="FamiliesofMartyrsAmountfinal" name="FamiliesofMartyrsAmountfinal" onkeyup="AmountBuilderInput('FamiliesofMartyrs')">
+                            
+                             <input type="text"  class="donationamount" readonly value="$" id="FamiliesofMartyrsAmountfinal" name="FamiliesofMartyrsAmountfinal" onkeyup="AmountBuilderInput('FamiliesofMartyrs')">
                         </div>
                     </div>
                     
@@ -606,7 +643,8 @@
                         <input type="radio" id="FrontLineMinistryAmount4" name="FrontLineMinistryAmount" value="100">
                         <label for="FrontLineMinistryAmount4" class="donationLabel" onClick="AmountBuilder('FrontLineMinistry')">$100</label>
                         <div class="final-field">
-                             <input type="text" readonly class="donationamount" value="$" id="FrontLineMinistryAmountfinal" name="FrontLineMinistryAmountfinal" onkeyup="AmountBuilderInput('FrontLineMinistry')">
+                            
+                             <input type="text"  class="donationamount" readonly value="$" id="FrontLineMinistryAmountfinal" name="FrontLineMinistryAmountfinal" onkeyup="AmountBuilderInput('FrontLineMinistry')">
                         </div>
                     </div>
                     
@@ -621,7 +659,8 @@
                         <input type="radio" id="VOMedicalAmount4" name="VOMedicalAmount" value="100">
                         <label for="VOMedicalAmount4" class="donationLabel" onClick="AmountBuilder('VOMedical')">$100</label>
                         <div class="final-field">
-                             <input type="text" readonly class="donationamount" value="$" id="VOMedicalAmountfinal" name="VOMedicalAmountfinal" onkeyup="AmountBuilderInput('VOMedical')">
+                            
+                             <input type="text"  class="donationamount" readonly value="$" id="VOMedicalAmountfinal" name="VOMedicalAmountfinal" onkeyup="AmountBuilderInput('VOMedical')">
                         </div>
                     </div>
                     
@@ -636,7 +675,8 @@
                         <input type="radio" id="VOMMinistryFundAmount4" name="VOMMinistryFundAmount" value="100">
                         <label for="VOMMinistryFundAmount4" class="donationLabel" onClick="AmountBuilder('VOMMinistryFund')">$100</label>
                         <div class="final-field">
-                             <input type="text" readonly class="donationamount" value="$" id="VOMMinistryFundAmountfinal" name="VOMMinistryFundAmountfinal" onkeyup="AmountBuilderInput('VOMMinistryFund')">
+                            
+                             <input type="text"  class="donationamount" readonly value="$" id="VOMMinistryFundAmountfinal" name="VOMMinistryFundAmountfinal" onkeyup="AmountBuilderInput('VOMMinistryFund')">
                         </div>
                     </div>
                     
@@ -653,7 +693,8 @@
                         <input type="radio" id="BiblesLiteratureAmount5" name="BiblesLiteratureAmount" value="150">
                         <label for="BiblesLiteratureAmount5" class="donationLabel" onClick="AmountBuilder('BiblesLiterature')">$150</label>
                         <div class="final-field">
-                             <input type="text" readonly class="donationamount" value="$" id="BiblesLiteratureAmountfinal" name="BiblesLiteratureAmountfinal" onkeyup="AmountBuilderInput('BiblesLiterature')">
+                            
+                             <input type="text"  class="donationamount" readonly value="$" id="BiblesLiteratureAmountfinal" name="BiblesLiteratureAmountfinal" onkeyup="AmountBuilderInput('BiblesLiterature')">
                         </div>
                         
                     </div>
@@ -671,7 +712,8 @@
                         <input type="radio" id="BiblesPlusAmount5" name="BiblesPlusAmount" value="150">
                         <label for="BiblesPlusAmount5" class="donationLabel" onClick="AmountBuilder('BiblesPlus')">$150</label>
                         <div class="final-field">
-                             <input type="text" readonly class="donationamount" value="$" id="BiblesPlusAmountfinal" name="BiblesPlusAmountfinal" onkeyup="AmountBuilderInput('BiblesPlus')">
+                            
+                             <input type="text"  class="donationamount" readonly value="$" id="BiblesPlusAmountfinal" name="BiblesPlusAmountfinal" onkeyup="AmountBuilderInput('BiblesPlus')">
                         </div>
                     </div>
                     
@@ -688,7 +730,8 @@
                         <input type="radio" id="UkraineAmount5" name="UkraineAmount" value="150">
                         <label for="UkraineAmount5" class="donationLabel" onClick="AmountBuilder('Ukraine')">$150</label>
                         <div class="final-field">
-                             <input type="text" readonly class="donationamount" value="$" id="UkraineAmountfinal" name="UkraineAmountfinal" onkeyup="AmountBuilderInput('Ukraine')">
+                            
+                             <input type="text"  class="donationamount" readonly value="$" id="UkraineAmountfinal" name="UkraineAmountfinal" onkeyup="AmountBuilderInput('Ukraine')">
                         </div>
                     </div>
                 </div>

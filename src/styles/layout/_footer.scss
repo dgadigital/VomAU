@@ -75,7 +75,7 @@ footer {
                 }
 
                 .links-wrapper {
-                    padding-right: 60px;
+                    padding-right: 50px;
 
                     @media (max-width: 991px){
                         padding-right: 20px;
@@ -203,7 +203,7 @@ footer {
                         }
                     }
                     
-                    @media (max-width: 575px){
+                    @media (max-width: 620px){
                         .nav-item {
                             &.show {
                                 .nav-link {
@@ -242,7 +242,7 @@ footer {
                             
                             &:not(.show) + .show {
                                 .about{
-                                    margin-bottom: 80px;
+                                    margin-bottom: 270px;
                                 }
                                 .get-involved{
                                     margin-bottom: 330px;
