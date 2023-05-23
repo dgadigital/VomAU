@@ -156,4 +156,56 @@
             }
         }
     }
+
+    &.church-testimonial{
+        .testimonial-container{
+            display: flex;
+            gap: 50px;
+            height: auto !important;
+            @media(max-width: 1200px){
+                flex-direction: column;
+                height: auto;
+
+            }
+            .image-container{
+                width: 40%;
+                @media(max-width: 1200px){
+                    width: 100%;
+                    text-align: center;
+                    img{
+                        width: 350px !important;
+                    }
+                }
+                
+            }
+            .text-container{
+                position: relative;
+                width: 100%;
+                padding: 40px 40px 40px 40px;
+                background-color: #F7F7F7;
+                .quote-icon{
+                    position: absolute;
+                    top: -20px;
+                    left: 116px;
+                    @media (max-width: 400px){
+                        left: 45px;
+                    }
+                }
+                h2{
+                    text-transform: unset;
+                }
+                p{
+                    font-family: $font-lato-regular;
+                    font-size: 14px;
+                }
+            }
+            &:not(:first-child){
+                padding-top: 50px;
+            }
+            &:not(:last-child){
+                padding-bottom: 50px;
+                border-bottom: 1px solid #D5D5D3;
+            }
+        }
+    }
 }
