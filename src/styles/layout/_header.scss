@@ -146,6 +146,10 @@ header {
                     box-shadow: none;
                 }
 
+                .nav-item{
+                    padding-top: 0;
+                }
+                
                 .dropdown-item{
                     display: flex;
                     flex-direction: column;

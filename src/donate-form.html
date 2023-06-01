@@ -68,6 +68,7 @@
             margin-top: 45px;
         }
         .checkbox-button{
+            position: relative;
             display: inline-block;
             min-height: 50px;
         }
@@ -82,6 +83,7 @@
             display: inline-block;
             padding: 15px 0;
             width: 82%;
+            height: 50%;
             font-size: 14px;
             font-weight: 400;
             text-align: center;  
@@ -90,6 +92,13 @@
             border: 1.25px solid #DEDEDE;
             cursor: pointer;
             z-index: 1;
+        }
+
+        .checkbox-label span{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
         }
 
         /* Style for the checkbox label when checked */
@@ -107,7 +116,7 @@
         .tooltip {
             position: absolute;
             display: inline-block;
-            margin-top: 25px;
+            top: 50%;
             margin-left: 2px;
             width: 18px;
             height: 18px;
@@ -129,7 +138,8 @@
             display: none;
             padding: 4px 8px;
             left: -505px;
-            width: 500px;
+            width: fit-content;
+            max-width: 500px;
             max-width: 400px;
             color: #fff;
             font-size: 12px;
@@ -155,13 +165,15 @@
         @media (max-width: 1800px){
             .tooltip-text{
                 left: -305px;
-                width: 300px;
+                width: fit-content;
+                max-width: 300px;
             }
         }
         @media (max-width: 991px){
             .tooltip-text{
                 left: -154px;
-                width: 137px;
+                width: fit-content;
+                max-width: 137px;
             }
         }
 
@@ -523,38 +535,33 @@
                 <div class="donate-checkbox">
                     <div class="checkbox-button">
                         <input type="checkbox" class="checkbox-input" id="FamiliesofMartyrs" name="FamiliesofMartyrs" value="FamiliesofMartyrs">
-                        <label class="checkbox-label" for="FamiliesofMartyrs" onClick="RevealSection('FamiliesofMartyrs')">Families of Martyrs</label>
-                        <span class="tooltip">i<span class="tooltip-text">Try this</span></span>
+                        <label class="checkbox-label" for="FamiliesofMartyrs" onClick="RevealSection('FamiliesofMartyrs')"><span>Families of Martyrs</span></label>
+                        <span class="tooltip">i<span class="tooltip-text"></span></span>
                     </div>
                     <div class="checkbox-button">
                         <input type="checkbox" class="checkbox-input" id="FrontLineMinistry" name="FrontLineMinistry" value="FrontLineMinistry">
-                        <label class="checkbox-label" for="FrontLineMinistry" onClick="RevealSection('FrontLineMinistry')">Front Line Ministry</label>
-                        <span class="tooltip">i<span class="tooltip-text">Try this</span></span>
+                        <label class="checkbox-label" for="FrontLineMinistry" onClick="RevealSection('FrontLineMinistry')"><span>Front Line Ministry</span></label>
+                        <span class="tooltip">i<span class="tooltip-text"></span></span>
                     </div>
                     <div class="checkbox-button">
                         <input type="checkbox" class="checkbox-input" id="VOMedical" name="VOMedical" value="VOMedical">
                         <label class="checkbox-label" for="VOMedical" onClick="RevealSection('VOMedical')">VOMedical</label>
-                        <span class="tooltip">i<span class="tooltip-text">Try thisTry thisTry thisTry thisTry thisTry thisTry thisTry thisTry thisTry thisTry thisTry this</span></span>
+                        <span class="tooltip">i<span class="tooltip-text"></span></span>
                     </div>
                     <div class="checkbox-button">
                         <input type="checkbox" class="checkbox-input" id="VOMMinistryFund" name="VOMMinistryFund" value="VOMMinistryFund">
-                        <label class="checkbox-label" for="VOMMinistryFund" onClick="RevealSection('VOMMinistryFund')">VOM Ministry Fund</label>
-                        <span class="tooltip">i<span class="tooltip-text">Try this</span></span>
+                        <label class="checkbox-label" for="VOMMinistryFund" onClick="RevealSection('VOMMinistryFund')"><span>VOM Ministry Fund</span></label>
+                        <span class="tooltip">i<span class="tooltip-text"></span></span>
                     </div>
                     <div class="checkbox-button">
                         <input type="checkbox" class="checkbox-input" id="BiblesLiterature" name="BiblesLiterature" value="BiblesLiterature">
-                        <label class="checkbox-label" for="BiblesLiterature" onClick="RevealSection('BiblesLiterature')">Bibles & Literature</label>
-                        <span class="tooltip">i<span class="tooltip-text">Try this</span></span>
-                    </div>
-                    <div class="checkbox-button">
-                        <input type="checkbox" class="checkbox-input" id="BiblesPlus" name="BiblesPlus" value="BiblesPlus">
-                        <label class="checkbox-label" for="BiblesPlus" onClick="RevealSection('BiblesPlus')">Bibles Plus</label>
-                        <span class="tooltip">i<span class="tooltip-text">Try this</span></span>
+                        <label class="checkbox-label" for="BiblesLiterature" onClick="RevealSection('BiblesLiterature')"><span>Bibles & Literature</span></label>
+                        <span class="tooltip">i<span class="tooltip-text"></span></span>
                     </div>
                     <div class="checkbox-button">
                         <input type="checkbox" class="checkbox-input" id="Ukraine" name="Ukraine" value="Ukraine">
-                        <label class="checkbox-label" for="Ukraine" onClick="RevealSection('Ukraine')">Ukraine Front Line Ministry</label>
-                        <span class="tooltip">i<span class="tooltip-text">Try this</span></span>
+                        <label class="checkbox-label" for="Ukraine" onClick="RevealSection('Ukraine')"><span>Ukraine Front Line Ministry</span></label>
+                        <span class="tooltip">i<span class="tooltip-text"></span></span>
                     </div>
                 </div>
                 <a href="#step2" class="btn-orange disable" id="next">Next</a>
@@ -578,7 +585,7 @@
                         <label for="BibleChallengeAmount5" class="donationLabel" onClick="AmountBuilder('BibleChallenge')">$200</label>
                         <div class="final-field">
                             
-                             <input type="text"  class="donationamount" readonly value="$" id="BibleChallengeAmountfinal" name="BibleChallengeAmountfinal" onkeyup="AmountBuilderInput('BibleChallenge')">
+                             <input type="text"  class="donationamount" value="$" id="BibleChallengeAmountfinal" name="BibleChallengeAmountfinal" onkeyup="AmountBuilderInput('BibleChallenge')">
                         </div>
                     </div>
                     
@@ -596,7 +603,7 @@
                         <label for="EmergencyResponseAfghanistanAmount5" class="donationLabel" onClick="AmountBuilder('EmergencyResponseAfghanistan')">$500</label>
                         <div class="final-field">
                             
-                             <input type="text"  class="donationamount" readonly value="$" id="EmergencyResponseAfghanistanAmountfinal" name="EmergencyResponseAfghanistanAmountfinal" onkeyup="AmountBuilderInput('EmergencyResponseAfghanistan')">
+                             <input type="text"  class="donationamount" value="$" id="EmergencyResponseAfghanistanAmountfinal" name="EmergencyResponseAfghanistanAmountfinal" onkeyup="AmountBuilderInput('EmergencyResponseAfghanistan')">
                         </div>
                     </div>
                     
@@ -612,7 +619,7 @@
                         <label for="AramaicBiblesforIraqiChristiansAmount4" class="donationLabel" onClick="AmountBuilder('AramaicBiblesforIraqiChristians')">$100</label>
                         <div class="final-field">
                             
-                             <input type="text"  class="donationamount" readonly value="$" id="AramaicBiblesforIraqiChristiansAmountfinal" name="AramaicBiblesforIraqiChristiansAmountfinal" onkeyup="AmountBuilderInput('AramaicBiblesforIraqiChristians')">
+                             <input type="text"  class="donationamount" value="$" id="AramaicBiblesforIraqiChristiansAmountfinal" name="AramaicBiblesforIraqiChristiansAmountfinal" onkeyup="AmountBuilderInput('AramaicBiblesforIraqiChristians')">
                         </div>
                     </div>
                     
@@ -628,7 +635,7 @@
                         <label for="FamiliesofMartyrsAmount4" class="donationLabel" onClick="AmountBuilder('FamiliesofMartyrs')">$100</label>
                         <div class="final-field">
                             
-                             <input type="text"  class="donationamount" readonly value="$" id="FamiliesofMartyrsAmountfinal" name="FamiliesofMartyrsAmountfinal" onkeyup="AmountBuilderInput('FamiliesofMartyrs')">
+                             <input type="text"  class="donationamount" value="$" id="FamiliesofMartyrsAmountfinal" name="FamiliesofMartyrsAmountfinal" onkeyup="AmountBuilderInput('FamiliesofMartyrs')">
                         </div>
                     </div>
                     
@@ -644,7 +651,7 @@
                         <label for="FrontLineMinistryAmount4" class="donationLabel" onClick="AmountBuilder('FrontLineMinistry')">$100</label>
                         <div class="final-field">
                             
-                             <input type="text"  class="donationamount" readonly value="$" id="FrontLineMinistryAmountfinal" name="FrontLineMinistryAmountfinal" onkeyup="AmountBuilderInput('FrontLineMinistry')">
+                             <input type="text"  class="donationamount" value="$" id="FrontLineMinistryAmountfinal" name="FrontLineMinistryAmountfinal" onkeyup="AmountBuilderInput('FrontLineMinistry')">
                         </div>
                     </div>
                     
@@ -660,7 +667,7 @@
                         <label for="VOMedicalAmount4" class="donationLabel" onClick="AmountBuilder('VOMedical')">$100</label>
                         <div class="final-field">
                             
-                             <input type="text"  class="donationamount" readonly value="$" id="VOMedicalAmountfinal" name="VOMedicalAmountfinal" onkeyup="AmountBuilderInput('VOMedical')">
+                             <input type="text"  class="donationamount" value="$" id="VOMedicalAmountfinal" name="VOMedicalAmountfinal" onkeyup="AmountBuilderInput('VOMedical')">
                         </div>
                     </div>
                     
@@ -676,7 +683,7 @@
                         <label for="VOMMinistryFundAmount4" class="donationLabel" onClick="AmountBuilder('VOMMinistryFund')">$100</label>
                         <div class="final-field">
                             
-                             <input type="text"  class="donationamount" readonly value="$" id="VOMMinistryFundAmountfinal" name="VOMMinistryFundAmountfinal" onkeyup="AmountBuilderInput('VOMMinistryFund')">
+                             <input type="text"  class="donationamount" value="$" id="VOMMinistryFundAmountfinal" name="VOMMinistryFundAmountfinal" onkeyup="AmountBuilderInput('VOMMinistryFund')">
                         </div>
                     </div>
                     
@@ -694,7 +701,7 @@
                         <label for="BiblesLiteratureAmount5" class="donationLabel" onClick="AmountBuilder('BiblesLiterature')">$150</label>
                         <div class="final-field">
                             
-                             <input type="text"  class="donationamount" readonly value="$" id="BiblesLiteratureAmountfinal" name="BiblesLiteratureAmountfinal" onkeyup="AmountBuilderInput('BiblesLiterature')">
+                             <input type="text"  class="donationamount" value="$" id="BiblesLiteratureAmountfinal" name="BiblesLiteratureAmountfinal" onkeyup="AmountBuilderInput('BiblesLiterature')">
                         </div>
                         
                     </div>
@@ -713,7 +720,7 @@
                         <label for="BiblesPlusAmount5" class="donationLabel" onClick="AmountBuilder('BiblesPlus')">$150</label>
                         <div class="final-field">
                             
-                             <input type="text"  class="donationamount" readonly value="$" id="BiblesPlusAmountfinal" name="BiblesPlusAmountfinal" onkeyup="AmountBuilderInput('BiblesPlus')">
+                             <input type="text"  class="donationamount" value="$" id="BiblesPlusAmountfinal" name="BiblesPlusAmountfinal" onkeyup="AmountBuilderInput('BiblesPlus')">
                         </div>
                     </div>
                     
@@ -731,7 +738,7 @@
                         <label for="UkraineAmount5" class="donationLabel" onClick="AmountBuilder('Ukraine')">$150</label>
                         <div class="final-field">
                             
-                             <input type="text"  class="donationamount" readonly value="$" id="UkraineAmountfinal" name="UkraineAmountfinal" onkeyup="AmountBuilderInput('Ukraine')">
+                             <input type="text"  class="donationamount" value="$" id="UkraineAmountfinal" name="UkraineAmountfinal" onkeyup="AmountBuilderInput('Ukraine')">
                         </div>
                     </div>
                 </div>
