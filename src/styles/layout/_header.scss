@@ -146,10 +146,6 @@ header {
                     box-shadow: none;
                 }
 
-                .nav-item{
-                    padding-top: 0;
-                }
-                
                 .dropdown-item{
                     display: flex;
                     flex-direction: column;
@@ -300,7 +296,7 @@ header {
                     padding-top: 15px;
                     padding-bottom: 15px;
                 }
-
+                
                 &.show {
                     .nav-link {
                         color: $dark-green;
@@ -345,7 +341,7 @@ header {
                             transform: rotate(-90deg);
                         }
                     }
-                }
+                } 
             }
         }
 
