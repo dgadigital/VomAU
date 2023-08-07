@@ -404,4 +404,13 @@
             }
         }
     }
+
+    &.landing-page{
+        .banner-wrapper{
+            .image{
+                display: flex;
+                align-items: center;
+            }
+        }
+    }
 }
