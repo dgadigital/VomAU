@@ -175,20 +175,21 @@
             margin-right: 20px;
 
             @media (max-width: 991px){
-                width: 25%;
+                width: 17%;
             }
 
             @media (max-width: 767px){
                 width: 100%;
             }
             .title-wrapper{
+                align-items: unset;
+                min-height: unset;
+
                 .title{
-                    font-size: 20px;
+                    font-size: 16px;
+                    font-style: $font-lato-bold;
+                    font-weight: 700;
                     color: #353535;
-                    -webkit-line-clamp: unset;
-                    -webkit-box-orient: unset;
-                    overflow: unset;
-                    text-overflow: unset;
                 }
             }
 
