@@ -49,6 +49,7 @@
             justify-content: center;
 
             .product-column{
+                position: relative;
                 display: flex;
                 flex-direction: column;
                 flex-basis: 23%;
@@ -59,6 +60,24 @@
                 }
                 @media (max-width: 768px){
                     flex-basis: 100%;
+                }
+
+                .new-item{
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    display: flex;
+                    align-items: center;
+                    padding-left: 10px;
+                    padding-right: 10px;
+                    padding-bottom: 15px;
+                    padding-top: 15px;
+                    font-size: 14px;
+                    color: #fff;
+                    text-transform: uppercase;
+                    background-color: $dark-green;
+                    border-bottom-right-radius: 10px;
+                    border-bottom-left-radius: 10px;
                 }
                 .image-wrapper{
                     display: flex;

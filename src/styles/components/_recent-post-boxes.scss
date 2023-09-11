@@ -169,4 +169,31 @@
                 text-overflow: ellipsis;
             }
         }
+
+        &.w-20{
+            width: 18%;
+            margin-right: 20px;
+
+            @media (max-width: 991px){
+                width: 25%;
+            }
+
+            @media (max-width: 767px){
+                width: 100%;
+            }
+            .title-wrapper{
+                .title{
+                    font-size: 20px;
+                    color: #353535;
+                    -webkit-line-clamp: unset;
+                    -webkit-box-orient: unset;
+                    overflow: unset;
+                    text-overflow: unset;
+                }
+            }
+
+            &:last-of-type{
+                margin-right: 0;
+            }
+        }
     }
