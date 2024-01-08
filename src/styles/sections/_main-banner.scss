@@ -29,22 +29,39 @@
             @media (max-width: 1199px) {
             text-align: center;
             }
-            
-            .large-title{
-                font-size: 88px;
-                letter-spacing: -1.5px;
-
-                @media (max-width: 991px){
-                    font-size: 78px;
-                }
+            .title-wrapper{
                 @media (max-width: 768px){
-                    font-size: 66px;
+                    justify-content: center;
                 }
-                @media (max-width: 678px){
-                    font-size: 44px;
+                &.l-title{
+                    width: 200%;
+
+                    @media (max-width: 768px){
+                        width: 100%;
+                    }
                 }
-                @media (max-width: 500px){
-                    font-size: 36px;
+                .logo{
+                    @media (max-width: 768px){
+                        width: 70px;
+                    }
+                }
+                .large-title{
+                    font-size: 88px;
+                    letter-spacing: -1.5px;
+                    font-weight: 600;
+
+                    @media (max-width: 991px){
+                        font-size: 78px;
+                    }
+                    @media (max-width: 768px){
+                        font-size: 66px;
+                    }
+                    @media (max-width: 678px){
+                        font-size: 44px;
+                    }
+                    @media (max-width: 500px){
+                        font-size: 36px;
+                    }
                 }
             }
         }
