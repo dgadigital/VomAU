@@ -152,7 +152,8 @@ header {
                     justify-content: center;
                     padding-top: 8px;
                     padding-bottom: 8px;
-                    width: 280px;
+                    padding-right: 20px !important;
+                    width: 250px;
                     max-width: 100%;
                     min-height: 68px;
                     font-family: $font-lato-bold;
@@ -264,7 +265,7 @@ header {
 
                 .dropdown-menu {
                     top: -2px;
-                    left: 100%;
+                    left: 96%;
                     height: auto;
                     min-height: 100%;
                     clip-path: inset(-5px -30px -42px 0px);
@@ -361,6 +362,13 @@ header {
                 }
             }
 
+            .dropdown-menu {
+                .dropdown-menu {
+                    left: -250px;
+                    max-width: 250px;
+                }
+            }
+
             .nav-item {
                 @media (max-width: 767px) {
                     padding-top: 0;
@@ -375,6 +383,10 @@ header {
                         padding-right: 10px;
                     }
                 }
+
+                a.dropdown-item {
+                    color: #212529;
+                }
             }
         }
     }
@@ -387,7 +399,53 @@ header {
         }
     }
 
+    .dropdown-item.with-arrow{
+        position: relative;
+
+        &:after {
+            content: "";
+            position: absolute;
+            top: 42%;
+            right: 15px;
+            margin-left: 0;
+            transform: translateY(-50%);
+            height: 8.58px;
+            width: 15px;
+            border: 0;
+            background-image: url('../assets/images/menu-dropdown.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            transform: rotate(-90deg);
+        }
+
+        &:hover {
+            &:after {
+                filter: brightness(0) invert(1);
+                transition: all 0.2s;
+
+                @media (max-width: 767px) {
+                    filter: none;
+                }
+            }
+        }
+    }
+
     .navbar-toggler[aria-expanded=true] .icon-bar:first-child {
         transform: rotate(225deg) translate(-4px,-4px);
+    }
+}
+
+.mobile-none {
+    @media (max-width: 767px) {
+        display: none;
+    }
+}
+
+.mobile-show {
+    display: none;
+
+    @media (max-width: 767px) {
+        display: block;
     }
 }

@@ -23,6 +23,33 @@
         font-size: 14px;
     }
 
+    &.icon {
+        position: relative;
+        padding-right: 45px !important;
+
+        @media (max-width: 767px) {
+            display: none;
+        }
+
+        &:after {
+            content: '';
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            height: 7px;
+            width: 15px;
+            background-image: url('https://dev-vomau.pantheonsite.io/wp-content/uploads/2024/11/btn-icon.png');
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            transform: rotateX(180deg);
+
+            @media (max-width: 767px) {
+                top: 11px;
+            }
+        }
+    }
+
     &:hover,
     &:active,
     &:focus {
@@ -84,5 +111,45 @@
         background-color: #FBFBFB;
         color: #FF0016;
         border: 1.5px solid #FF0016
+    }
+}
+
+.btn-drop {
+    position: relative;
+    z-index: 100;
+
+    ul {
+        position: absolute;
+        width: 290px;
+        top: 74px;
+        display: none;
+        transition: all 0.3s ease;
+        background-color:#f6f6f6;
+
+        li {
+            padding: 10px 25px;
+            border-bottom: 1px solid #e0e0e0;
+            
+            &:hover {
+                background-color: #DE4A57;
+                transition: all .2s ease-in-out;
+
+                a {
+                    color: #fff;
+                }
+            }
+
+           strong {
+            font-size: 12px;
+            font-family: "Lato Bold";
+           }
+           div {
+            font-size: 11px;
+           }
+
+           a {
+            color: #353535;
+           }
+        }
     }
 }

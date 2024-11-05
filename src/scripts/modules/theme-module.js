@@ -5,6 +5,7 @@ AppName.Modules.ThemeModule = (function () {
   //////////////////////
   // Private Methods //
   ////////////////////
+  
 
   var _navbarToggler = () => {
     var toggler = $('.navbar-toggler');
@@ -18,6 +19,12 @@ AppName.Modules.ThemeModule = (function () {
       }
       navbarCollapse.toggleClass('show');
     })
+
+
+    $('#btn-drop').click(function(event) {
+      event.preventDefault(); // Prevent default link behavior
+      $('.btn-drop ul').toggle(); // Toggle visibility of the <ul> element
+    });
   }
 
   var _rollingNumber = () => {
