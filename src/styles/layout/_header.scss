@@ -174,7 +174,7 @@ header {
                     &:active {
                         color: #fff;
                         background-color: $dark-green;
-                        border-bottom: 0.5px solid #DADADA;
+                        border-bottom: 1px solid $dark-green;
 
                         @media (max-width: 767px) {
                             background-color: #f6f6f6;
@@ -242,7 +242,7 @@ header {
                     &.show {
                         background-color: $dark-green;
                         color: #fff;
-                        border-bottom: 0.5;
+                        border-bottom: 1px solid $dark-green;
 
                         @media (max-width: 767px) {
                             background-color: #f6f6f6;
